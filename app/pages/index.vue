@@ -3,7 +3,8 @@
     <!-- Demo Component with CSS Animation - Replace with VideoHero when you add your video -->
     <VideoHeroDemo
       title="Beyond the Pitch Deck. This is the Real Story."
-      description="Discover the untold stories behind the world's most influential innovations. Every breakthrough has a beginning—we're here to tell those stories."
+      date="12 November 2025"
+      venue="The Homecoming Theatre, District 6, Cape Town"
       :ui="{
         title: 'text-white',
         description: 'text-white/90',
@@ -30,36 +31,38 @@
         variant: 'subtle'
       }]"
     /> -->
+
     <UPageSection
-      id="features"
-      title="Uncovering the Stories That Shape Our World"
-      description="From garage startups to groundbreaking discoveries, we dive deep into the human stories behind the innovations that changed everything."
-      :features="[{
-        icon: 'i-lucide-lightbulb',
-        title: 'Innovation Chronicles',
-        description: 'Deep-dive into the moments of inspiration that sparked world-changing ideas and the people who dared to pursue them.'
-      }, {
-        icon: 'i-lucide-users',
-        title: 'Human Stories',
-        description: 'Meet the visionaries, rebels, and dreamers whose passion and perseverance turned impossible ideas into reality.'
-      }, {
-        icon: 'i-lucide-map',
-        title: 'Journey Mapping',
-        description: 'Follow the complete journey from concept to breakthrough, including the failures, pivots, and breakthroughs along the way.'
-      }, {
-        icon: 'i-lucide-globe',
-        title: 'Global Impact',
-        description: 'Explore how these innovations rippled across industries, cultures, and continents to shape the modern world.'
-      }, {
-        icon: 'i-lucide-book-open',
-        title: 'Research-Driven',
-        description: 'Every story is meticulously researched and verified, bringing you authentic insights from primary sources and key players.'
-      }, {
-        icon: 'i-lucide-trending-up',
-        title: 'Future Implications',
-        description: 'Understand not just what happened, but what it means for the future of technology, society, and human progress.'
-      }]"
-    />
+      id="introduction"
+      class="max-w-6xl mx-auto"
+    >
+      <p class="text-lg md:text-xl lg:text-2xl md:leading-[140%] text-center text-muted-foreground mb-4">
+        Origin Stories is a <strong>live theatre event and media platform</strong> where <strong>African entrepreneurs share their inspiring journeys</strong>. It’s not just a stage, it’s a support platform. The stories are raw, honest, and deeply human. They highlight resilience, ingenuity and legacy, while amplifying African entrepreneurship to the world.
+      </p>
+      <p class="text-2xl md:text-3xl lg:text-4xl md:leading-[140%] text-center text-muted-foreground mb-4">
+        Our mission is to <strong>inspire and empower</strong> by broadcasting the journeys of Africa’s boldest founders; stories that shape culture, create communities, and attract global capital.
+      </p>
+      <p class="text-lg md:text-xl lg:text-2xl md:leading-[140%] text-center text-muted-foreground mb-4">
+        Origin Stories goes deeper. We capture the <strong>unfiltered, human, and inspiring Hero's Journey</strong> of Africa's most brilliant innovators. This isn't about traction graphs; it's about the <strong>Why Me?</strong> and the <strong>What Did I Sacrifice?</strong>; the personal truth that forges excellence.
+      </p>
+      <p class="text-lg md:text-xl lg:text-2xl md:leading-[140%] text-center text-muted-foreground mb-4">
+        In the African ecosystem, trust is built relationally, not transactionally. We provide the essential context you need to connect with customers, attract the right capital, and secure top talent.
+      </p>
+    </UPageSection>
+
+    <UPageSection>
+      <h3 class="text-2xl md:text-3xl lg:text-4xl md:leading-[140%] text-center text-muted-foreground mb-4 font-bold">
+        Welcome to the home of authentic African innovation.
+      </h3>
+      <div style="position: relative; padding-bottom: 68.25%; padding-top: 35px; height: 0; overflow: hidden;">
+        <iframe
+          src="https://app.airtimetools.com/embed/z_0TaBL4Irrx4SyVj8FymM?embedSlides=true"
+          frameborder="0"
+          allow="autoplay; encrypted-media; allowfullscreen"
+          style="display: block; position: absolute; top:0; left: 50%; transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%); width: 100%; height: 100%;"
+        />
+      </div>
+    </UPageSection>
 
     <UPageSection>
       <UPageCTA

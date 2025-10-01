@@ -12,7 +12,7 @@ useHead({
 })
 
 const title = 'Origin Stories'
-const description = 'Discover the untold stories behind the world\'s most influential innovations. Every breakthrough has a beginning—we\'re here to tell those stories.'
+const description = 'Beyond the Pitch Deck. This is the Real Story.'
 
 useSeoMeta({
   title,
@@ -53,15 +53,13 @@ const navigation = [
       </template>
 
       <template #right>
-        <UColorModeButton />
-
         <UButton
           to="#"
-          icon="i-lucide-mail"
-          aria-label="Contact"
-          color="neutral"
-          variant="ghost"
-        />
+          color="primary"
+          variant="solid"
+        >
+          Get Tickets
+        </UButton>
       </template>
     </UHeader>
 
@@ -69,12 +67,12 @@ const navigation = [
       <NuxtPage />
     </UMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" />
+    <USeparator />
 
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Origin Stories • © {{ new Date().getFullYear() }} • Uncovering Innovation
+          Origin Stories © {{ new Date().getFullYear() }}
         </p>
       </template>
 

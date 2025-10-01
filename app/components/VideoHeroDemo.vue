@@ -11,7 +11,9 @@ type ButtonLink = {
 }
 interface VideoHeroDemoProps {
   title: string
-  description: string
+  description?: string
+  date?: string
+  venue?: string
   links?: ButtonLink[]
 }
 
@@ -35,7 +37,6 @@ const _props = withDefaults(defineProps<VideoHeroDemoProps>(), {
     <div class="relative z-10">
       <UPageHero
         :title="title"
-        :description="description"
         :links="links"
         :ui="{
           root: 'py-24 sm:py-32',
@@ -46,29 +47,28 @@ const _props = withDefaults(defineProps<VideoHeroDemoProps>(), {
         <template #default>
           <slot />
         </template>
-        <template #title>
-          <div class="max-w-4xl mx-auto">
-            <span class="text-white drop-shadow-lg">{{ title }}</span>
+        <template #header>
+          <div class="text-center space-y-3">
+            <div class="max-w-6xl mx-auto">
+              <span class="text-white font-bold drop-shadow-lg text-2xl md:text-3xl lg:text-8xl md:leading-[140%]">{{ title }}</span>
+            </div>
+            <div
+              v-if="description"
+              class="text-white/90 drop-shadow-md"
+            >
+              {{ description }}
+            </div>
+            <div class="flex items-center justify-center gap-3 text-3xl text-white/80 drop-shadow-md">
+              <span v-if="date">{{ date }}</span>
+              <span
+                v-if="date && venue"
+                aria-hidden="true"
+              >•</span>
+              <span v-if="venue">{{ venue }}</span>
+            </div>
           </div>
-        </template>
-        <template #dates>
-          <div class="max-w-4xl mx-auto">
-            <span>
-              Test
-            </span>
-          </div>
-        </template>
-        <template #description>
-          <span class="text-white/90 drop-shadow-md">{{ description }}</span>
         </template>
       </UPageHero>
-    </div>
-
-    <!-- Demo Notice -->
-    <div class="absolute bottom-4 right-4 z-20">
-      <div class="bg-black/60 text-white text-xs px-3 py-1 rounded-full">
-        Demo Mode - Add your video to replace this animation
-      </div>
     </div>
   </div>
 </template>

@@ -4,6 +4,39 @@
 @theme static {
   --font-sans: 'Hind', sans-serif;
 
+  --ui-font-body: var(--font-sans);
+  --ui-font-button: var(--font-sans);
+  --ui-font-headline: var(--font-sans);
+  --ui-font-display: var(--font-sans);
+  --ui-font-mono: var(--font-sans);
+  --ui-font-serif: var(--font-sans);
+  --ui-font-ui: var(--font-sans);
+  --ui-font-brand: var(--font-sans);
+  --ui-font-accent: var(--font-sans);
+  --ui-font-heading: var(--font-sans);
+  --ui-font-subheading: var(--font-sans);
+  --ui-font-caption: var(--font-sans);
+  --ui-font-label: var(--font-sans);
+  --ui-font-button: var(--font-sans);
+  --ui-font-headline: var(--font-sans);
+  --ui-font-display: var(--font-sans);
+  --ui-font-mono: var(--font-sans);
+  --ui-font-serif: var(--font-sans);
+  --ui-font-ui: var(--font-sans);
+  --ui-font-brand: var(--font-sans);
+  --ui-font-accent: var(--font-sans);
+  --ui-font-heading: var(--font-sans);
+  --ui-font-subheading: var(--font-sans);
+  --ui-font-caption: var(--font-sans);
+  --ui-font-label: var(--font-sans);
+
+  --color-primary: black;
+  --color-secondary: black;
+  --color-tertiary: black;
+  --color-quaternary: black;
+  --color-quinary: black;
+  --color-senary: black;
+
   --color-green-50: #EFFDF5;
   --color-green-100: #D9FBE8;
   --color-green-200: #B3F5D1;
