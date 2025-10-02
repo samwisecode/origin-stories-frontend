@@ -1,11 +1,7 @@
 <script setup>
 useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
+  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+  link: [{ rel: 'icon', href: '/favicon.ico' }],
   htmlAttrs: {
     lang: 'en'
   }
@@ -53,13 +49,7 @@ const navigation = [
       </template>
 
       <template #right>
-        <UButton
-          to="#"
-          color="primary"
-          variant="solid"
-        >
-          Get Tickets
-        </UButton>
+        <UButton to="#" color="primary" variant="solid"> Get Your Ticket </UButton>
       </template>
     </UHeader>
 
@@ -71,9 +61,7 @@ const navigation = [
 
     <UFooter>
       <template #left>
-        <p class="text-sm text-muted">
-          Origin Stories © {{ new Date().getFullYear() }}
-        </p>
+        <p class="text-sm text-muted">Origin Stories © {{ new Date().getFullYear() }}</p>
       </template>
 
       <template #right>

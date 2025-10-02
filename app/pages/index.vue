@@ -37,16 +37,23 @@
       class="max-w-6xl mx-auto"
     >
       <p class="text-lg md:text-xl lg:text-2xl md:leading-[140%] text-center text-muted-foreground mb-4">
-        Origin Stories is a <strong>live theatre event and media platform</strong> where <strong>African entrepreneurs share their inspiring journeys</strong>. It’s not just a stage, it’s a support platform. The stories are raw, honest, and deeply human. They highlight resilience, ingenuity and legacy, while amplifying African entrepreneurship to the world.
+        Origin Stories is a <strong>live theatre event and media platform</strong> where <strong>African entrepreneurs
+          share their inspiring journeys</strong>. It’s not just a stage, it’s a support platform. The stories are raw,
+        honest, and deeply human. They highlight resilience, ingenuity and legacy, while amplifying African
+        entrepreneurship to the world.
       </p>
       <p class="text-2xl md:text-3xl lg:text-4xl md:leading-[140%] text-center text-muted-foreground mb-4">
-        Our mission is to <strong>inspire and empower</strong> by broadcasting the journeys of Africa’s boldest founders; stories that shape culture, create communities, and attract global capital.
+        Our mission is to <strong>inspire and empower</strong> by broadcasting the journeys of Africa’s boldest
+        founders; stories that shape culture, create communities, and attract global capital.
       </p>
       <p class="text-lg md:text-xl lg:text-2xl md:leading-[140%] text-center text-muted-foreground mb-4">
-        Origin Stories goes deeper. We capture the <strong>unfiltered, human, and inspiring Hero's Journey</strong> of Africa's most brilliant innovators. This isn't about traction graphs; it's about the <strong>Why Me?</strong> and the <strong>What Did I Sacrifice?</strong>; the personal truth that forges excellence.
+        Origin Stories goes deeper. We capture the <strong>unfiltered, human, and inspiring Hero's Journey</strong> of
+        Africa's most brilliant innovators. This isn't about traction graphs; it's about the <strong>Why Me?</strong>
+        and the <strong>What Did I Sacrifice?</strong>; the personal truth that forges excellence.
       </p>
       <p class="text-lg md:text-xl lg:text-2xl md:leading-[140%] text-center text-muted-foreground mb-4">
-        In the African ecosystem, trust is built relationally, not transactionally. We provide the essential context you need to connect with customers, attract the right capital, and secure top talent.
+        In the African ecosystem, trust is built relationally, not transactionally. We provide the essential context you
+        need to connect with customers, attract the right capital, and secure top talent.
       </p>
     </UPageSection>
 
@@ -61,6 +68,17 @@
           allow="autoplay; encrypted-media; allowfullscreen"
           style="display: block; position: absolute; top:0; left: 50%; transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%); width: 100%; height: 100%;"
         />
+      </div>
+    </UPageSection>
+
+    <UPageSection>
+      <div>
+        <UButton to="#">
+          Get Your Ticket
+          <template #trailing>
+            <UIcon name="i-lucide-arrow-right" />
+          </template>
+        </UButton>
       </div>
     </UPageSection>
 
