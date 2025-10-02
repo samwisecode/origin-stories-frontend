@@ -70,283 +70,161 @@ const sponsors = {
 
 <template>
   <div>
-    <UPageHero
-      title="Our Sponsors"
-      description="Origin Stories is made possible through the generous support of organizations and individuals who believe in the power of storytelling to inspire innovation."
-    />
-
-    <UPageSection
-      title="Why Sponsor Origin Stories?"
-      description="By supporting our mission, sponsors help ensure that the fascinating stories behind world-changing innovations remain accessible to curious minds everywhere."
-    >
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div class="space-y-4 text-center">
-          <div class="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-            <UIcon
-              name="i-lucide-globe"
-              class="h-8 w-8 text-primary"
-            />
+    <!-- Dramatic Hero Section -->
+    <section class="section-massive bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="display-xl mb-16">
+            Our
+            <br>
+            <span class="text-accent">Sponsors</span>
+          </h1>
+          <p class="text-hero mx-auto mb-12">
+            Origin Stories is made possible through the generous support of organizations and individuals who believe in the power of storytelling to inspire innovation.
+          </p>
+          <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div class="text-center">
+              <div class="text-4xl font-bold mb-2 text-accent">50M+</div>
+              <div class="text-lg">Global Reach</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold mb-2 text-accent">100%</div>
+              <div class="text-lg">Research Quality</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold mb-2 text-accent">24/7</div>
+              <div class="text-lg">Impact Stories</div>
+            </div>
           </div>
-          <div>
-            <h3 class="text-lg font-semibold">
-              Global Reach
-            </h3>
-            <p class="text-sm text-muted-foreground">
-              Our stories reach millions of readers worldwide, inspiring the next generation of innovators.
+        </div>
+      </div>
+    </section>
+
+    <!-- Black Section with Sponsor Tiers -->
+    <section class="section-large bg-black text-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="display-lg mb-12 text-white">
+          Sponsorship
+          <br>
+          Tiers
+        </h2>
+        <p class="text-hero text-white/90 mb-20">
+          Join organizations who believe in the power of storytelling to inspire innovation.
+        </p>
+
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="border-2 border-white/20 p-8">
+            <div class="text-4xl font-bold mb-4 text-accent">PLATINUM</div>
+            <h3 class="text-2xl font-semibold mb-6 text-white">Premier Partners</h3>
+            <p class="text-white/80 text-lg leading-relaxed mb-8">
+              Substantial support for our research and storytelling efforts with maximum visibility.
             </p>
+            <div class="space-y-3 text-white/70">
+              <div>• Homepage logo placement</div>
+              <div>• Dedicated content features</div>
+              <div>• Executive access</div>
+            </div>
           </div>
-        </div>
 
-        <div class="space-y-4 text-center">
-          <div class="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-            <UIcon
-              name="i-lucide-target"
-              class="h-8 w-8 text-primary"
-            />
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold">
-              Quality Content
-            </h3>
-            <p class="text-sm text-muted-foreground">
-              Meticulously researched and beautifully crafted stories that educate and inspire.
+          <div class="border-2 border-white/20 p-8">
+            <div class="text-4xl font-bold mb-4 text-accent">GOLD</div>
+            <h3 class="text-2xl font-semibold mb-6 text-white">Innovation Partners</h3>
+            <p class="text-white/80 text-lg leading-relaxed mb-8">
+              Significant contribution to our mission with featured recognition.
             </p>
+            <div class="space-y-3 text-white/70">
+              <div>• Content page features</div>
+              <div>• Newsletter inclusion</div>
+              <div>• Event partnerships</div>
+            </div>
           </div>
-        </div>
 
-        <div class="space-y-4 text-center">
-          <div class="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-            <UIcon
-              name="i-lucide-heart"
-              class="h-8 w-8 text-primary"
-            />
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold">
-              Meaningful Impact
-            </h3>
-            <p class="text-sm text-muted-foreground">
-              Supporting education, innovation, and the preservation of important historical narratives.
+          <div class="border-2 border-white/20 p-8">
+            <div class="text-4xl font-bold mb-4 text-accent">SILVER</div>
+            <h3 class="text-2xl font-semibold mb-6 text-white">Story Supporters</h3>
+            <p class="text-white/80 text-lg leading-relaxed mb-8">
+              Essential support keeping our content accessible to everyone.
             </p>
-          </div>
-        </div>
-      </div>
-    </UPageSection>
-
-    <!-- Platinum Sponsors -->
-    <UPageSection
-      title="Platinum Sponsors"
-      description="Our premier partners who provide substantial support for our research and storytelling efforts."
-    >
-      <div class="grid gap-8 md:grid-cols-2">
-        <div
-          v-for="sponsor in sponsors.platinum"
-          :key="sponsor.name"
-          class="group rounded-lg border bg-card p-6 hover:shadow-md transition-shadow"
-        >
-          <div class="flex items-start gap-4">
-            <div class="h-16 w-16 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <UIcon
-                :name="sponsor.logo"
-                class="h-8 w-8 text-primary"
-              />
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl font-semibold group-hover:text-primary transition-colors">
-                {{ sponsor.name }}
-              </h3>
-              <p class="text-muted-foreground mt-1">
-                {{ sponsor.description }}
-              </p>
-              <UButton
-                :to="sponsor.website"
-                variant="ghost"
-                size="sm"
-                class="mt-3 -ml-3"
-                trailing-icon="i-lucide-external-link"
-              >
-                Visit Website
-              </UButton>
+            <div class="space-y-3 text-white/70">
+              <div>• Logo recognition</div>
+              <div>• Social media mentions</div>
+              <div>• Community access</div>
             </div>
           </div>
         </div>
       </div>
-    </UPageSection>
+    </section>
 
-    <!-- Gold Sponsors -->
-    <UPageSection
-      title="Gold Sponsors"
-      description="Valued partners who contribute significantly to our mission of uncovering innovation stories."
-    >
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div
-          v-for="sponsor in sponsors.gold"
-          :key="sponsor.name"
-          class="group rounded-lg border bg-card p-4 hover:shadow-sm transition-shadow"
-        >
-          <div class="flex items-start gap-3">
-            <div class="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <UIcon
-                :name="sponsor.logo"
-                class="h-6 w-6 text-primary"
-              />
+    <!-- Current Sponsors -->
+    <section class="section-large bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="display-md mb-20">Current Partners</h2>
+
+        <!-- Platinum Tier -->
+        <div class="mb-20">
+          <div class="text-2xl font-bold mb-8 text-accent uppercase tracking-widest">Platinum</div>
+          <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div v-for="sponsor in sponsors.platinum" :key="sponsor.name" class="border-2 border-black p-12 hover:bg-black hover:text-white transition-colors duration-300 group">
+              <div class="w-16 h-16 bg-gray-200 group-hover:bg-white group-hover:text-black mx-auto mb-6 flex items-center justify-center font-bold text-2xl">
+                {{ sponsor.name.slice(0, 2) }}
+              </div>
+              <h3 class="text-2xl font-semibold mb-3">{{ sponsor.name }}</h3>
+              <p class="text-lg opacity-80">{{ sponsor.description }}</p>
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="font-semibold group-hover:text-primary transition-colors">
-                {{ sponsor.name }}
-              </h3>
-              <p class="text-sm text-muted-foreground mt-1">
-                {{ sponsor.description }}
-              </p>
+          </div>
+        </div>
+
+        <!-- Gold Tier -->
+        <div class="mb-20">
+          <div class="text-2xl font-bold mb-8 text-accent uppercase tracking-widest">Gold</div>
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div v-for="sponsor in sponsors.gold" :key="sponsor.name" class="border border-black p-8 hover:bg-black hover:text-white transition-colors duration-300 group">
+              <div class="w-12 h-12 bg-gray-200 group-hover:bg-white group-hover:text-black mx-auto mb-4 flex items-center justify-center font-bold text-lg">
+                {{ sponsor.name.slice(0, 1) }}
+              </div>
+              <h3 class="text-xl font-semibold mb-2">{{ sponsor.name }}</h3>
+              <p class="opacity-80">{{ sponsor.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Silver Tier -->
+        <div>
+          <div class="text-2xl font-bold mb-8 text-accent uppercase tracking-widest">Silver</div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div v-for="sponsor in sponsors.silver" :key="sponsor.name" class="border border-gray-300 p-6 hover:border-black transition-colors">
+              <div class="w-10 h-10 bg-gray-100 mx-auto mb-3 flex items-center justify-center font-semibold">
+                {{ sponsor.name.slice(0, 1) }}
+              </div>
+              <h3 class="font-semibold mb-1">{{ sponsor.name }}</h3>
+              <p class="text-sm opacity-70">{{ sponsor.description }}</p>
             </div>
           </div>
         </div>
       </div>
-    </UPageSection>
+    </section>
 
-    <!-- Silver Sponsors -->
-    <UPageSection
-      title="Silver Sponsors"
-      description="Supporting organizations that help make our content freely accessible to everyone."
-    >
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div
-          v-for="sponsor in sponsors.silver"
-          :key="sponsor.name"
-          class="group rounded-lg border bg-card p-4 hover:shadow-sm transition-shadow"
-        >
-          <div class="text-center space-y-3">
-            <div class="mx-auto h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-              <UIcon
-                :name="sponsor.logo"
-                class="h-5 w-5 text-primary"
-              />
-            </div>
-            <div>
-              <h3 class="font-medium group-hover:text-primary transition-colors">
-                {{ sponsor.name }}
-              </h3>
-              <p class="text-xs text-muted-foreground mt-1">
-                {{ sponsor.description }}
-              </p>
-            </div>
-          </div>
+    <!-- Final CTA -->
+    <section class="section-large bg-gray-100">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="display-md mb-8">
+          Support Innovation
+          <br>
+          Storytelling
+        </h2>
+        <p class="text-hero mb-12">
+          Join our mission to preserve and share the stories that inspire the next generation of innovators.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <button class="btn-primary">
+            Become a Sponsor
+          </button>
+          <button class="btn-secondary">
+            Learn More
+          </button>
         </div>
       </div>
-    </UPageSection>
-
-    <!-- Sponsorship Opportunities -->
-    <UPageSection
-      title="Become a Sponsor"
-      description="Join our community of supporters and help us continue telling the stories that inspire innovation."
-    >
-      <div class="max-w-4xl mx-auto">
-        <div class="grid gap-8 lg:grid-cols-3">
-          <div class="lg:col-span-2 space-y-6">
-            <div>
-              <h3 class="text-lg font-semibold mb-3">
-                Sponsorship Benefits
-              </h3>
-              <ul class="space-y-3">
-                <li class="flex items-start gap-3">
-                  <UIcon
-                    name="i-lucide-check"
-                    class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"
-                  />
-                  <span class="text-muted-foreground">Brand visibility across our digital platforms</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <UIcon
-                    name="i-lucide-check"
-                    class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"
-                  />
-                  <span class="text-muted-foreground">Recognition in our quarterly impact reports</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <UIcon
-                    name="i-lucide-check"
-                    class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"
-                  />
-                  <span class="text-muted-foreground">Early access to new content and research findings</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <UIcon
-                    name="i-lucide-check"
-                    class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"
-                  />
-                  <span class="text-muted-foreground">Opportunities for co-branded content partnerships</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-semibold mb-3">
-                Partnership Opportunities
-              </h3>
-              <p class="text-muted-foreground">
-                We offer flexible sponsorship packages tailored to your organization's goals and budget.
-                From content partnerships to event sponsorships, we'll work with you to create a
-                meaningful collaboration that aligns with your values and reaches your target audience.
-              </p>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <div class="rounded-lg border bg-card p-6">
-              <h3 class="font-semibold mb-4">
-                Get Started
-              </h3>
-              <p class="text-sm text-muted-foreground mb-4">
-                Ready to support the future of innovation storytelling?
-              </p>
-              <UButton
-                to="#"
-                size="sm"
-                block
-                trailing-icon="i-lucide-arrow-right"
-              >
-                Contact Us
-              </UButton>
-            </div>
-
-            <div class="rounded-lg border bg-card p-6">
-              <h3 class="font-semibold mb-4">
-                Media Kit
-              </h3>
-              <p class="text-sm text-muted-foreground mb-4">
-                Download our sponsorship information packet.
-              </p>
-              <UButton
-                to="#"
-                variant="outline"
-                size="sm"
-                block
-                trailing-icon="i-lucide-download"
-              >
-                Download PDF
-              </UButton>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UPageSection>
-
-    <UPageSection>
-      <UPageCTA
-        title="Support Innovation Storytelling"
-        description="Join our mission to preserve and share the stories that inspire the next generation of innovators."
-        variant="subtle"
-        :links="[{
-          label: 'Become a Sponsor',
-          to: '#',
-          trailingIcon: 'i-lucide-arrow-right'
-        }, {
-          label: 'Learn More',
-          to: '/about',
-          color: 'neutral',
-          variant: 'outline'
-        }]"
-      />
-    </UPageSection>
+    </section>
   </div>
 </template>
