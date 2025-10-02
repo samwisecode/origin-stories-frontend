@@ -44,6 +44,21 @@
     <!-- Ticket CTA Section -->
     <TicketCTA />
 
+    <div>
+      <h2 class="text-3xl font-bold text-center my-8">Featured Speakers</h2>
+      <div class="flex flex-wrap justify-center">
+        <SpeakerProfileCard
+          class="m-8"
+          name="Will Green"
+          title="Founder & CEO"
+          avatar-url="https://media.licdn.com/dms/image/v2/D4D03AQG_d8huZ9FSLA/profile-displayphoto-shrink_800_800/B4DZUZkWONGcAk-/0/1739890714218?e=1762387200&v=beta&t=l3O0soWj7YlcA2EFgA_zUKvZCOGsbPNsXe_8wof3yT8"
+          :show-user-info="true"
+          :show-behind-gradient="true"
+          :enable-tilt="true"
+        />
+      </div>
+    </div>
+
     <!-- Final CTA Section -->
     <FinalCTA />
   </div>

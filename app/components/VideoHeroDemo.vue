@@ -50,15 +50,15 @@ const _props = withDefaults(defineProps<VideoHeroDemoProps>(), {
         <template #header>
           <div class="text-center space-y-3">
             <div class="max-w-6xl mx-auto">
-              <span class="text-white font-bold drop-shadow-lg text-2xl md:text-3xl lg:text-8xl md:leading-[140%]">{{ title }}</span>
+              <span class="text-white font-bold drop-shadow-lg text-2xl md:text-3xl lg:text-8xl">{{
+                title
+              }}</span>
             </div>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-3 text-xl md:text-2xl lg:text-3xl text-white/80 drop-shadow-md">
+            <div
+              class="flex flex-col md:flex-row items-center justify-center gap-3 text-xl md:text-2xl lg:text-3xl text-white/80 drop-shadow-md"
+            >
               <span v-if="date">{{ date }}</span>
-              <span
-                v-if="date && venue"
-                aria-hidden="true"
-                class="hidden md:block"
-              >•</span>
+              <span v-if="date && venue" aria-hidden="true" class="hidden md:block">•</span>
               <span v-if="venue">{{ venue }}</span>
             </div>
           </div>
