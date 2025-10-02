@@ -78,7 +78,6 @@
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 400;
   line-height: 1.4;
-  color: #333;
   max-width: 50rem;
 }
 
@@ -118,7 +117,7 @@
 }
 
 .btn-primary:hover {
-  background: #fff;
+  background: transparent;
   color: #000;
   border-color: #000;
   cursor: pointer;

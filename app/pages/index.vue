@@ -49,12 +49,12 @@
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
         <p class="text-white text-3xl my-8 mx-auto leading-relaxed">
           Origin Stories is a
-          <span class="text-black bg-white font-bold p-2"
+          <span class="text-black bg-white font-bold p-2 border-4 border-black"
             >live theatre event and media platform</span
           >
           where
-          <span class="text-black bg-white font-bold p-2 border-t-4 border-r-4 border-black"
-            >African entrepreneurs share their inspiring journeys.</span
+          <span class="text-black bg-white font-bold p-2 border-4 border-black"
+            >African&nbsp;entrepreneurs share their inspiring journeys.</span
           >It’s not just a stage, it’s a support platform. The stories are raw, honest, and deeply
           human. They highlight resilience, ingenuity and legacy, while amplifying African
           entrepreneurship to the world.
@@ -73,7 +73,7 @@
       </div>
     </UPageSection>
 
-    <UPageSection class="">
+    <UPageSection>
       <div class="container mx-auto bg-white border-6 border-black">
         <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
           <p class="text-black text-3xl font-medium my-8 mx-auto leading-relaxed">
@@ -82,6 +82,50 @@
             about the Why Me? and the What Did I Sacrifice?; the personal truth that forges
             excellence.
           </p>
+          <p class="text-black text-3xl font-medium my-8 mx-auto leading-relaxed">
+            In the African ecosystem, trust is built relationally, not transactionally. We provide
+            the essential context you need to connect with customers, attract the right capital, and
+            secure top talent.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <UButton class="btn-primary">Get Event Tickets</UButton>
+      </div>
+    </UPageSection>
+
+    <UPageSection>
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-black text-6xl font-black my-8 mx-auto leading-[120%]">
+          Welcome to the home of authentic African innovation.
+        </h2>
+        <div>
+          <div
+            style="
+              position: relative;
+              padding-bottom: 68.25%;
+              padding-top: 35px;
+              height: 0;
+              overflow: hidden;
+            "
+          >
+            <iframe
+              src="https://app.airtimetools.com/embed/z_0TaBL4Irrx4SyVj8FymM?embedSlides=true"
+              frameborder="0"
+              allow="autoplay; encrypted-media; allowfullscreen"
+              style="
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                width: 100%;
+                height: 100%;
+              "
+            ></iframe>
+          </div>
         </div>
       </div>
     </UPageSection>
@@ -117,13 +161,13 @@
           Behind Innovation?
         </h2>
         <p class="text-hero mb-12">
-          Join thousands of curious minds exploring the fascinating origins of the technologies and
-          ideas that shape our daily lives.
+          Join the curious minds exploring the fascinating origins of the technologies and ideas
+          that shape our daily lives.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <button class="btn-primary">Start Exploring</button>
-          <button class="btn-secondary">View Our Sponsors</button>
+          <UButton class="btn-primary" to="/about">Start Exploring</UButton>
+          <UButton class="btn-secondary" to="/sponsors">View Our Sponsors</UButton>
         </div>
       </div>
     </section>
