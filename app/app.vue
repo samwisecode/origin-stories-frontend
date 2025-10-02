@@ -31,9 +31,7 @@ const navigation = [
   <UApp>
     <UHeader>
       <template #left>
-        <NuxtLink to="/">
-          <AppLogo class="w-auto h-6 shrink-0" />
-        </NuxtLink>
+        <NuxtLink to="/" class="text-2xl font-bold"> ORIGIN STORIES </NuxtLink>
 
         <nav class="hidden md:flex items-center gap-6 ml-8">
           <NuxtLink
@@ -49,7 +47,7 @@ const navigation = [
       </template>
 
       <template #right>
-        <UButton to="#" color="primary" variant="solid"> Get Your Ticket </UButton>
+        <UButton class="btn-menu">Get Your Ticket</UButton>
       </template>
     </UHeader>
 

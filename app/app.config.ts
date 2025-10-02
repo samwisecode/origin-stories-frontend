@@ -1,11 +1,26 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'green',
+      primary: 'slate',
       neutral: 'slate'
     },
-    pageHero: {
-      description: 'max-w-2xl mx-auto text-lg text-muted-foreground'
+    button: {
+      defaultVariants: {
+        color: 'black',
+        variant: 'solid',
+        size: 'md'
+      },
+      default: {
+        class: 'bg-black text-white'
+      }
     }
+    // pageHero: {
+    //   title: 'hero-title',
+    //   description: 'hero-description mt-6'
+    // },
+    // pageSection: {
+    //   title: 'section-title',
+    //   description: 'section-description mt-4'
+    // }
   }
 })

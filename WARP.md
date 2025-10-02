@@ -12,7 +12,9 @@ This is a **Nuxt 4** application built with **Nuxt UI** as the design system fou
 - **UI Library**: Nuxt UI 4.0.0 (with Tailwind CSS)
 - **Language**: TypeScript
 - **Package Manager**: pnpm (v10.17.1)
-- **Styling**: Tailwind CSS with custom green color palette
+- **Typography**: Inter font family (100-900 weights)
+- **Styling**: TED-inspired design system with dramatic typography
+- **Color Palette**: High-contrast black/white with red accents
 - **Icons**: Lucide icons via @iconify-json/lucide
 - **Image Optimization**: @nuxt/image
 - **Linting**: ESLint with @nuxt/eslint
@@ -61,10 +63,12 @@ pnpm typecheck        # Run TypeScript type checking
 - Template menu is a dropdown showing different Nuxt UI template options
 - Custom `AppLogo` component renders SVG logo with CSS custom properties for theming
 
-**Styling Approach**:
-- Custom green color palette defined in `main.css` using Tailwind's @theme directive
-- Uses CSS custom properties (`var(--ui-primary)`) for dynamic theming
-- Primary color is set to 'green' and neutral to 'slate' in app config
+**Design System**:
+- TED-inspired dramatic typography with ultra-bold headlines
+- High-contrast black/white layout with strategic red accents
+- Massive section spacing for visual impact (`section-massive`, `section-large`)
+- Custom typography scale: `.display-xl`, `.display-lg`, `.display-md`, `.text-hero`, `.text-lead`
+- Sharp, geometric button styles with uppercase text and bold borders
 
 **SEO & Meta Management**: 
 - Centralized SEO configuration in `app.vue` using `useSeoMeta` composable

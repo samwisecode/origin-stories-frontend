@@ -26,5 +26,11 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  fonts: {
+    families: [
+      { name: 'Inter', provider: 'google' }
+    ]
   }
 })
