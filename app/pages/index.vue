@@ -48,11 +48,41 @@
     <UPageSection class="bg-black text-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
         <p class="text-white text-3xl my-8 mx-auto leading-relaxed">
-          Origin Stories is a live theatre event and media platform where African entrepreneurs
-          share their inspiring journeys. It’s not just a stage, it’s a support platform. The
-          stories are raw, honest, and deeply human. They highlight resilience, ingenuity and
-          legacy, while amplifying African entrepreneurship to the world.
+          Origin Stories is a
+          <span class="text-black bg-white font-bold p-2"
+            >live theatre event and media platform</span
+          >
+          where
+          <span class="text-black bg-white font-bold p-2 border-t-4 border-r-4 border-black"
+            >African entrepreneurs share their inspiring journeys.</span
+          >It’s not just a stage, it’s a support platform. The stories are raw, honest, and deeply
+          human. They highlight resilience, ingenuity and legacy, while amplifying African
+          entrepreneurship to the world.
         </p>
+      </div>
+    </UPageSection>
+
+    <UPageSection>
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <p class="text-black text-5xl font-black my-8 mx-auto leading-[120%]">
+          Our mission is to
+          <span class="bg-black text-white px-4 py-2">inspire and empower</span> by broadcasting the
+          journeys of Africa’s boldest founders; stories that shape culture, create communities, and
+          attract global capital.
+        </p>
+      </div>
+    </UPageSection>
+
+    <UPageSection class="">
+      <div class="container mx-auto bg-white border-6 border-black">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+          <p class="text-black text-3xl font-medium my-8 mx-auto leading-relaxed">
+            Origin Stories goes deeper. We capture the unfiltered, human, and inspiring Hero's
+            Journey of Africa's most brilliant innovators. This isn't about traction graphs; it's
+            about the Why Me? and the What Did I Sacrifice?; the personal truth that forges
+            excellence.
+          </p>
+        </div>
       </div>
     </UPageSection>
 
