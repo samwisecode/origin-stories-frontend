@@ -131,7 +131,7 @@
     </UPageSection>
 
     <!-- Featured Speaker Section -->
-    <section class="section-large bg-white">
+    <!-- <section class="section-large bg-white">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="text-center mb-20">
           <h2 class="display-md mb-8">Featured Speaker</h2>
@@ -150,7 +150,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Final CTA -->
     <section class="section-large bg-gray-50">
