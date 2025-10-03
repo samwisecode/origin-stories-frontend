@@ -5,74 +5,10 @@ useSeoMeta({
   description:
     "Meet the organizations and individuals who support Origin Stories' mission to uncover the stories behind innovation."
 })
-
-// const sponsors = {
-//   platinum: [
-//     {
-//       name: 'TechForward Foundation',
-//       logo: 'i-lucide-building-2',
-//       description: 'Supporting digital innovation storytelling',
-//       website: '#'
-//     },
-//     {
-//       name: 'Innovation Institute',
-//       logo: 'i-lucide-lightbulb',
-//       description: 'Advancing research in innovation history',
-//       website: '#'
-//     }
-//   ],
-//   gold: [
-//     {
-//       name: 'Future Labs',
-//       logo: 'i-lucide-rocket',
-//       description: "Pioneering tomorrow's technologies",
-//       website: '#'
-//     },
-//     {
-//       name: 'Discovery Media Group',
-//       logo: 'i-lucide-tv',
-//       description: 'Bringing stories to global audiences',
-//       website: '#'
-//     },
-//     {
-//       name: 'Heritage Research Center',
-//       logo: 'i-lucide-book',
-//       description: 'Preserving innovation heritage',
-//       website: '#'
-//     }
-//   ],
-//   silver: [
-//     {
-//       name: 'StartupStory Co.',
-//       logo: 'i-lucide-trending-up',
-//       description: 'Documenting entrepreneurial journeys',
-//       website: '#'
-//     },
-//     {
-//       name: 'Digital Archives Inc.',
-//       logo: 'i-lucide-database',
-//       description: 'Digitizing historical records',
-//       website: '#'
-//     },
-//     {
-//       name: 'Creative Minds Network',
-//       logo: 'i-lucide-users',
-//       description: 'Connecting innovators worldwide',
-//       website: '#'
-//     },
-//     {
-//       name: 'Research Partners LLC',
-//       logo: 'i-lucide-microscope',
-//       description: 'Supporting investigative research',
-//       website: '#'
-//     }
-//   ]
-// }
 </script>
 
 <template>
   <div>
-    <!-- Dramatic Hero Section -->
     <section class="section-massive bg-white">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="text-center">
