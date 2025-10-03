@@ -2,41 +2,43 @@
   <div>
     <!-- Dramatic Hero Section -->
     <section class="section-massive relative overflow-hidden bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12 items-center min-h-screen">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="../assets/images/african-landscape.jpg"
+          alt="African landscape background"
+          class="w-auto h-full object-cover"
+        />
+        <!-- Black Opacity Overlay -->
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+      <!-- Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-8">
             <div class="space-y-8">
-              <h1 class="display-xl">
+              <h1 class="display-xl text-black">
                 Origin
                 <br />
                 <span class="text-accent">Stories</span>
               </h1>
               <div class="space-y-6">
-                <h2 class="display-md font-normal">
+                <h2 class="display-md font-normal text-white">
                   Beyond the Pitch Deck.
                   <br />
                   This is the Real Story.
                 </h2>
-                <p class="text-hero mb-0">12 September 2025 | 6:30pm</p>
-                <p class="text-lg text-black">The Homecoming Theatre, District 6, Cape Town</p>
+                <p class="text-hero mb-0 text-white">12 September 2025 | 6:30pm</p>
+                <p class="text-xl text-white/80">The Homecoming Theatre, District 6, Cape Town</p>
               </div>
               <div class="flex flex-col sm:flex-row gap-4 pt-8">
-                <UButton class="btn-primary">Get Your Ticket</UButton>
-                <UButton class="btn-secondary">Learn More</UButton>
-              </div>
-            </div>
-          </div>
-          <div class="lg:col-span-4">
-            <div class="relative">
-              <!-- Placeholder for future video/visual element -->
-              <div class="aspect-square bg-gray-100 rounded-sm flex items-center justify-center">
-                <div class="text-center space-y-4">
-                  <img
-                    src="../assets/images/speaker.jpg"
-                    alt="Origin Stories Speaker"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
+                <UButton
+                  class="btn-primary bg-white text-black border-2 border-black hover:bg-black hover:text-white hover:border-white"
+                  >Get Your Ticket</UButton
+                >
+                <UButton class="btn-secondary bg-white text-black hover:bg-gray-100"
+                  >Learn More</UButton
+                >
               </div>
             </div>
           </div>
