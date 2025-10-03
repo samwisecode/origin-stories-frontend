@@ -30,8 +30,8 @@
               What is <span class="text-green-600">Origin Stories</span>?
             </h2>
             <p class="text-lg md:text-xl leading-relaxed text-gray-700">
-              Origin Stories is a <strong class="text-green-600">live theatre event and media platform</strong> where
-              <strong class="text-blue-600">African entrepreneurs share their inspiring journeys</strong>.
+              Origin Stories is a <span class="relative inline-block text-green-600 font-bold swoosh-underline">live theatre event and media platform</span> where 
+              <strong class="text-blue-600">African entrepreneurs share their inspiring journeys</strong>. 
               It's not just a stage, it's a support platform.
             </p>
             <div class="flex flex-wrap gap-3">
@@ -151,5 +151,65 @@
 
 .animate-fade-in {
   animation: fadeInUp 0.6s ease-out;
+}
+
+/* Curved swoosh underline */
+.swoosh-underline {
+  position: relative;
+  z-index: 1;
+}
+
+.swoosh-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: white;
+  border-radius: 3px;
+  transform: scaleY(1) skew(-15deg, 0deg);
+  transform-origin: bottom left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: swooshDraw 1.2s ease-out 0.2s forwards;
+}
+
+/* Remove the before pseudo-element for simpler, cleaner look */
+
+@keyframes swooshDraw {
+  0% {
+    width: 0%;
+    opacity: 0;
+    transform: scaleY(1) skew(-15deg, 0deg);
+  }
+  50% {
+    width: 60%;
+    opacity: 0.9;
+    transform: scaleY(1.1) skew(-20deg, 0deg);
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    transform: scaleY(1) skew(-15deg, 0deg);
+  }
+}
+
+/* Hover effect for the swoosh */
+.swoosh-underline:hover::after {
+  animation: swooshPulse 0.6s ease-in-out;
+}
+
+@keyframes swooshPulse {
+  0%, 100% {
+    transform: scaleY(1) skew(-15deg, 0deg);
+    opacity: 1;
+    height: 5px;
+  }
+  50% {
+    transform: scaleY(1.2) skew(-18deg, 0deg);
+    opacity: 0.9;
+    height: 6px;
+  }
 }
 </style>

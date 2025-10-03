@@ -47,7 +47,7 @@ const navigation = [
       </template>
 
       <template #right>
-        <UButton class="btn-menu">Get Your Ticket</UButton>
+        <UButton class="btn-menu hover:bg-transparent">Get Your Ticket</UButton>
       </template>
     </UHeader>
 

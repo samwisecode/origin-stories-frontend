@@ -35,17 +35,17 @@
   --color-slate-950: #020617;
 
   /* Orange accent color */
-  --color-orange-50: #d47c39;
-  --color-red-100: #d47c39;
-  --color-red-200: #d47c39;
-  --color-red-300: #d47c39;
-  --color-red-400: #d47c39;
-  --color-red-500: #d47c39;
-  --color-red-600: #d47c39;
-  --color-red-700: #d47c39;
-  --color-red-800: #d47c39;
-  --color-red-900: #d47c39;
-  --color-red-950: #d47c39;
+  --color-sunset-50: #d47c39;
+  --color-sunset-100: #d47c39;
+  --color-sunset-200: #d47c39;
+  --color-sunset-300: #d47c39;
+  --color-sunset-400: #d47c39;
+  --color-sunset-500: #d47c39;
+  --color-sunset-600: #d47c39;
+  --color-sunset-700: #d47c39;
+  --color-sunset-800: #d47c39;
+  --color-sunset-900: #d47c39;
+  --color-sunset-950: #d47c39;
 }
 
 /* TED-inspired typography system */
@@ -78,7 +78,6 @@
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 400;
   line-height: 1.4;
-  color: #333;
   max-width: 50rem;
 }
 
@@ -118,7 +117,7 @@
 }
 
 .btn-primary:hover {
-  background: #fff;
+  background: transparent;
   color: #000;
   border-color: #000;
   cursor: pointer;
