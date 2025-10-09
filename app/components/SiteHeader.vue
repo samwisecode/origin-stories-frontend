@@ -7,7 +7,7 @@ const navigation = [
 </script>
 
 <template>
-  <header class="border-b-2 border-black p-4">
+  <header class="bg-white border-b-2 border-black p-4 sticky top-0 z-50">
     <div class="container mx-auto flex items-center justify-between">
       <div class="flex">
         <NuxtLink to="/" class="text-2xl font-bold">
@@ -34,7 +34,11 @@ const navigation = [
       </div>
 
       <div>
-        <UButton class="btn-menu hover:bg-transparent">Get Your Ticket</UButton>
+        <UButton
+          class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white"
+        >
+          Get Your Ticket
+        </UButton>
       </div>
     </div>
   </header>

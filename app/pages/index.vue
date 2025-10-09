@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+// const speakers = [
+
+// ]
+</script>
+
 <template>
   <div>
     <!-- Dramatic Hero Section -->
@@ -20,17 +26,19 @@
                 <img src="/Origin_Stories_Primary_Flag yellow.svg" class="w-164" />
               </div>
               <div class="space-y-6 text-center">
-                <h2 class="font-semibold text-3xl mb-16 text-black">
+                <h2 class="font-semibold text-3xl mb-16 text-light-brown">
                   Inspiring Stories of African Entrepreneurs
                 </h2>
-                <p class="text-4xl text-center mb-2 text-light-brown">12 November 2025 | 6:30pm</p>
-                <p class="text-xl text-light-brown text-center">
+                <p class="text-4xl text-center mb-2 text-black font-semibold">
+                  12 November 2025 | 6:30pm
+                </p>
+                <p class="text-xl text-black text-center">
                   The Homecoming Theatre, District 6, Cape Town
                 </p>
               </div>
               <div class="flex flex-col justify-center sm:flex-row gap-4 pt-8">
                 <UButton
-                  class="btn-primary bg-[#c59640] text-white border-2 border-black hover:bg-black hover:text-white hover:border-white"
+                  class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white hover:border-white"
                   >Get Your Ticket</UButton
                 >
                 <UButton
@@ -89,8 +97,15 @@
           </p>
         </div>
       </div>
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <UButton class="btn-primary">Get Event Tickets</UButton>
+    </UPageSection>
+
+    <UPageSection>
+      <h2 class="font-semibold text-4xl text-black text-center">Speakers</h2>
+      <div class="grid grid-cols-4 gap-4">
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
       </div>
     </UPageSection>
 
@@ -129,28 +144,6 @@
         </div>
       </div>
     </UPageSection>
-
-    <!-- Featured Speaker Section -->
-    <!-- <section class="section-large bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="text-center mb-20">
-          <h2 class="display-md mb-8">Featured Speaker</h2>
-        </div>
-
-        <div class="flex justify-center">
-          <div class="max-w-md">
-            <SpeakerProfileCard
-              name="Will Green"
-              title="Founder & CEO"
-              avatar-url="https://media.licdn.com/dms/image/v2/D4D03AQG_d8huZ9FSLA/profile-displayphoto-shrink_800_800/B4DZUZkWONGcAk-/0/1739890714218?e=1762387200&v=beta&t=l3O0soWj7YlcA2EFgA_zUKvZCOGsbPNsXe_8wof3yT8"
-              :show-user-info="true"
-              :show-behind-gradient="false"
-              :enable-tilt="false"
-            />
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Final CTA -->
     <section class="section-large bg-gray-50">

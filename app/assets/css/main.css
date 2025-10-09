@@ -117,9 +117,6 @@
 }
 
 .btn-menu {
-  background: #000;
-  color: #fff;
-  border: 2px solid #000;
   padding: 0.5rem 1rem;
   font-weight: 600;
   font-size: 0.75rem;
@@ -130,9 +127,6 @@
 }
 
 .btn-menu:hover {
-  background: #fff;
-  color: #000;
-  border-color: #000;
   cursor: pointer;
 }
 
