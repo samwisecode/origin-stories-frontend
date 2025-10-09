@@ -113,9 +113,6 @@
 }
 
 .btn-primary:hover {
-  background: transparent;
-  color: #000;
-  border-color: #000;
   cursor: pointer;
 }
 
@@ -150,8 +147,7 @@
 }
 
 .btn-secondary:hover {
-  background: #000;
-  color: #fff;
+  cursor: pointer;
 }
 
 /* Grid systems */

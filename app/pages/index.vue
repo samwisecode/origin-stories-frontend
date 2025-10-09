@@ -34,7 +34,8 @@
                   class="btn-primary bg-[#c59640] text-white border-2 border-black hover:bg-black hover:text-white hover:border-white"
                   >Get Your Ticket</UButton
                 >
-                <UButton class="btn-secondary bg-black text-white hover:bg-white hover:text-black"
+                <UButton
+                  class="btn-secondary bg-black text-white hover:bg-white hover:text-black border-2 border-black"
                   >Learn More</UButton
                 >
               </div>
