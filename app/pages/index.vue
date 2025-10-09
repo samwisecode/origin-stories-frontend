@@ -5,38 +5,36 @@
       <!-- Background Image -->
       <div class="absolute inset-0">
         <img
-          src="../assets/images/african-landscape.jpg"
+          src="/desert.jpg"
           alt="African landscape background"
-          class="w-auto h-full object-cover"
+          class="w-full h-full object-cover"
         />
         <!-- Black Opacity Overlay -->
-        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
       </div>
       <!-- Content -->
       <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-8">
-            <div class="space-y-8">
-              <h1 class="display-xl text-black">
-                Origin
-                <br />
-                <span class="text-accent">Stories</span>
-              </h1>
-              <div class="space-y-6">
-                <h2 class="display-md font-normal text-white">
-                  Beyond the Pitch Deck.
-                  <br />
-                  This is the Real Story.
-                </h2>
-                <p class="text-hero mb-0 text-white">12 September 2025 | 6:30pm</p>
-                <p class="text-xl text-white/80">The Homecoming Theatre, District 6, Cape Town</p>
+        <div class="">
+          <div class="">
+            <div class="space-y-8 text-center">
+              <div class="flex justify-center">
+                <img src="/Origin_Stories_Primary_Flag yellow.svg" class="w-164" />
               </div>
-              <div class="flex flex-col sm:flex-row gap-4 pt-8">
+              <div class="space-y-6 text-center">
+                <h2 class="display-md font-normal mb-16 text-white">
+                  Inspiring Stories of African Entrepreneurs
+                </h2>
+                <p class="text-4xl text-center mb-2 text-white">12 November 2025 | 6:30pm</p>
+                <p class="text-xl text-white/90 text-center">
+                  The Homecoming Theatre, District 6, Cape Town
+                </p>
+              </div>
+              <div class="flex flex-col justify-center sm:flex-row gap-4 pt-8">
                 <UButton
-                  class="btn-primary bg-white text-black border-2 border-black hover:bg-black hover:text-white hover:border-white"
+                  class="btn-primary bg-[#c59640] text-white border-2 border-black hover:bg-black hover:text-white hover:border-white"
                   >Get Your Ticket</UButton
                 >
-                <UButton class="btn-secondary bg-white text-black hover:bg-gray-100"
+                <UButton class="btn-secondary bg-black text-white hover:bg-white hover:text-black"
                   >Learn More</UButton
                 >
               </div>

@@ -19,37 +19,11 @@ useSeoMeta({
   twitterImage: '/og-image.png',
   twitterCard: 'summary_large_image'
 })
-
-const navigation = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Sponsors', to: '/sponsors' }
-]
 </script>
 
 <template>
   <UApp>
-    <UHeader>
-      <template #left>
-        <NuxtLink to="/" class="text-2xl font-bold"> ORIGIN STORIES </NuxtLink>
-
-        <nav class="hidden md:flex items-center gap-6 ml-8">
-          <NuxtLink
-            v-for="item in navigation"
-            :key="item.to"
-            :to="item.to"
-            class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            active-class="text-foreground"
-          >
-            {{ item.label }}
-          </NuxtLink>
-        </nav>
-      </template>
-
-      <template #right>
-        <UButton class="btn-menu hover:bg-transparent">Get Your Ticket</UButton>
-      </template>
-    </UHeader>
+    <SiteHeader />
 
     <UMain>
       <NuxtPage />
