@@ -3,14 +3,13 @@
     <!-- Dramatic Hero Section -->
     <section class="section-massive relative overflow-hidden bg-white">
       <!-- Background Image -->
-      <div class="absolute inset-0">
-        <img
+      <div>
+        <!-- <img
           src="/desert.jpg"
           alt="African landscape background"
           class="w-full h-full object-cover"
-        />
+        /> -->
         <!-- Black Opacity Overlay -->
-        <div class="absolute inset-0 bg-black/20"></div>
       </div>
       <!-- Content -->
       <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -21,11 +20,11 @@
                 <img src="/Origin_Stories_Primary_Flag yellow.svg" class="w-164" />
               </div>
               <div class="space-y-6 text-center">
-                <h2 class="display-md font-normal mb-16 text-white">
+                <h2 class="font-semibold text-3xl mb-16 text-black">
                   Inspiring Stories of African Entrepreneurs
                 </h2>
-                <p class="text-4xl text-center mb-2 text-white">12 November 2025 | 6:30pm</p>
-                <p class="text-xl text-white/90 text-center">
+                <p class="text-4xl text-center mb-2 text-light-brown">12 November 2025 | 6:30pm</p>
+                <p class="text-xl text-light-brown text-center">
                   The Homecoming Theatre, District 6, Cape Town
                 </p>
               </div>
