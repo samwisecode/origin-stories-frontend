@@ -8,7 +8,7 @@ useHead({
 })
 
 const title = 'Origin Stories'
-const description = 'Beyond the Pitch Deck. This is the Real Story.'
+const description = 'Inspiring Stories of African Entrepreneurs'
 
 useSeoMeta({
   title,

@@ -15,7 +15,7 @@ useSeoMeta({
           <h1 class="display-xl mb-16">
             Our
             <br />
-            <span class="text-accent">Sponsors</span>
+            <span class="text-accent">Partners</span>
           </h1>
           <p class="text-hero mx-auto mb-12">
             Origin Stories is made possible through the generous support of African organizations

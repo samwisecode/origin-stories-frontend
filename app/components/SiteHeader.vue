@@ -2,7 +2,7 @@
 const navigation = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Sponsors', to: '/sponsors' }
+  { label: 'Partners', to: '/partners' }
 ]
 </script>
 
@@ -35,6 +35,8 @@ const navigation = [
 
       <div>
         <UButton
+          to="https://www.quicket.co.za/events/339332-origin-stories/#/"
+          target="_blank"
           class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white"
         >
           Get Your Ticket
