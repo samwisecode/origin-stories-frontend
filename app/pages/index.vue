@@ -130,7 +130,7 @@
       </div>
     </section>
 
-    <section class="container mx-auto">
+    <section class="container mx-auto py-20">
       <div class="grid grid-cols-3 items-center">
         <div class="col-span-2">
           <h2 class="text-black text-3xl my-8 font-bold mx-auto leading-[120%]">Our Vision</h2>
@@ -171,34 +171,9 @@
       </div>
     </section>
 
-    <!-- <div class="flex flex-col justify-center sm:flex-row gap-4">
-      <UButton
-        class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
-        to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-        target="_blank"
-        >Get Your Ticket</UButton
-      >
-    </div> -->
-
-    <section class="container mx-auto my-12">
-      <h2 class="font-semibold text-4xl text-black text-center my-8">Speakers</h2>
-      <div class="grid grid-cols-5 gap-4">
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-      </div>
-    </section>
-
     <section class="bg-black">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="text-white text-3xl font-black my-8 mx-auto leading-[120%]">
+      <div class="max-w-6xl mx-auto py-20 text-center">
+        <h2 class="text-light-brown text-4xl font-black py-8 mx-auto leading-[120%]">
           Welcome to the Home of Authentic African Origin Stories
         </h2>
         <div>
@@ -233,58 +208,30 @@
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="section-large bg-gray-50">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="display-md mb-8">
-          Ready to Discover the Stories
-          <br />
-          Behind Innovation?
-        </h2>
-        <p class="text-hero mb-12">
-          Join the curious minds exploring the fascinating origins of the technologies and ideas
-          that shape our daily lives.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <div>
-            <UButton
-              to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-              target="_blank"
-              class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white"
-            >
-              Get Your Ticket
-            </UButton>
-          </div>
-          <div>
-            <UButton
-              to="/#speakers"
-              target="_blank"
-              class="btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white"
-            >
-              Become a Speaker
-            </UButton>
-          </div>
-          <div>
-            <UButton
-              to="/partners"
-              target="_blank"
-              class="btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white"
-            >
-              Become a Partner
-            </UButton>
-          </div>
-          <div>
-            <UButton
-              to="/"
-              target="_blank"
-              class="btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white"
-            >
-              Follow Us
-            </UButton>
-          </div>
-        </div>
+    <section id="speakers" class="container mx-auto py-12">
+      <h2 class="font-semibold text-4xl text-black text-center my-8">Speakers</h2>
+      <div class="grid grid-cols-5 gap-4">
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+      </div>
+      <div class="flex flex-col justify-center pt-20 pb-10 sm:flex-row gap-4">
+        <UButton
+          class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
+          to="https://www.quicket.co.za/events/339332-origin-stories/#/"
+          target="_blank"
+          >Get Your Ticket</UButton
+        >
       </div>
     </section>
+
+    <JoinCommunity />
   </div>
 </template>

@@ -80,24 +80,6 @@ useSeoMeta({
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="section-large bg-gray-100">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="display-md mb-8">
-          Support Innovation
-          <br />
-          Storytelling
-        </h2>
-        <p class="text-hero mb-12">
-          Join our mission to preserve and share the stories that inspire the next generation of
-          innovators.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <button class="btn-primary">Become a Sponsor</button>
-          <button class="btn-secondary">Learn More</button>
-        </div>
-      </div>
-    </section>
+    <JoinCommunity />
   </div>
 </template>

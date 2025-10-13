@@ -84,24 +84,6 @@ useSeoMeta({
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="section-large bg-gray-100">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="display-md mb-8">
-          Join Our
-          <br />
-          Community
-        </h2>
-        <p class="text-hero mb-12">
-          Be part of a growing community of curious minds exploring the stories that shaped our
-          world.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <button class="btn-primary">Subscribe to Updates</button>
-          <button class="btn-secondary">Follow Us</button>
-        </div>
-      </div>
-    </section>
+    <JoinCommunity />
   </div>
 </template>
