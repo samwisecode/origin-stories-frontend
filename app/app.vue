@@ -40,7 +40,15 @@ useSeoMeta({
         <div class="flex items-center gap-2">
           <UButton
             to="#"
-            icon="i-simple-icons-twitter"
+            icon="i-simple-icons-youtube"
+            aria-label="Twitter"
+            color="neutral"
+            variant="ghost"
+            size="sm"
+          />
+          <UButton
+            to="https://www.instagram.com/willsgreenwalk"
+            icon="i-simple-icons-instagram"
             aria-label="Twitter"
             color="neutral"
             variant="ghost"
@@ -55,7 +63,7 @@ useSeoMeta({
             size="sm"
           />
           <UButton
-            to="#"
+            to="mailto:will@colab.marketing"
             icon="i-lucide-mail"
             aria-label="Contact"
             color="neutral"
