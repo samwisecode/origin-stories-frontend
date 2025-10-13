@@ -19,7 +19,7 @@ useSeoMeta({
               disservice to the world.
             </p>
             <p class="text-hero mb-8">
-              We created Origin Stories to give these narratives a high-quality, powerful platform.
+              We created Origin Stories to give these narratives a voice.
             </p>
           </div>
         </div>

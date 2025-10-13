@@ -17,15 +17,15 @@ useSeoMeta({
             <br />
             <span class="text-accent">Partners</span>
           </h1>
-          <p class="text-hero mx-auto mb-12">
+          <p class="text-hero mx-auto mb-8">
             Origin Stories is made possible through the generous support of African organizations
-            and individuals who believe in the power of storytelling to inspire innovation.
+            and individuals who believe in the power of storytelling to inspire future innovation.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="section-large bg-white container mx-auto">
+    <section class="bg-white container mx-auto">
       <div class="sponsor">
         <div>
           <img
@@ -64,17 +64,15 @@ useSeoMeta({
           <h2 class="text-2xl font-bold mt-8 mb-2">Von Seidels</h2>
           <p class="text-xl mb-4">
             Von Seidels is a specialist Intellectual Property law firm committed to protecting and
-            enforcing IP rights <strong>throughout Africa</strong>. With a head office in Cape Town
-            and a wide network including dedicated offices for filing directly in regional bodies
-            like ARIPO and OAPI, they bring decades of technical expertise and experience in complex
-            IP law. They are ISO 9001 certified for service quality, embodying a commitment to
-            excellence.
+            enforcing IP rights throughout Africa. With a head office in Cape Town and a wide
+            network including dedicated offices for filing directly in regional bodies like ARIPO
+            and OAPI, they bring decades of technical expertise and experience in complex IP law.
+            They are ISO 9001 certified for service quality, embodying a commitment to excellence.
           </p>
           <p class="text-xl mb-4">
             In an ecosystem where a founder's unique idea is their most valuable asset, Von Seidels
-            advocates the
-            <strong>security and integrity of that initial, sacrificial moment of innovation</strong
-            >. They understand that a founder's story begins with an original insight. By developing
+            advocates the security and integrity of that initial, sacrificial moment of innovation.
+            They understand that a founder's story begins with an original insight. By developing
             and implementing tailored IP strategies, they provide the crucial legal backbone that
             allows African ventures to grow with confidence and protect their origin.
           </p>

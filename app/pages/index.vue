@@ -109,54 +109,79 @@
           <span class="font-bold p-2">What is ORIGIN STORIES?</span>
         </p>
         <ul class="text-white/80 text-3xl list-disc pl-8">
-          <li class="my-8">10 handpicked curated speakers</li>
+          <li class="my-8"><strong>10 handpicked</strong> curated <strong>speakers</strong></li>
           <li class="my-8">
-            Each speaker has 7 minutes to share the real story behind their entrepreneurial journey.
+            Each speaker has <strong>7 minutes</strong> to share the real story behind their
+            <strong>entrepreneurial journey</strong>.
           </li>
           <li class="my-8">
-            Think 'TED talk' meets 'PechaKucha' with a healthy dose of humour, emotions,
-            celebrations and support.
+            Think <strong>'TED talk' meets 'PechaKucha'</strong> with a healthy dose of humour,
+            emotions, celebrations and support.
           </li>
           <li class="my-8">
-            The event is NOT an investor, product, business, sales or marketing pitch.
+            The event is <strong>NOT</strong> an investor, product, business, sales or marketing
+            pitch.
           </li>
           <li class="my-8">
-            An informal networking and entertaining evening with other curious and supportive
-            Humans.
+            An informal networking and <strong>entertaining evening</strong> with other curious and
+            supportive Humans.
           </li>
         </ul>
       </div>
     </section>
 
-    <div class="flex flex-col justify-center sm:flex-row gap-4">
+    <section class="container mx-auto">
+      <div class="grid grid-cols-3 items-center">
+        <div class="col-span-2">
+          <h2 class="text-black text-3xl my-8 font-bold mx-auto leading-[120%]">Our Vision</h2>
+          <p class="text-black text-xl my-8 mx-auto">
+            To inspire, connect and positively shape the global narrative of African
+            entrepreneurship.
+            <br />
+            To reach <strong>1 million African Entrepreneurs by 2050</strong>.
+          </p>
+          <p class="text-black text-xl my-8 mx-auto">
+            This isn’t just a platform, it’s a stage for stories that resonate, ideas that linger
+            and unheard voices to make a lasting impact.
+          </p>
+          <p class="text-black text-xl my-8 mx-auto">
+            Are you ready to experience real human and inspiring African Origin Stories?
+          </p>
+          <p class="text-black text-xl my-8 mx-auto">
+            We look forward to welcoming you on the
+            <strong>12th of November 2025 at 18:30 for 19:00 (doors open 18:00)</strong>.
+          </p>
+          <p class="text-black text-xl my-8 mx-auto">
+            Thanks to all our founding partners for your support especially Silicon Overdrive, Von
+            Seidels, Sealand. Thanks to our volunteer team (Terry, Paul, George, Keron, Kate, Danie,
+            Marius, Sam, Racheline, Marco, Chelsea et al).
+          </p>
+          <p class="text-sm">
+            For more information visit
+            <a href="https://www.originstories.africa" class="underline">www.originstories.africa</a
+            >.
+            <br />
+            *All profits will be reinvested to host future events to create and distribute more
+            stories and help support High School entrepreneur programmes in Africa.
+          </p>
+        </div>
+        <div>
+          <img src="/arms-linked.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="flex flex-col justify-center sm:flex-row gap-4">
       <UButton
         class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
         to="https://www.quicket.co.za/events/339332-origin-stories/#/"
         target="_blank"
         >Get Your Ticket</UButton
       >
-    </div>
+    </div> -->
 
-    <!-- <UPageSection>
-      <div class="container mx-auto bg-white border-6 border-black">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <p class="text-black text-3xl font-medium my-8 mx-auto leading-relaxed">
-            Origin Stories goes deeper. We capture the unfiltered, human, and inspiring Hero's
-            Journey of Africa's most brilliant innovators. This isn't about traction graphs; it's
-            about the Why Me? and the What Did I Sacrifice?; the personal truth that forges
-            excellence.
-          </p>
-          <p class="text-black text-3xl font-medium my-8 mx-auto leading-relaxed">
-            In the African ecosystem, trust is built relationally, not transactionally. We provide
-            the essential context you need to connect with customers, attract the right capital, and
-            secure top talent.
-          </p>
-        </div>
-      </div>
-    </UPageSection> -->
-
-    <section class="container mx-auto">
-      <h2 class="font-semibold text-4xl text-black text-center">Speakers</h2>
+    <section class="container mx-auto my-12">
+      <h2 class="font-semibold text-4xl text-black text-center my-8">Speakers</h2>
       <div class="grid grid-cols-5 gap-4">
         <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
         <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
@@ -171,16 +196,16 @@
       </div>
     </section>
 
-    <section>
+    <section class="bg-black">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="text-black text-3xl font-black my-8 mx-auto leading-[120%]">
+        <h2 class="text-white text-3xl font-black my-8 mx-auto leading-[120%]">
           Welcome to the Home of Authentic African Origin Stories
         </h2>
         <div>
           <div
             style="
               position: relative;
-              padding-bottom: 68.25%;
+              padding-bottom: 67.25%;
               padding-top: 35px;
               height: 0;
               overflow: hidden;
@@ -200,7 +225,7 @@
                 -moz-transform: translateX(-50%);
                 width: 100%;
                 height: 100%;
-                max-width: 850px;
+                background-color: black;
               "
             ></iframe>
           </div>
