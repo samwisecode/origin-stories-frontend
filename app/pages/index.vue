@@ -1,10 +1,59 @@
 <script lang="ts" setup>
 const speakers = [
   {
-    name: 'Sam',
-    profilePicUrl: 'https://img.com',
+    name: 'Zanele Abraham Matome',
+    profilePicUrl: '/Zanele-Abraham-Matome.jpg',
     title: 'Founder',
-    company: 'Lank Dev'
+    company: 'Welo Health'
+  },
+  {
+    name: 'Honesty Ndou',
+    profilePicUrl: '/Honesty-Ndou.jpg',
+    title: 'Founder',
+    company: 'HTN Architectural Design Lab',
+    linkedInUrl: 'https://www.linkedin.com/in/zanele-abraham-matome-68447518/'
+  },
+  {
+    name: 'Nkosinathi Temba',
+    profilePicUrl: '/Nkosinathi-Temba.jpg',
+    title: 'CEO & Co-founder',
+    company: 'thuto.io'
+  },
+  {
+    name: 'Samantha Skyring',
+    profilePicUrl: '/Samantha-Skyring.jpg',
+    title: 'CEO and Founder',
+    company: 'Oryx Desert Salt'
+  },
+  {
+    name: 'Thapelo Nthite',
+    profilePicUrl: '/Thapelo-Nthite.jpg',
+    title: 'Co-founder',
+    company: 'Botlhale AI'
+  },
+  {
+    name: 'Imtiyaaz Riley',
+    profilePicUrl: '/Imtiyaaz-Riley.jpg',
+    title: 'CEO',
+    company: 'Imtiyaaz'
+  },
+  {
+    name: 'Kimlynn Temple',
+    profilePicUrl: '/Kimlynn-Temple.jpg',
+    title: 'CEO',
+    company: 'Tipped'
+  },
+  {
+    name: 'Saleem Jaffer',
+    profilePicUrl: '/Saleem-Jaffer.jpg',
+    title: 'Founder',
+    company: 'Alpha Crest Finance'
+  },
+  {
+    name: 'Serisha Barrat',
+    profilePicUrl: '/Serisha-Barrat.jpg',
+    title: 'CEO',
+    company: 'Lawyerd Up'
   }
 ]
 </script>
@@ -61,17 +110,6 @@ const speakers = [
       </div>
     </section>
 
-    <!-- <section class="pt-4">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <p class="text-black text-3xl my-8 mx-auto leading-relaxed">
-          Our mission is to
-          <span class="bg-black font-bold text-white px-4 py-2">inspire and empower</span> by
-          broadcasting the journeys of Africa’s boldest founders; stories that shape culture, create
-          communities, and attract global capital.
-        </p>
-      </div>
-    </section> -->
-
     <section class="w-full p-8">
       <div class="container max-w-260 mx-auto text-center">
         <div>
@@ -82,7 +120,7 @@ const speakers = [
             The Origin of ORIGIN STORIES...
           </p>
           <p class="text-black text-3xl my-8 mx-auto">
-            Early one Friday morning while talking with an African entrepreneur and walking down
+            "Early one Friday morning while talking with an African entrepreneur and walking down
             Lion's Head mountain in Cape Town.
           </p>
           <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
@@ -99,10 +137,12 @@ const speakers = [
             stories and share them with the World.
           </p>
           <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
-            Join us in supporting and celebrating these inspiring Humans.
+            Join us in supporting and celebrating these inspiring Humans."
           </p>
-          <p class="text-black text-base my-8 mx-auto leading-[120%]">
-            Will Green Curator ORIGIN STORIES a WGW Community and Africa Tech Ecosystem initiative.
+          <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
+            <strong>Will Green</strong> <br />
+            Curator <br />
+            <span class="text-sm">a WGW Community and Africa Tech Ecosystem initiative.</span>
           </p>
         </div>
       </div>
@@ -114,7 +154,7 @@ const speakers = [
           <span class="font-bold p-2">What is ORIGIN STORIES?</span>
         </p>
         <ul class="text-white/80 text-3xl list-disc pl-8">
-          <li class="my-8"><strong>10 handpicked</strong> curated <strong>speakers</strong></li>
+          <li class="my-8"><strong>10 handpicked</strong> curated <strong>speakers</strong>.</li>
           <li class="my-8">
             Each speaker has <strong>7 minutes</strong> to share the real story behind their
             <strong>entrepreneurial journey</strong>.
@@ -130,6 +170,9 @@ const speakers = [
           <li class="my-8">
             An informal networking and <strong>entertaining evening</strong> with other curious and
             supportive Humans.
+          </li>
+          <li class="my-8">
+            A <strong>global community</strong> supporting African entrepreneurs.
           </li>
         </ul>
       </div>
@@ -158,14 +201,9 @@ const speakers = [
           </p>
           <p class="text-black text-xl my-8 mx-auto">
             Thanks to all our founding partners for your support especially Silicon Overdrive, Von
-            Seidels, Sealand. Thanks to our volunteer team (Terry, Paul, George, Keron, Kate, Danie,
-            Marius, Sam, Racheline, Marco, Chelsea et al).
+            Seidels, Sealand. Thanks to our volunteer team.
           </p>
-          <p class="text-sm">
-            For more information visit
-            <a href="https://www.originstories.africa" class="underline">www.originstories.africa</a
-            >.
-            <br />
+          <p class="text-black text-xl my-8 mx-auto">
             *All profits will be reinvested to host future events to create and distribute more
             stories and help support High School entrepreneur programmes in Africa.
           </p>
@@ -176,10 +214,10 @@ const speakers = [
       </div>
     </section>
 
-    <section id="speakers" class="container mx-auto py-12">
-      <h2 class="font-semibold text-4xl text-black text-center my-8">Speakers</h2>
-      <div class="grid grid-cols-5 gap-4">
-        <div>
+    <section id="speakers" class="py-20 bg-black">
+      <h2 class="font-semibold text-4xl text-white text-center my-8">Speakers</h2>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-5 gap-12 p-12">
           <SpeakerProfile
             v-for="(speaker, index) in speakers"
             :key="index"
@@ -187,16 +225,10 @@ const speakers = [
             :title="speaker.title"
             :profile-pic-url="speaker.profilePicUrl"
             :company="speaker.company"
+            :linked-in-url="speaker.linkedInUrl"
+            class="text-white/90 bg-black"
           />
         </div>
-      </div>
-      <div class="flex flex-col justify-center pt-20 pb-10 sm:flex-row gap-4">
-        <UButton
-          class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
-          to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-          target="_blank"
-          >Get Your Ticket</UButton
-        >
       </div>
     </section>
 

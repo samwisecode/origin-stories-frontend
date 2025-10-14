@@ -34,7 +34,7 @@ useSeoMeta({
             class="w-full max-w-64 h-full object-contain"
           />
         </div>
-        <div class="space-y-4 border-b-1 border-slate-200 pb-8 mb-16">
+        <div class="space-y-4 pb-8">
           <h2 class="text-2xl font-bold mt-8 mb-2">Silicon Overdrive</h2>
           <p class="text-xl mb-4">
             Founded in 1995 by a team driven by innovation, Silicon Overdrive has built a
@@ -50,7 +50,15 @@ useSeoMeta({
             the complex challenges of scaling an African business. They are the essential foundation
             that propels our content to the world.
           </p>
+          <p>
+            <NuxtLink to="https://www.overdrive.co.za/" class="underline font-bold"
+              >overdrive.co.za</NuxtLink
+            >
+          </p>
         </div>
+      </div>
+      <div>
+        <USeparator class="my-20" />
       </div>
       <div class="sponsor">
         <div>
@@ -76,10 +84,95 @@ useSeoMeta({
             and implementing tailored IP strategies, they provide the crucial legal backbone that
             allows African ventures to grow with confidence and protect their origin.
           </p>
+          <p>
+            <NuxtLink to="https://www.vonseidels.com/" class="underline font-bold"
+              >vonseidels.com</NuxtLink
+            >
+          </p>
+        </div>
+      </div>
+      <div>
+        <USeparator class="my-20" />
+      </div>
+      <div class="sponsor">
+        <div>
+          <img
+            src="/Sealand-Gear-Logo.png"
+            alt="Von Seidels Logo"
+            class="w-full max-w-64 h-full object-contain"
+          />
+        </div>
+        <div class="space-y-4 pb-8 mb-8">
+          <h2 class="text-2xl font-bold mt-8 mb-2">Sealand</h2>
+          <p class="text-xl mb-4">
+            Inspired by Cape Town, our love for adventure, and our mission to protect the outdoors -
+            Sealand is a lifestyle brand that focuses on responsibly made gear and apparel. Our
+            mission is to ensure that every decision we make keeps the planet and its people front
+            and centre. With this in mind, all of our bags and apparel are made from waste or
+            responsibly and ethically sourced materials.
+          </p>
+          <p class="text-xl mb-4">
+            The structural waste or meticulously sourced material is then combined with high-quality
+            hardware, innovative design, and expert craftsmanship to create gear that will last a
+            lifetime. Our upcycled and responsibly sourced materials are sturdy and weather
+            resistant, making them perfect for any adventure.
+          </p>
+          <p class="text-xl mb-4">
+            Sealand forms part of the vibrant South African community and environment around it,
+            while dedicating itself to profound social and environmental impact. We aspire to always
+            play our part for the planet and its people.
+          </p>
+          <p>
+            <NuxtLink to="https://sealandgear.com/" class="underline font-bold"
+              >sealandgear.com</NuxtLink
+            >
+          </p>
         </div>
       </div>
     </section>
 
-    <JoinCommunity />
+    <section class="section-large bg-gray-50">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="display-md mb-8">Amplify African Origin Stories</h2>
+        <p class="text-hero mb-12">Submit Your Story. Support Us. Share the Stories.</p>
+        <div class="flex flex-col justify-center pb-10 sm:flex-row gap-4">
+          <UButton
+            class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
+            to="https://www.quicket.co.za/events/339332-origin-stories/#/"
+            target="_blank"
+            >Get Your Ticket</UButton
+          >
+        </div>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <!-- <div>
+          <UButton
+            to="https://www.quicket.co.za/events/339332-origin-stories/#/"
+            target="_blank"
+            class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white"
+          >
+            Get Your Ticket
+          </UButton>
+        </div> -->
+          <div>
+            <UButton
+              to="/partners"
+              target="_blank"
+              class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
+            >
+              Support
+            </UButton>
+          </div>
+          <div>
+            <UButton
+              to="/"
+              target="_blank"
+              class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
+            >
+              Connect
+            </UButton>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
