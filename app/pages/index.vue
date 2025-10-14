@@ -69,10 +69,10 @@ const speakers = [
                 <img src="/Origin_Stories_Primary_Flag yellow.svg" class="w-164" />
               </div>
               <div class="space-y-6 text-center">
-                <h2 class="font-semibold text-3xl mb-8 text-light-brown">
+                <h2 class="font-semibold text-2xl md:text-3xl mb-8 text-light-brown">
                   Inspiring Journey's of African Entrepreneurs
                 </h2>
-                <p class="text-4xl text-center mb-2 text-black font-semibold">
+                <p class="text-3xl md:text-4xl text-center mb-2 text-black font-semibold">
                   12 November 2025 | 6:30pm
                 </p>
                 <p class="text-xl text-black text-center">
@@ -82,7 +82,7 @@ const speakers = [
               <div class="flex flex-col justify-center sm:flex-row gap-4 pt-4">
                 <UButton
                   to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-                  class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
+                  class="flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
                   target="_blank"
                   >Get Your Ticket</UButton
                 >
@@ -93,15 +93,15 @@ const speakers = [
       </div>
     </section>
 
-    <section class="mt-8 bg-black py-20">
+    <section class="mt-8 bg-black pt-5 md:pt-20 pb-5 md:pb-20">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <p class="text-white text-3xl my-4 mx-auto leading-relaxed">
+        <p class="text-white text-2xl md:text-3xl my-4 mx-auto leading-relaxed">
           Origin Stories is a
-          <span class="text-black bg-white font-bold p-2 border-4 border-black"
+          <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
             >live theatre event and media platform</span
           >
           where
-          <span class="text-black bg-white font-bold p-2 border-4 border-black"
+          <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
             >African&nbsp;entrepreneurs share their inspiring journeys.</span
           >It’s not just a stage, it’s a support platform. The stories are raw, honest and deeply
           human. They highlight resilience, ingenuity and legacy while, amplifying African
@@ -116,30 +116,30 @@ const speakers = [
           <div class="flex justify-center">
             <img src="/table-mountain.png" alt="Table Mountain" />
           </div>
-          <p class="text-black text-3xl my-8 font-bold mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 font-bold mx-auto leading-[120%]">
             The Origin of ORIGIN STORIES...
           </p>
-          <p class="text-black text-3xl my-8 mx-auto">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto">
             "Early one Friday morning while talking with an African entrepreneur and walking down
             Lion's Head mountain in Cape Town.
           </p>
-          <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
             I realised there was nowhere to listen to or share these inspiring African
             entrepreneur's stories (like Nkosinathi's) and for them to inspire the next generation
             of dreamers, builders and value-creators.
           </p>
-          <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
             After reading the quote "IF NOT NOW, WHEN? IF NOT ME, WHO?" and being encouraged by
             others.
           </p>
-          <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
             We decided to create this platform to showcase the most inspiring African Entrepreneur
             stories and share them with the World.
           </p>
-          <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
             Join us in supporting and celebrating these inspiring Humans."
           </p>
-          <p class="text-black text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl mt-8 mx-auto leading-[120%]">
             <strong>Will Green</strong> <br />
             Curator <br />
             <span class="text-sm">a WGW Community and Africa Tech Ecosystem initiative.</span>
@@ -148,12 +148,12 @@ const speakers = [
       </div>
     </section>
 
-    <section class="mt-8 bg-black pt-20 pb-20">
+    <section class="mt-8 bg-black pt-5 md:pt-20 pb-5 md:pb-20">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-left">
-        <p class="text-white text-3xl my-4 mx-auto leading-relaxed">
-          <span class="font-bold p-2">What is ORIGIN STORIES?</span>
+        <p class="text-white text-center md:text-left text-2xl md:text-3xl my-4 leading-relaxed">
+          <span class="font-bold">What is ORIGIN STORIES?</span>
         </p>
-        <ul class="text-white/80 text-3xl list-disc pl-8">
+        <ul class="text-white/80 text-xl list-disc pl-8">
           <li class="my-8"><strong>10 handpicked</strong> curated <strong>speakers</strong>.</li>
           <li class="my-8">
             Each speaker has <strong>7 minutes</strong> to share the real story behind their
@@ -178,7 +178,7 @@ const speakers = [
       </div>
     </section>
 
-    <section class="container mx-auto py-20 px-4">
+    <section class="container mx-auto pt-5 md:pt-20 pb-5 md:pb-20 px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 items-center">
         <div class="text-center col-span-1 md:col-span-2 md:text-left">
           <h2 class="text-black text-3xl my-8 font-bold mx-auto leading-[120%]">Our Vision</h2>
@@ -208,13 +208,13 @@ const speakers = [
             stories and help support High School entrepreneur programmes in Africa.
           </p>
         </div>
-        <div class="col-span-1 p-20 md:p-4">
+        <div class="col-span-1 px-20 md:p-4">
           <img src="/arms-linked.png" />
         </div>
       </div>
     </section>
 
-    <section id="speakers" class="py-20 bg-black">
+    <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
       <h2 class="font-semibold text-4xl text-white text-center my-8">Speakers</h2>
       <div class="container mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
