@@ -39,7 +39,8 @@ useSeoMeta({
       <template #right>
         <div class="flex items-center gap-2">
           <UButton
-            to="#"
+            to="https://www.youtube.com/@africanoriginstories"
+            target="_blank"
             icon="i-simple-icons-youtube"
             aria-label="Twitter"
             color="neutral"
@@ -48,6 +49,7 @@ useSeoMeta({
           />
           <UButton
             to="https://www.instagram.com/willsgreenwalk"
+            target="_blank"
             icon="i-simple-icons-instagram"
             aria-label="Twitter"
             color="neutral"
@@ -55,7 +57,7 @@ useSeoMeta({
             size="sm"
           />
           <UButton
-            to="#"
+            to="https://www.linkedin.com/company/origin-stories-africa/"
             icon="i-simple-icons-linkedin"
             aria-label="LinkedIn"
             color="neutral"
@@ -63,7 +65,7 @@ useSeoMeta({
             size="sm"
           />
           <UButton
-            to="mailto:will@colab.marketing"
+            to="mailto:will@colab.marketing?subject=ORIGIN STORIES ENQUIRY"
             icon="i-lucide-mail"
             aria-label="Contact"
             color="neutral"

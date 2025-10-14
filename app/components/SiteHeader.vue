@@ -67,9 +67,9 @@ const closeMenu = () => {
 
         <!-- Hamburger Menu (mobile only) -->
         <button
-          @click="toggleMenu"
-          class="lg:hidden flex items-center justify-center w-8 h-8 relative z-50"
           aria-label="Toggle menu"
+          class="lg:hidden flex items-center justify-center w-8 h-8 relative z-50"
+          @click="toggleMenu"
         >
           <div class="w-6 h-5 relative flex flex-col justify-between">
             <span
@@ -104,12 +104,17 @@ const closeMenu = () => {
       <!-- Close button inside menu -->
       <div class="flex justify-end p-6 border-b border-gray-200">
         <button
-          @click="closeMenu"
           class="w-8 h-8 flex items-center justify-center"
           aria-label="Close menu"
+          @click="closeMenu"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
           </svg>
         </button>
       </div>
