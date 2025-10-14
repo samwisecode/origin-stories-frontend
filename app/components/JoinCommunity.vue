@@ -12,25 +12,28 @@
           >Get Your Ticket</UButton
         >
       </div>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <div>
-          <UButton
-            to="https://docs.google.com/forms/d/e/1FAIpQLScZCVuy29E6vZhPX5NmPHtM3GUVL_zQ2UG5PQ_6XZ-znBUJmA/viewform"
-            target="_blank"
-            class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
-          >
-            Become a Partner
-          </UButton>
-        </div>
-        <div>
-          <UButton
-            to="/"
-            target="_blank"
-            class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
-          >
-            Connect
-          </UButton>
-        </div>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <UButton
+          to="https://docs.google.com/forms/d/1A5oVu5QgLhCXHcQVU7kupJ8NdagcPKcWLRFWR4q4FV8/viewform?edit_requested=true"
+          target="_blank"
+          class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
+        >
+          Submit Your Story
+        </UButton>
+        <UButton
+          to="https://docs.google.com/forms/d/e/1FAIpQLScZCVuy29E6vZhPX5NmPHtM3GUVL_zQ2UG5PQ_6XZ-znBUJmA/viewform"
+          target="_blank"
+          class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
+        >
+          Partner with us
+        </UButton>
+        <UButton
+          to="mailto:will@colab.marketing?subject=ORIGIN STORIES ENQUIRY"
+          target="_blank"
+          class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
+        >
+          Connect with us
+        </UButton>
       </div>
     </div>
   </section>
