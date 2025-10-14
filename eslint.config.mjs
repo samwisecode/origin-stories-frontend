@@ -14,6 +14,7 @@ export default withNuxt(
       'vue/singleline-html-element-content-newline': 'off',
       // Fix the problematic rule
       'vue/html-self-closing': 'off'
+      // 'arrow-parens': 'always'
     }
   }
 )

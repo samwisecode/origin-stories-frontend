@@ -24,15 +24,6 @@
         </div>
         <div>
           <UButton
-            to="/#speakers"
-            target="_blank"
-            class="btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white"
-          >
-            Become a Speaker
-          </UButton>
-        </div>
-        <div>
-          <UButton
             to="/partners"
             target="_blank"
             class="btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white"

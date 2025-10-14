@@ -1,7 +1,12 @@
 <script lang="ts" setup>
-// const speakers = [
-
-// ]
+const speakers = [
+  {
+    name: 'Sam',
+    profilePicUrl: 'https://img.com',
+    title: 'Founder',
+    company: 'Lank Dev'
+  }
+]
 </script>
 
 <template>
@@ -16,7 +21,7 @@
               </div>
               <div class="space-y-6 text-center">
                 <h2 class="font-semibold text-3xl mb-8 text-light-brown">
-                  Inspiring Stories of African Entrepreneurs
+                  Inspiring Journey's of African Entrepreneurs
                 </h2>
                 <p class="text-4xl text-center mb-2 text-black font-semibold">
                   12 November 2025 | 6:30pm
@@ -130,9 +135,9 @@
       </div>
     </section>
 
-    <section class="container mx-auto py-20">
-      <div class="grid grid-cols-3 items-center">
-        <div class="col-span-2">
+    <section class="container mx-auto py-20 px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 items-center">
+        <div class="text-center col-span-1 md:col-span-2 md:text-left">
           <h2 class="text-black text-3xl my-8 font-bold mx-auto leading-[120%]">Our Vision</h2>
           <p class="text-black text-xl my-8 mx-auto">
             To inspire, connect and positively shape the global narrative of African
@@ -165,45 +170,8 @@
             stories and help support High School entrepreneur programmes in Africa.
           </p>
         </div>
-        <div>
+        <div class="col-span-1 p-20 md:p-4">
           <img src="/arms-linked.png" />
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-black">
-      <div class="max-w-6xl mx-auto py-20 text-center">
-        <h2 class="text-light-brown text-4xl font-black py-8 mx-auto leading-[120%]">
-          Welcome to the Home of Authentic African Origin Stories
-        </h2>
-        <div>
-          <div
-            style="
-              position: relative;
-              padding-bottom: 67.25%;
-              padding-top: 35px;
-              height: 0;
-              overflow: hidden;
-            "
-          >
-            <iframe
-              src="https://app.airtimetools.com/embed/z_0TaBL4Irrx4SyVj8FymM?embedSlides=true"
-              frameborder="0"
-              allow="autoplay; encrypted-media; allowfullscreen"
-              style="
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                width: 100%;
-                height: 100%;
-                background-color: black;
-              "
-            ></iframe>
-          </div>
         </div>
       </div>
     </section>
@@ -211,16 +179,16 @@
     <section id="speakers" class="container mx-auto py-12">
       <h2 class="font-semibold text-4xl text-black text-center my-8">Speakers</h2>
       <div class="grid grid-cols-5 gap-4">
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
-        <SpeakerProfile name="Sam" company="Lank Dev" title="Founder" />
+        <div>
+          <SpeakerProfile
+            v-for="(speaker, index) in speakers"
+            :key="index"
+            :name="speaker.name"
+            :title="speaker.title"
+            :profile-pic-url="speaker.profilePicUrl"
+            :company="speaker.company"
+          />
+        </div>
       </div>
       <div class="flex flex-col justify-center pt-20 pb-10 sm:flex-row gap-4">
         <UButton

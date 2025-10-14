@@ -1,7 +1,7 @@
 <script setup>
 useSeoMeta({
   title: 'About - Origin Stories',
-  description: ''
+  description: 'We Tell the Stories Africa is Too Humble to Tell.'
 })
 </script>
 
@@ -28,25 +28,17 @@ useSeoMeta({
 
     <!-- Black Section with White Text -->
     <section class="section-large bg-black text-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="text-left text-white mb-20">
           <h2 class="mb-12 text-white text-4xl font-bold">Why This Matters</h2>
-          <ul class="text-white space-y-8 text-left">
+          <ul class="text-white space-y-8 text-left list-disc">
             <li class="flex items-start gap-4 text-hero text-white">
-              <UIcon
-                name="i-lucide-chevrons-right"
-                class="w-6 h-6 mt-1.5 text-white flex-shrink-0"
-              />
               <span>
                 We challenge the notion that talking about success, excellence, or overcoming
                 challenges is "in bad taste." We celebrate it.
               </span>
             </li>
             <li class="flex items-start gap-4 text-hero text-white">
-              <UIcon
-                name="i-lucide-chevrons-right"
-                class="w-6 h-6 mt-1.5 text-white flex-shrink-0"
-              />
               <span>
                 Unlike other ecosystems, African founders rarely get credit for their perseverance
                 through failure. We showcase the relentless challenges and creative solutions not as
@@ -54,10 +46,6 @@ useSeoMeta({
               </span>
             </li>
             <li class="flex items-start gap-4 text-hero text-white">
-              <UIcon
-                name="i-lucide-chevrons-right"
-                class="w-6 h-6 mt-1.5 text-white flex-shrink-0"
-              />
               <span>
                 In a relational business culture, trust is everything. We give founders a recorded
                 asset that tells their personal history, character, and mission. This allows
@@ -66,10 +54,6 @@ useSeoMeta({
               </span>
             </li>
             <li class="flex items-start gap-4 text-hero text-white">
-              <UIcon
-                name="i-lucide-chevrons-right"
-                class="w-6 h-6 mt-1.5 text-white flex-shrink-0"
-              />
               <span>
                 The standard Silicon Valley pitch format is useful, but it lacks Heart & Soul. We
                 bring back the personal Origin Story; what inspired you, what you gave up, and why
