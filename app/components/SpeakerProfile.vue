@@ -15,12 +15,12 @@ defineProps<{
         <img :src="profilePicUrl" :alt="name" />
       </div>
       <div class="flex flex-col items-center justify-center py-2 px-4">
-        <h4 class="font-bold text-center text-lg">
+        <h4 class="font-bold text-center text-base md:text-lg">
           {{ name }}
         </h4>
         <USeparator class="px-8 py-2 opacity-20" />
-        <p class="text-center text-base opacity-90">{{ title }}</p>
-        <p class="text-sm text-center opacity-80">{{ company }}</p>
+        <p class="text-center text-sm md:text-base opacity-90">{{ title }}</p>
+        <p class="text-xs md:text-sm text-center opacity-70">{{ company }}</p>
       </div>
     </div>
   </div>

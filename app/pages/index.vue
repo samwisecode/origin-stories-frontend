@@ -217,7 +217,7 @@ const speakers = [
     <section id="speakers" class="py-20 bg-black">
       <h2 class="font-semibold text-4xl text-white text-center my-8">Speakers</h2>
       <div class="container mx-auto">
-        <div class="grid grid-cols-5 gap-12 p-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
           <SpeakerProfile
             v-for="(speaker, index) in speakers"
             :key="index"

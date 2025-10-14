@@ -137,25 +137,16 @@ useSeoMeta({
         <p class="text-hero mb-12">Submit Your Story. Support Us. Share the Stories.</p>
         <div class="flex flex-col justify-center pb-10 sm:flex-row gap-4">
           <UButton
-            class="btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
+            class="flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
             to="https://www.quicket.co.za/events/339332-origin-stories/#/"
             target="_blank"
             >Get Your Ticket</UButton
           >
         </div>
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <!-- <div>
-          <UButton
-            to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-            target="_blank"
-            class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white"
-          >
-            Get Your Ticket
-          </UButton>
-        </div> -->
           <div>
             <UButton
-              to="/partners"
+              to="/"
               target="_blank"
               class="flex justify-center btn-menu bg-white text-black border-2 border-black hover:bg-black hover:text-white min-w-44"
             >
