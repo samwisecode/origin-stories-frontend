@@ -137,7 +137,7 @@ const closeMenu = () => {
           <UButton
             to="https://www.quicket.co.za/events/339332-origin-stories/#/"
             target="_blank"
-            class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white w-full"
+            class="flex justify-center btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white w-full"
             @click="closeMenu"
           >
             Get Your Ticket
