@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm list:*)",
+      "Bash(node:*)",
+      "Bash(cat:*)",
+      "Bash(pnpm why:*)",
+      "Bash(rm:*)",
+      "Bash(pnpm run postinstall)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

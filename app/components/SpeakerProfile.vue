@@ -5,6 +5,7 @@ defineProps<{
   title?: string
   company?: string
   linkedInUrl?: string
+  bio?: string
 }>()
 </script>
 
@@ -23,7 +24,22 @@ defineProps<{
         <p class="text-xs md:text-sm text-center opacity-70">{{ company }}</p>
       </div>
     </div>
+    <UModal
+      :title="name"
+      :description="title"
+      :close="{
+        color: 'neutral',
+        variant: 'ghost'
+      }"
+    >
+      <UButton
+        label="Read Bio"
+        class="block cursor-pointer hover:text-white/50 w-full text-center"
+      />
+
+      <template #body>
+        {{ bio }}
+      </template>
+    </UModal>
   </div>
 </template>
-
-<style></style>

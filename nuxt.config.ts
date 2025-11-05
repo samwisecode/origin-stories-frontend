@@ -18,6 +18,20 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
 
+  nitro: {
+    experimental: {
+      wasm: true
+    }
+  },
+
+  vite: {
+    server: {
+      fs: {
+        strict: false
+      }
+    }
+  },
+
   eslint: {
     config: {
       stylistic: {
@@ -27,11 +41,11 @@ export default defineNuxtConfig({
     }
   },
 
+  fonts: {
+    families: [{ name: 'Poppins', provider: 'google' }]
+  },
+
   gtag: {
     id: 'G-BX04VF3EPE'
   }
-
-  // fonts: {
-  //   families: [{ name: 'Poppins', provider: 'google' }]
-  // }
 })
