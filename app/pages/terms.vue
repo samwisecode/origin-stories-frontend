@@ -9,7 +9,8 @@
       <p class="my-4">
         We collect your details to run and improve Origin Stories Africa events, communicate with
         you, and - if you opt in-share future opportunities. We never sell your data. You can opt
-        out or delete your data anytime by emailing aoriginstories@gmail.com.
+        out or delete your data anytime by emailing
+        <a href="mailto:aoriginstories@gmail.com">aoriginstories@gmail.com</a>.
       </p>
       <div class="my-8">
         <p class="text-lg font-bold my-2">1. Controller and Representatives</p>
