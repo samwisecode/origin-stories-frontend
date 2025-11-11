@@ -33,7 +33,10 @@ useSeoMeta({
 
     <UFooter>
       <template #left>
-        <p class="text-sm text-muted">Origin Stories © {{ new Date().getFullYear() }}</p>
+        <p class="text-sm text-muted">
+          Origin Stories © {{ new Date().getFullYear() }}
+          <NuxtLink to="/terms" class="underline">Terms & Conditions</NuxtLink>
+        </p>
       </template>
 
       <template #right>
