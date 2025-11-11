@@ -35,7 +35,8 @@ useSeoMeta({
       <template #left>
         <p class="text-sm text-muted">
           Origin Stories © {{ new Date().getFullYear() }}
-          <NuxtLink to="/terms" class="underline">Terms & Conditions</NuxtLink>
+          <NuxtLink to="/terms" class="underline">Terms & Conditions</NuxtLink> |
+          <NuxtLink to="/policy" class="underline">Privacy Policy</NuxtLink>
         </p>
       </template>
 
