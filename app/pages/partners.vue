@@ -129,6 +129,43 @@ useSeoMeta({
           </p>
         </div>
       </div>
+      <div>
+        <USeparator class="my-10 md:my-20" />
+      </div>
+      <div class="sponsor">
+        <div>
+          <img
+            src="/Vida-e-caffe.png"
+            alt="Vida e caffè Logo"
+            class="w-full max-w-48 md:max-w-64 h-full object-contain"
+          />
+        </div>
+        <div class="space-y-4 pb-8 mb-8">
+          <h2 class="text-2xl font-bold mt-8 mb-2">Vida e Caffè</h2>
+          <p class="text-lg md:text-xl mb-4">
+            Vida e Caffè is Portuguese for 'life and coffee'. <br />
+            It's really that simple – no coffee, no life; no life, no coffee
+          </p>
+          <p class="text-lg md:text-xl mb-4">
+            Since starting on Kloof Street in Cape Town in 2001, vida e caffè has been on a mission
+            to bring together the classic street café charm of Portugal and the dynamic spirit of
+            Africa. They pour this passion into everything they do, from their 100% Arabica Estrela
+            coffee blend to the dedicated service you receive from their incredible team, the
+            Passionistas. The "vida e caffè way" is all about energy, consistency, and creating a
+            genuine, uplifting experiencing for everyone, every day.
+          </p>
+          <p class="text-lg md:text-xl mb-4">
+            Sealand forms part of the vibrant South African community and environment around it,
+            while dedicating itself to profound social and environmental impact. We aspire to always
+            play our part for the planet and its people.
+          </p>
+          <p>
+            <NuxtLink to="https://vidaecaffe.com/" class="underline font-bold"
+              >vidaecaffe.com</NuxtLink
+            >
+          </p>
+        </div>
+      </div>
     </section>
 
     <JoinCommunity />
