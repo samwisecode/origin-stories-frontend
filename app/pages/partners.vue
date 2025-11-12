@@ -152,12 +152,7 @@ useSeoMeta({
             Africa. They pour this passion into everything they do, from their 100% Arabica Estrela
             coffee blend to the dedicated service you receive from their incredible team, the
             Passionistas. The "vida e caffè way" is all about energy, consistency, and creating a
-            genuine, uplifting experiencing for everyone, every day.
-          </p>
-          <p class="text-lg md:text-xl mb-4">
-            Sealand forms part of the vibrant South African community and environment around it,
-            while dedicating itself to profound social and environmental impact. We aspire to always
-            play our part for the planet and its people.
+            genuine, uplifting experience for everyone, every day.
           </p>
           <p>
             <NuxtLink to="https://vidaecaffe.com/" class="underline font-bold"
