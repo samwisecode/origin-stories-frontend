@@ -72,42 +72,24 @@ const speakers = [
 
 <template>
   <div>
-    <section class="mt-8 mb-20">
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="">
-          <div class="">
-            <div class="space-y-8 text-center">
-              <div class="flex justify-center">
-                <img src="/Origin_Stories_Primary_Flag yellow.svg" class="w-164" />
-              </div>
-              <div class="space-y-6 text-center">
-                <h2 class="font-semibold text-2xl md:text-3xl mb-8 text-light-brown">
-                  Inspiring Journey's of African Entrepreneurs
-                </h2>
-                <p class="text-3xl md:text-4xl text-center mb-2 text-black font-semibold">
-                  12 November 2025 | 6:30pm
-                </p>
-                <p class="text-xl text-black text-center">
-                  The Homecoming Theatre, District 6, Cape Town
-                </p>
-              </div>
-              <div class="flex flex-col justify-center sm:flex-row gap-4 pt-4">
-                <UButton
-                  to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-                  class="flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
-                  target="_blank"
-                  >Get Your Ticket</UButton
-                >
-              </div>
-            </div>
-          </div>
+    <section class="bg-black border-b-4 py-8 border-light-brown">
+      <div class="max-w-7xl w-full mx-auto px-6 lg:px-8">
+        <div class="relative aspect-video w-full">
+          <iframe
+            src="https://www.youtube.com/embed/hVNk76B2yJg"
+            title="Origin Stories Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="absolute inset-0 w-full h-full"
+          />
         </div>
       </div>
     </section>
 
-    <section class="mt-8 bg-black pt-5 md:pt-20 pb-5 md:pb-20">
+    <section class="py-5 md:py-20">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <p class="text-white text-2xl md:text-3xl my-4 mx-auto leading-relaxed">
+        <p class="text-black text-2xl md:text-3xl my-4 mx-auto leading-relaxed">
           Origin Stories is a
           <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
             >live theatre event and media platform</span
@@ -227,7 +209,7 @@ const speakers = [
     </section>
 
     <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <h2 class="font-semibold text-4xl text-white text-center my-8">Speakers</h2>
+      <h2 class="font-semibold text-4xl text-white text-center my-8">2025 Speakers</h2>
       <div class="container mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
           <SpeakerProfile
