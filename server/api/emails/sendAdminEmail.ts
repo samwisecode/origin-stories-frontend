@@ -12,8 +12,8 @@ const contactFormSchema = z.object({
 export default defineEventHandler(async (event) => {
   const body = await readValidatedBody(event, contactFormSchema.parse)
 
-  const resend = new Resend(process.env.VITE_RESEND_API_KEY)
-  const adminEmail = process.env.VITE_ADMIN_EMAIL
+  const resend = new Resend(process.env.RESEND_API_KEY)
+  const adminEmail = process.env.ADMIN_EMAIL
 
   if (!adminEmail) {
     throw createError({
@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: 'Origin Stories Website <onboarding@resend.dev>',
       to: adminEmail,
       subject: `Contact form enquiry from ${body.name}`,
@@ -39,11 +39,22 @@ export default defineEventHandler(async (event) => {
       `
     })
 
-    return { success: true, message: 'Email sent successfully' }
+    console.log('Resend API response:', JSON.stringify(result, null, 2))
+
+    if (result.error) {
+      console.error('Resend error:', result.error)
+      throw createError({
+        statusCode: 500,
+        statusMessage: result.error.message || 'Failed to send email'
+      })
+    }
+
+    return { success: true, message: 'Email sent successfully', data: result.data }
   } catch (error) {
+    console.error('Email send error:', error)
     throw createError({
       statusCode: 500,
-      statusMessage: 'Failed to send email'
+      statusMessage: error instanceof Error ? error.message : 'Failed to send email'
     })
   }
 })
