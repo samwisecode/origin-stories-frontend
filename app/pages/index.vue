@@ -1,6 +1,44 @@
 <script lang="ts" setup>
-// import { ref } from 'vue'
+import { ref } from 'vue'
 import { UButton } from '#components'
+
+const contactForm = ref({
+  name: '',
+  email: '',
+  phone: '',
+  company: '',
+  message: ''
+})
+
+const isSubmitting = ref(false)
+const submitStatus = ref<'idle' | 'success' | 'error'>('idle')
+
+async function submitContactForm() {
+  isSubmitting.value = true
+  submitStatus.value = 'idle'
+
+  try {
+    const response = await $fetch('/api/emails/sendAdminEmail', {
+      method: 'POST',
+      body: contactForm.value
+    })
+
+    if (response) {
+      submitStatus.value = 'success'
+      contactForm.value = {
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: ''
+      }
+    }
+  } catch (error) {
+    submitStatus.value = 'error'
+  } finally {
+    isSubmitting.value = false
+  }
+}
 
 const speakers = [
   {
@@ -117,23 +155,23 @@ const speakers = [
             "Early one Friday morning while talking with an African entrepreneur and walking down
             Lion's Head mountain in Cape Town.
           </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
             I realised there was nowhere to listen to or share these inspiring African
             entrepreneur's stories (like Nkosinathi's) and for them to inspire the next generation
             of dreamers, builders and value-creators.
           </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
             After reading the quote "IF NOT NOW, WHEN? IF NOT ME, WHO?" and being encouraged by
             others.
           </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
             We decided to create this platform to showcase the most inspiring African Entrepreneur
             stories and share them with the World.
           </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
             Join us in supporting and celebrating these inspiring Humans."
           </p>
-          <p class="text-black text-2xl md:text-3xl mt-8 mx-auto leading-[120%]">
+          <p class="text-black text-2xl md:text-3xl mt-8 mx-auto leading-relaxed">
             <strong>Will Green</strong> <br />
             Curator <br />
             <span class="text-sm">a WGW Community and Africa Tech Ecosystem initiative.</span>
@@ -228,5 +266,98 @@ const speakers = [
     </section>
 
     <JoinCommunity />
+
+    <section id="contact" class="bg-black pt-12 md:pt-20 pb-12 md:pb-20">
+      <div class="max-w-2xl mx-auto px-6 lg:px-8">
+        <h2 class="font-semibold text-3xl md:text-4xl text-white text-center mb-4">Get in Touch</h2>
+        <p class="text-white/80 text-center mb-12 text-lg">
+          Have a question or want to get involved? We'd love to hear from you.
+        </p>
+
+        <form @submit.prevent="submitContactForm" class="space-y-6">
+          <div>
+            <label for="name" class="block text-white font-semibold mb-2">Name *</label>
+            <input
+              id="name"
+              v-model="contactForm.name"
+              type="text"
+              required
+              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+              placeholder="Your name"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-white font-semibold mb-2">Email *</label>
+            <input
+              id="email"
+              v-model="contactForm.email"
+              type="email"
+              required
+              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="phone" class="block text-white font-semibold mb-2">Phone</label>
+              <input
+                id="phone"
+                v-model="contactForm.phone"
+                type="tel"
+                class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+                placeholder="+27 XX XXX XXXX"
+              />
+            </div>
+
+            <div>
+              <label for="company" class="block text-white font-semibold mb-2">Company</label>
+              <input
+                id="company"
+                v-model="contactForm.company"
+                type="text"
+                class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+                placeholder="Your company"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-white font-semibold mb-2">Message *</label>
+            <textarea
+              id="message"
+              v-model="contactForm.message"
+              required
+              rows="5"
+              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640] resize-none"
+              placeholder=""
+            />
+          </div>
+
+          <div
+            v-if="submitStatus === 'success'"
+            class="bg-green-100 border-2 border-green-800 text-green-900 px-4 py-3"
+          >
+            Thank you for your message! We'll get back to you soon.
+          </div>
+
+          <div
+            v-if="submitStatus === 'error'"
+            class="bg-red-100 border-2 border-red-800 text-red-900 px-4 py-3"
+          >
+            Something went wrong. Please try again or email us at will@colab.marketing
+          </div>
+
+          <UButton
+            type="submit"
+            :disabled="isSubmitting"
+            class="w-full flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:border-light-brown hover:bg-black hover:text-light-brown"
+          >
+            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+          </UButton>
+        </form>
+      </div>
+    </section>
   </div>
 </template>
