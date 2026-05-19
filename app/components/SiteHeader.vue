@@ -49,20 +49,18 @@ const closeMenu = () => {
       <div class="flex items-center gap-4">
         <!-- Ticket Button (visible on all screens) -->
         <UButton
-          to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-          target="_blank"
-          class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white hidden sm:flex"
+          to="#contact"
+          class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white hidden sm:flex cursor-pointer"
         >
-          Get Your Ticket
+          Get In Touch
         </UButton>
 
         <!-- Mobile Ticket Button (text only, visible on mobile) -->
         <UButton
-          to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-          target="_blank"
-          class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white sm:hidden text-xs px-2 py-1"
+          to="#contact"
+          class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white sm:hidden text-xs px-2 py-1 cursor-pointer"
         >
-          Tickets
+          Get In Touch
         </UButton>
 
         <!-- Hamburger Menu (mobile only) -->
@@ -135,12 +133,11 @@ const closeMenu = () => {
         <!-- Mobile menu ticket button -->
         <div class="pt-4">
           <UButton
-            to="https://www.quicket.co.za/events/339332-origin-stories/#/"
-            target="_blank"
+            to="#contact"
             class="flex justify-center btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white w-full"
             @click="closeMenu"
           >
-            Get Your Ticket
+            Get In Touch
           </UButton>
         </div>
       </nav>

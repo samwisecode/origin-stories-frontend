@@ -6,7 +6,9 @@
       "Bash(cat:*)",
       "Bash(pnpm why:*)",
       "Bash(rm:*)",
-      "Bash(pnpm run postinstall)"
+      "Bash(pnpm run postinstall)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ],
     "deny": [],
     "ask": []
