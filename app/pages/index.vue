@@ -186,7 +186,9 @@ const speakers = [
           <span class="font-bold">What is ORIGIN STORIES?</span>
         </p>
         <ul class="text-white/80 text-xl list-disc pl-8">
-          <li class="my-8"><strong>10 handpicked</strong> curated <strong>speakers</strong>.</li>
+          <li class="my-8">
+            <strong>7 - 10 handpicked</strong> curated <strong>speakers</strong>.
+          </li>
           <li class="my-8">
             Each speaker has <strong>7 minutes</strong> to share the real story behind their
             <strong>entrepreneurial journey</strong>.
@@ -229,7 +231,7 @@ const speakers = [
           </p>
           <p class="text-black text-xl my-8 mx-auto">
             We look forward to welcoming you on the
-            <strong>12th of November 2025 at 18:30 for 19:00 (doors open 18:00)</strong>.
+            <strong>19th of November 2026 at 18:30 for 19:00 (doors open 18:00)</strong>.
           </p>
           <p class="text-black text-xl my-8 mx-auto">
             Thanks to all our founding partners for your support especially Silicon Overdrive, Von
@@ -247,7 +249,19 @@ const speakers = [
     </section>
 
     <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <h2 class="font-semibold text-4xl text-white text-center my-8">2025 Speakers</h2>
+      <h2 class="font-semibold text-4xl text-white text-center my-8">
+        Interested in Speaking in 2026?
+      </h2>
+      <div class="max-w-xl mx-auto px-6 lg:px-8 text-center mb-48">
+        <UButton
+          href="https://docs.google.com/forms/d/1A5oVu5QgLhCXHcQVU7kupJ8NdagcPKcWLRFWR4q4FV8/viewform?edit_requested=true"
+          target="_blank"
+          class="mx-auto flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:border-light-brown hover:bg-black hover:text-light-brown"
+        >
+          Apply to Speak
+        </UButton>
+      </div>
+      <h3 class="font-semibold text-2xl text-white text-center my-8">2025 Speakers</h3>
       <div class="container mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
           <SpeakerProfile
@@ -274,7 +288,7 @@ const speakers = [
           Have a question or want to get involved? We'd love to hear from you.
         </p>
 
-        <form @submit.prevent="submitContactForm" class="space-y-6">
+        <form class="space-y-6" @submit.prevent="submitContactForm">
           <div>
             <label for="name" class="block text-white font-semibold mb-2">Name *</label>
             <input
