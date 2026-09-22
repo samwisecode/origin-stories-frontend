@@ -1,7 +1,7 @@
 <!-- eslint-disable @stylistic/quotes -->
 <script setup>
 useSeoMeta({
-  title: 'Sponsors - Origin Stories',
+  title: 'Partners - Origin Stories',
   description:
     "Meet the organizations and individuals who support Origin Stories' mission to uncover the stories behind innovation."
 })
