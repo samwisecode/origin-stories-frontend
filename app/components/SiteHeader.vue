@@ -49,18 +49,18 @@ const closeMenu = () => {
       <div class="flex items-center gap-4">
         <!-- Ticket Button (visible on all screens) -->
         <UButton
-          to="#contact"
+          to="https://qkt.io/AfricanOriginStories"
           class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white hidden sm:flex cursor-pointer"
         >
-          Get In Touch
+          Get Your Ticket
         </UButton>
 
         <!-- Mobile Ticket Button (text only, visible on mobile) -->
         <UButton
-          to="#contact"
+          to="https://qkt.io/AfricanOriginStories"
           class="btn-menu bg-light-brown text-black border-2 border-black hover:bg-black hover:text-white sm:hidden text-xs px-2 py-1 cursor-pointer"
         >
-          Get In Touch
+          Get Your Ticket
         </UButton>
 
         <!-- Hamburger Menu (mobile only) -->

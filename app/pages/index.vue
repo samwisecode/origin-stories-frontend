@@ -110,6 +110,38 @@ const speakers = [
 
 <template>
   <div>
+    <section class="mt-8 mb-20">
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="">
+          <div class="">
+            <div class="space-y-8 text-center">
+              <div class="flex justify-center">
+                <img src="/Origin_Stories_Primary_Flag yellow.svg" class="w-164" />
+              </div>
+              <div class="space-y-6 text-center">
+                <h2 class="font-semibold text-2xl md:text-3xl mb-8 text-light-brown">
+                  Inspiring Journey's of African Entrepreneurs
+                </h2>
+                <p class="text-3xl md:text-4xl text-center mb-2 text-black font-semibold">
+                  19 November 2026 | 7:00pm
+                </p>
+                <p class="text-xl text-black text-center">
+                  The Star Theatre, Homecoming Centre, District 6, Cape Town
+                </p>
+              </div>
+              <div class="flex flex-col justify-center sm:flex-row gap-4 pt-4">
+                <UButton
+                  to="https://qkt.io/AfricanOriginStories"
+                  class="flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
+                  target="_blank"
+                  >Get Your Ticket</UButton
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="bg-black border-b-4 py-8 border-light-brown">
       <div class="max-w-7xl w-full mx-auto px-6 lg:px-8">
         <div class="relative aspect-video w-full">
