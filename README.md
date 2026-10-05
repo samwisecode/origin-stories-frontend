@@ -1,60 +1,79 @@
-# Nuxt Starter Template
+# Origin Stories — Frontend
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+[![Built with Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+Frontend for **Origin Stories** — a media platform showcasing African entrepreneur stories. The site promotes live theatre events and shares inspiring entrepreneurial journeys from across the continent.
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+## Tech Stack
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-  </picture>
-</a>
-
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+- **Framework**: Nuxt 4.1.2 + TypeScript
+- **UI**: Nuxt UI 4.0.0 (Tailwind CSS + component library)
+- **Package manager**: pnpm (v10.17.1)
+- **Fonts**: Poppins via `@nuxt/fonts`
+- **Icons**: Lucide + Simple Icons (@iconify-json)
+- **Animations**: motion-v
+- **Email**: Resend (contact form)
+- **Analytics**: Google Analytics via nuxt-gtag
+- **Validation**: zod
 
 ## Quick Start
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/starter
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
-
-## Setup
-
-Make sure to install the dependencies:
-
 ```bash
 pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
 pnpm dev
 ```
 
-## Production
+Development server runs on `http://localhost:3000`.
 
-Build the application for production:
-
-```bash
-pnpm build
-```
-
-Locally preview production build:
+## Scripts
 
 ```bash
-pnpm preview
+pnpm dev         # Development server
+pnpm build       # Production build
+pnpm preview     # Preview production build
+pnpm lint        # ESLint
+pnpm typecheck   # vue-tsc type checking
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Project Structure
+
+```
+app/
+├── app.vue              # Root component with SEO meta, UApp layout
+├── app.config.ts        # Nuxt UI theme (colors, button defaults)
+├── pages/               # index, about, team, partners, policy, terms
+├── components/          # SiteHeader, SpeakerProfile, JoinCommunity, etc.
+├── assets/css/          # Tailwind theme + typography
+├── types/               # TypeScript definitions
+server/api/
+└── emails/              # Resend email handlers
+```
+
+## Design System
+
+TED-inspired dramatic typography, high contrast:
+
+- **Colors**: black/white primary, gold/orange accents (`#c59640`)
+- **Typography**: Poppins with custom scale (`.display-xl`, `.display-lg`, `.text-hero`, `.text-lead`)
+- **Spacing**: dramatic section spacing (`.section-massive`, `.section-large`)
+- **Buttons**: sharp geometric styles, uppercase text (`btn-primary`, `btn-menu`)
+
+Custom CSS variables live in `app/assets/css/main.css`.
+
+## Server API
+
+Contact form emails via `server/api/emails/sendAdminEmail.ts` (Resend). Requires:
+
+| Variable         | Purpose                   |
+| ---------------- | ------------------------- |
+| `RESEND_API_KEY` | Resend API key            |
+| `ADMIN_EMAIL`    | Destination for enquiries |
+
+## Configuration
+
+- `nuxt.config.ts` — modules, route rules, Google Analytics (gtag, ID `G-BX04VF3EPE`)
+- `app.config.ts` — Nuxt UI theme: primary color, button variants
+
+## Content Patterns
+
+Speaker data is defined directly in page components as arrays (see `app/pages/index.vue`). Each speaker object: `name`, `profilePicUrl`, `title`, `company`, `bio`, optional `linkedInUrl`.

@@ -123,7 +123,7 @@ const speakers = [
                   Inspiring Journey's of African Entrepreneurs
                 </h2>
                 <p class="text-3xl md:text-4xl text-center mb-2 text-black font-semibold">
-                  19 November 2026 | 7:00pm
+                  19 November 2026 | 6:30pm
                 </p>
                 <p class="text-xl text-black text-center">
                   The Star Theatre, Homecoming Centre, District 6, Cape Town
