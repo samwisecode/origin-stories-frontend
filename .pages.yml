@@ -1,0 +1,93 @@
+media:
+  - name: speakers
+    label: Speaker photos
+    input: public/uploads/speakers
+    output: /uploads/speakers
+    categories: [image]
+  - name: partners
+    label: Partner logos
+    input: public/uploads/partners
+    output: /uploads/partners
+    categories: [image]
+
+content:
+  - name: speakers
+    label: Speakers
+    type: collection
+    path: content/speakers
+    format: json
+    filename: "{primary}.json"
+    view:
+      fields: [name, company, order]
+      primary: name
+      sort: [order, name]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: photo
+        label: Photo
+        type: image
+        required: true
+        options:
+          media: speakers
+      - name: title
+        label: Job title
+        type: string
+      - name: company
+        label: Company
+        type: string
+      - name: linkedInUrl
+        label: LinkedIn URL
+        type: string
+      - name: bio
+        label: Bio
+        type: text
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        description: Lower numbers show first.
+
+  - name: partners
+    label: Partners
+    type: collection
+    path: content/partners
+    format: json
+    filename: "{primary}.json"
+    view:
+      fields: [name, order]
+      primary: name
+      sort: [order, name]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: logo
+        label: Logo
+        type: image
+        required: true
+        options:
+          media: partners
+      - name: url
+        label: Website
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        description: Lower numbers show first.
