@@ -11,6 +11,7 @@ export interface Speaker {
   company?: string
   linkedInUrl?: string
   bio?: string
+  years: number[]
   order: number
 }
 

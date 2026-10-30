@@ -44,6 +44,10 @@ async function submitContactForm() {
 const speakers = Object.values(
   import.meta.glob<Speaker>('~~/content/speakers/*.json', { eager: true, import: 'default' })
 ).sort((a, b) => a.order - b.order)
+
+const speakerYears = [...new Set(speakers.flatMap(speaker => speaker.years))]
+  .sort((a, b) => b - a)
+  .map(year => ({ year, speakers: speakers.filter(speaker => speaker.years.includes(year)) }))
 </script>
 
 <template>
@@ -231,22 +235,24 @@ const speakers = Object.values(
           Apply to Speak
         </UButton>
       </div>
-      <h3 class="font-semibold text-2xl text-white text-center my-8">2025 Speakers</h3>
-      <div class="container mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
-          <SpeakerProfile
-            v-for="(speaker, index) in speakers"
-            :key="index"
-            :name="speaker.name"
-            :title="speaker.title"
-            :profile-pic-url="speaker.photo"
-            :company="speaker.company"
-            :linked-in-url="speaker.linkedInUrl"
-            :bio="speaker.bio"
-            class="text-white/90 bg-black cursor-pointer"
-          />
+      <template v-for="group in speakerYears" :key="group.year">
+        <h3 class="font-semibold text-2xl text-white text-center my-8">{{ group.year }} Speakers</h3>
+        <div class="container mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
+            <SpeakerProfile
+              v-for="speaker in group.speakers"
+              :key="speaker.name"
+              :name="speaker.name"
+              :title="speaker.title"
+              :profile-pic-url="speaker.photo"
+              :company="speaker.company"
+              :linked-in-url="speaker.linkedInUrl"
+              :bio="speaker.bio"
+              class="text-white/90 bg-black cursor-pointer"
+            />
+          </div>
         </div>
-      </div>
+      </template>
     </section>
 
     <JoinCommunity />
