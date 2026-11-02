@@ -223,20 +223,10 @@ const speakerYears = [...new Set(speakers.flatMap(speaker => speaker.years))]
     </section>
 
     <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <h2 class="font-semibold text-4xl text-white text-center my-8">
-        Interested in Speaking in 2026?
-      </h2>
-      <div class="max-w-xl mx-auto px-6 lg:px-8 text-center mb-48">
-        <UButton
-          href="https://docs.google.com/forms/d/1A5oVu5QgLhCXHcQVU7kupJ8NdagcPKcWLRFWR4q4FV8/viewform?edit_requested=true"
-          target="_blank"
-          class="mx-auto flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:border-light-brown hover:bg-black hover:text-light-brown"
-        >
-          Apply to Speak
-        </UButton>
-      </div>
       <template v-for="group in speakerYears" :key="group.year">
-        <h3 class="font-semibold text-2xl text-white text-center my-8">{{ group.year }} Speakers</h3>
+        <h3 class="font-semibold text-2xl text-white text-center my-8">
+          {{ group.year }} Speakers
+        </h3>
         <div class="container mx-auto">
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
             <SpeakerProfile

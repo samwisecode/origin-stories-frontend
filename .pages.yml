@@ -16,7 +16,7 @@ content:
     type: collection
     path: content/speakers
     format: json
-    filename: "{primary}.json"
+    filename: '{primary}.json'
     view:
       fields: [name, company, years, order]
       primary: name
@@ -64,7 +64,7 @@ content:
     type: collection
     path: content/partners
     format: json
-    filename: "{primary}.json"
+    filename: '{primary}.json'
     view:
       fields: [name, order]
       primary: name
@@ -92,6 +92,12 @@ content:
         options:
           format: html
           media: false
+      - name: years
+        label: Years
+        type: number
+        list: true
+        required: true
+        description: Each year this person spoke, e.g. 2025. Add a row per year.
       - name: order
         label: Display order
         type: number
