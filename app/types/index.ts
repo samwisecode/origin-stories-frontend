@@ -20,5 +20,6 @@ export interface Partner {
   logo: string
   url?: string
   description: string
+  status?: 'Current' | 'Past'
   order: number
 }

@@ -66,7 +66,7 @@ content:
     format: json
     filename: '{primary}.json'
     view:
-      fields: [name, order]
+      fields: [name, status, order]
       primary: name
       sort: [order, name]
       default:
@@ -92,6 +92,13 @@ content:
         options:
           format: html
           media: false
+      - name: status
+        label: Status
+        type: select
+        required: true
+        default: Current
+        options:
+          values: [Current, Past]
       - name: years
         label: Years
         type: number

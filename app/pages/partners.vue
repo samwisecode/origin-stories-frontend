@@ -6,6 +6,16 @@ const partners = Object.values(
   import.meta.glob<Partner>('~~/content/partners/*.json', { eager: true, import: 'default' })
 ).sort((a, b) => a.order - b.order)
 
+const status = ref<'Current' | 'Past'>('Current')
+const statusItems = [
+  { label: 'Current', value: 'Current' },
+  { label: 'Past', value: 'Past' }
+]
+// Partners saved before the status field existed count as current
+const filteredPartners = computed(() =>
+  partners.filter(partner => (partner.status ?? 'Current') === status.value)
+)
+
 useSeoMeta({
   title: 'Partners - Origin Stories',
   description:
@@ -32,7 +42,13 @@ useSeoMeta({
     </section>
 
     <section class="bg-white container mx-auto px-4">
-      <template v-for="(partner, index) in partners" :key="partner.name">
+      <UTabs
+        v-model="status"
+        :items="statusItems"
+        :content="false"
+        class="max-w-xs mx-auto mb-10 md:mb-20"
+      />
+      <template v-for="(partner, index) in filteredPartners" :key="partner.name">
         <div v-if="index > 0">
           <USeparator class="my-10 md:my-20" />
         </div>
