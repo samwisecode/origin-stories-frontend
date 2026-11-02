@@ -6,7 +6,7 @@
   "useTabs": false,
   "printWidth": 100,
   "bracketSpacing": true,
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "endOfLine": "lf",
   "vueIndentScriptAndStyle": false
 }
