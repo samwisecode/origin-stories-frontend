@@ -45,7 +45,7 @@ useSeoMeta({
         {{ currentYear }} <span class="text-accent">Speakers</span>
       </h2>
       <div class="container mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 p-12">
           <SpeakerProfile
             v-for="speaker in currentSpeakers"
             :key="speaker.name"
@@ -70,7 +70,7 @@ useSeoMeta({
           {{ group.year }} Speakers
         </h3>
         <div class="container mx-auto">
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 p-12">
             <SpeakerProfile
               v-for="speaker in group.speakers"
               :key="speaker.name"
