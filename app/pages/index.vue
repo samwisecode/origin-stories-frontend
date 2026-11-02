@@ -222,11 +222,11 @@ const latestSpeakers = speakers.filter(speaker => speaker.years.includes(latestY
     </section>
 
     <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <h3 class="font-semibold text-2xl text-white text-center my-8">
-        {{ latestYear }} Speakers
-      </h3>
+      <h2 class="display-md text-white text-center my-8">
+        {{ latestYear }} <span class="text-accent">Speakers</span>
+      </h2>
       <div class="container mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 p-12">
           <SpeakerProfile
             v-for="speaker in latestSpeakers"
             :key="speaker.name"

@@ -61,13 +61,13 @@ useSeoMeta({
       </div>
     </section>
 
-    <section v-if="pastSpeakerYears.length" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <h2 class="display-lg text-white text-center mt-8 mb-16">
+    <section v-if="pastSpeakerYears.length" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black border-t">
+      <h2 class="text-4xl md:text-5xl uppercase text-white text-center mt-8 mb-16">
         Past <span class="text-accent">Speakers</span>
       </h2>
       <template v-for="group in pastSpeakerYears" :key="group.year">
-        <h3 class="font-semibold text-2xl text-white text-center my-8">
-          {{ group.year }} Speakers
+        <h3 class="font-semibold text-3xl text-white text-center my-8">
+          {{ group.year }}
         </h3>
         <div class="container mx-auto">
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 p-12">
