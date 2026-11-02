@@ -6,15 +6,14 @@ const partners = Object.values(
   import.meta.glob<Partner>('~~/content/partners/*.json', { eager: true, import: 'default' })
 ).sort((a, b) => a.order - b.order)
 
-const status = ref<'Current' | 'Past'>('Current')
-const statusItems = [
-  { label: 'Current', value: 'Current' },
-  { label: 'Past', value: 'Past' }
-]
 // Partners saved before the status field existed count as current
-const filteredPartners = computed(() =>
-  partners.filter(partner => (partner.status ?? 'Current') === status.value)
-)
+const currentPartners = partners.filter(partner => partner.status !== 'Past')
+const pastPartners = partners.filter(partner => partner.status === 'Past')
+
+const partnerSections = [
+  { title: null, partners: currentPartners },
+  { title: 'Past Partners', partners: pastPartners }
+].filter(section => section.partners.length > 0)
 
 useSeoMeta({
   title: 'Partners - Origin Stories',
@@ -41,14 +40,15 @@ useSeoMeta({
       </div>
     </section>
 
-    <section class="bg-white container mx-auto px-4">
-      <UTabs
-        v-model="status"
-        :items="statusItems"
-        :content="false"
-        class="max-w-xs mx-auto mb-10 md:mb-20"
-      />
-      <template v-for="(partner, index) in filteredPartners" :key="partner.name">
+    <section
+      v-for="section in partnerSections"
+      :key="section.title ?? 'Current'"
+      class="bg-white container mx-auto px-4"
+    >
+      <h2 v-if="section.title" class="display-lg text-center mt-20 md:mt-32 mb-16">
+        Our <span class="text-accent">{{ section.title }}</span>
+      </h2>
+      <template v-for="(partner, index) in section.partners" :key="partner.name">
         <div v-if="index > 0">
           <USeparator class="my-10 md:my-20" />
         </div>
