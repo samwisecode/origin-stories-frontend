@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="">
+  <div>
     <div class="profile-card">
       <div>
         <img :src="profilePicUrl" :alt="name" />

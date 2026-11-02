@@ -10,11 +10,6 @@ const partners = Object.values(
 const currentPartners = partners.filter(partner => partner.status !== 'Past')
 const pastPartners = partners.filter(partner => partner.status === 'Past')
 
-const partnerSections = [
-  { title: null, partners: currentPartners },
-  { title: 'Past Partners', partners: pastPartners }
-].filter(section => section.partners.length > 0)
-
 useSeoMeta({
   title: 'Partners - Origin Stories',
   description:
@@ -40,38 +35,22 @@ useSeoMeta({
       </div>
     </section>
 
+    <section v-if="currentPartners.length" class="bg-white container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+        <PartnerCard v-for="partner in currentPartners" :key="partner.name" :partner="partner" />
+      </div>
+    </section>
+
     <section
-      v-for="section in partnerSections"
-      :key="section.title ?? 'Current'"
-      class="bg-white container mx-auto px-4"
+      v-if="pastPartners.length"
+      class="bg-white container mx-auto px-4 border-t border-gray-200"
     >
-      <h2 v-if="section.title" class="display-lg text-center mt-20 md:mt-32 mb-16">
-        Our <span class="text-accent">{{ section.title }}</span>
-      </h2>
-      <template v-for="(partner, index) in section.partners" :key="partner.name">
-        <div v-if="index > 0">
-          <USeparator class="my-10 md:my-20" />
-        </div>
-        <div class="sponsor">
-          <div>
-            <img
-              :src="partner.logo"
-              :alt="`${partner.name} Logo`"
-              class="w-full max-w-48 md:max-w-64 h-full object-contain"
-            />
-          </div>
-          <div class="space-y-4 pb-8 mb-8">
-            <h2 class="text-2xl font-bold mt-8 mb-2">{{ partner.name }}</h2>
-            <!-- eslint-disable-next-line vue/no-v-html -->
-            <div class="text-lg md:text-xl [&_p]:mb-4" v-html="partner.description" />
-            <p v-if="partner.url">
-              <NuxtLink :to="partner.url" class="underline font-bold">{{
-                partner.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')
-              }}</NuxtLink>
-            </p>
-          </div>
-        </div>
-      </template>
+      <h3 class="text-4xl md:text-6xl text-center mt-20 md:mt-32 mb-16 uppercase">
+        Our <span class="text-accent">Past Partners</span>
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+        <PartnerCard v-for="partner in pastPartners" :key="partner.name" :partner="partner" />
+      </div>
     </section>
 
     <JoinCommunity />

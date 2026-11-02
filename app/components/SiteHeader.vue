@@ -6,7 +6,7 @@ const isMenuOpen = ref(false)
 const navigation = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Speakers', to: '/#speakers' },
+  { label: 'Speakers', to: '/speakers' },
   { label: 'Partners', to: '/partners' }
 ]
 

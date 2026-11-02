@@ -45,9 +45,8 @@ const speakers = Object.values(
   import.meta.glob<Speaker>('~~/content/speakers/*.json', { eager: true, import: 'default' })
 ).sort((a, b) => a.order - b.order)
 
-const speakerYears = [...new Set(speakers.flatMap(speaker => speaker.years))]
-  .sort((a, b) => b - a)
-  .map(year => ({ year, speakers: speakers.filter(speaker => speaker.years.includes(year)) }))
+const latestYear = Math.max(...speakers.flatMap(speaker => speaker.years))
+const latestSpeakers = speakers.filter(speaker => speaker.years.includes(latestYear))
 </script>
 
 <template>
@@ -208,8 +207,8 @@ const speakerYears = [...new Set(speakers.flatMap(speaker => speaker.years))]
             <strong>19th of November 2026 at 18:30 for 19:00 (doors open 18:00)</strong>.
           </p>
           <p class="text-black text-xl my-8 mx-auto">
-            Thanks to all our founding partners for your support especially Silicon Overdrive, Von
-            Seidels, Sealand. Thanks to our volunteer team.
+            Thanks to all our partners for your support especially Silicon Overdrive, Western Cape
+            Government and Von Seidels. Thanks to our volunteer team.
           </p>
           <p class="text-black text-xl my-8 mx-auto">
             *All profits will be reinvested to host future events to create and distribute more
@@ -223,26 +222,24 @@ const speakerYears = [...new Set(speakers.flatMap(speaker => speaker.years))]
     </section>
 
     <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <template v-for="group in speakerYears" :key="group.year">
-        <h3 class="font-semibold text-2xl text-white text-center my-8">
-          {{ group.year }} Speakers
-        </h3>
-        <div class="container mx-auto">
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
-            <SpeakerProfile
-              v-for="speaker in group.speakers"
-              :key="speaker.name"
-              :name="speaker.name"
-              :title="speaker.title"
-              :profile-pic-url="speaker.photo"
-              :company="speaker.company"
-              :linked-in-url="speaker.linkedInUrl"
-              :bio="speaker.bio"
-              class="text-white/90 bg-black cursor-pointer"
-            />
-          </div>
+      <h3 class="font-semibold text-2xl text-white text-center my-8">
+        {{ latestYear }} Speakers
+      </h3>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-12">
+          <SpeakerProfile
+            v-for="speaker in latestSpeakers"
+            :key="speaker.name"
+            :name="speaker.name"
+            :title="speaker.title"
+            :profile-pic-url="speaker.photo"
+            :company="speaker.company"
+            :linked-in-url="speaker.linkedInUrl"
+            :bio="speaker.bio"
+            class="text-white/90 bg-black cursor-pointer"
+          />
         </div>
-      </template>
+      </div>
     </section>
 
     <JoinCommunity />
