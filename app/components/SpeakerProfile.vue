@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div>
-    <div class="profile-card">
+    <div>
       <div>
         <img :src="profilePicUrl" :alt="name" />
       </div>
@@ -23,9 +23,8 @@ defineProps<{
         <p class="text-xs md:text-sm text-center opacity-70">{{ company }}</p>
       </div>
     </div>
-    <!-- <UModal
+    <UModal
       :title="name"
-      :description="title"
       :close="{
         color: 'neutral',
         variant: 'ghost'
@@ -36,9 +35,23 @@ defineProps<{
         class="block cursor-pointer hover:text-white/50 w-full text-center"
       />
 
+      <template #description>
+        <p class="font-semibold">{{ title }}</p>
+        <p class="opacity-90">{{ company }}</p>
+        <UButton
+          v-if="linkedInUrl"
+          :to="linkedInUrl"
+          target="_blank"
+          icon="i-simple-icons-linkedin"
+          label="LinkedIn"
+          variant="ghost"
+          class="mt-1 px-0"
+        />
+      </template>
+
       <template #body>
         {{ bio }}
       </template>
-    </UModal> -->
+    </UModal>
   </div>
 </template>
