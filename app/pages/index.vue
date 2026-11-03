@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { UButton } from '#components'
-import type { Speaker } from '~/types'
+import type { Partner, Speaker } from '~/types'
 
 const contactForm = ref({
   name: '',
@@ -47,6 +47,13 @@ const speakers = Object.values(
 
 const latestYear = Math.max(...speakers.flatMap(speaker => speaker.years))
 const latestSpeakers = speakers.filter(speaker => speaker.years.includes(latestYear))
+
+// Partners saved before the status field existed count as current
+const currentPartners = Object.values(
+  import.meta.glob<Partner>('~~/content/partners/*.json', { eager: true, import: 'default' })
+)
+  .filter(partner => partner.status !== 'Past')
+  .sort((a, b) => a.order - b.order)
 </script>
 
 <template>
@@ -222,7 +229,7 @@ const latestSpeakers = speakers.filter(speaker => speaker.years.includes(latestY
     </section>
 
     <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <h2 class="display-md text-white text-center my-8">
+      <h2 class="display-md text-white text-center my-8 uppercase">
         {{ latestYear }} <span class="text-accent">Speakers</span>
       </h2>
       <div class="container mx-auto">
@@ -238,6 +245,42 @@ const latestSpeakers = speakers.filter(speaker => speaker.years.includes(latestY
             :bio="speaker.bio"
             class="text-white/90 bg-black cursor-pointer"
           />
+        </div>
+      </div>
+    </section>
+
+    <section
+      v-if="currentPartners.length"
+      id="partners"
+      class="pt-5 md:pt-20 pb-5 md:pb-20 bg-white"
+    >
+      <h2 class="uppercase display-md text-black text-center my-8">
+        Our <span class="text-accent">Partners</span>
+      </h2>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 py-12">
+          <component
+            :is="partner.url ? 'a' : 'div'"
+            v-for="partner in currentPartners"
+            :key="partner.name"
+            :href="partner.url"
+            :target="partner.url ? '_blank' : undefined"
+            :rel="partner.url ? 'noopener' : undefined"
+            class="flex items-center justify-center w-40 md:w-56 h-24 md:h-32"
+          >
+            <img
+              :src="partner.logo"
+              :alt="`${partner.name} Logo`"
+              class="max-w-full max-h-full object-contain"
+            />
+          </component>
+        </div>
+        <div class="flex justify-center">
+          <UButton
+            to="/partners"
+            class="flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
+            >Meet Our Partners</UButton
+          >
         </div>
       </div>
     </section>
