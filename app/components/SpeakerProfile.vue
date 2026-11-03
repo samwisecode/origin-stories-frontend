@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div>
-    <div>
+    <div class="p-0 lg:p-8 xl:p-12">
       <div>
         <img :src="profilePicUrl" :alt="name" />
       </div>

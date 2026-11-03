@@ -73,7 +73,7 @@ const currentPartners = Object.values(
                 <p class="text-3xl md:text-4xl text-center mb-2 text-black font-semibold">
                   19 November 2026 | 6:30pm
                 </p>
-                <p class="text-xl text-black text-center">
+                <p class="text-lg md:text-xl text-black text-center">
                   The Star Theatre, Homecoming Centre, District 6, Cape Town
                 </p>
               </div>
@@ -107,7 +107,7 @@ const currentPartners = Object.values(
 
     <section class="py-5 md:py-20">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <p class="text-black text-2xl md:text-3xl my-4 mx-auto leading-relaxed">
+        <p class="text-black text-xl md:text-2xl lg:text-3xl my-4 mx-auto leading-relaxed">
           Origin Stories is a
           <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
             >live theatre event and media platform</span
@@ -123,7 +123,7 @@ const currentPartners = Object.values(
     </section>
 
     <section class="w-full p-8">
-      <div class="container max-w-260 mx-auto text-center">
+      <div class="container max-w-260 mx-auto text-left">
         <div>
           <div class="flex justify-center">
             <img src="/table-mountain.png" alt="Table Mountain" />
@@ -131,31 +131,31 @@ const currentPartners = Object.values(
           <p class="text-black text-2xl md:text-3xl my-8 font-bold mx-auto leading-[120%]">
             The Origin of ORIGIN STORIES...
           </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto">
-            "Early one Friday morning while talking with an African entrepreneur and walking down
-            Lion's Head mountain in Cape Town.
-          </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
-            I realised there was nowhere to listen to or share these inspiring African
-            entrepreneur's stories (like Nkosinathi's) and for them to inspire the next generation
-            of dreamers, builders and value-creators.
-          </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
-            After reading the quote "IF NOT NOW, WHEN? IF NOT ME, WHO?" and being encouraged by
-            others.
-          </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
-            We decided to create this platform to showcase the most inspiring African Entrepreneur
-            stories and share them with the World.
-          </p>
-          <p class="text-black text-2xl md:text-3xl my-8 mx-auto leading-relaxed">
-            Join us in supporting and celebrating these inspiring Humans."
-          </p>
-          <p class="text-black text-2xl md:text-3xl mt-8 mx-auto leading-relaxed">
-            <strong>Will Green</strong> <br />
-            Curator <br />
-            <span class="text-sm">a WGW Community and Africa Tech Ecosystem initiative.</span>
-          </p>
+          <div class="text-black text-lg md:text-xl my-8 mx-auto">
+            <p class="mb-4">
+              "Early one Friday morning while talking with an African entrepreneur and walking down
+              Lion's Head mountain in Cape Town.
+            </p>
+            <p class="mb-4">
+              I realised there was nowhere to listen to or share these inspiring African
+              entrepreneur's stories (like Nkosinathi's) and for them to inspire the next generation
+              of dreamers, builders and value-creators.
+            </p>
+            <p class="mb-4">
+              After reading the quote "IF NOT NOW, WHEN? IF NOT ME, WHO?" and being encouraged by
+              others.
+            </p>
+            <p class="mb-4">
+              We decided to create this platform to showcase the most inspiring African Entrepreneur
+              stories and share them with the World.
+            </p>
+            <p class="mb-4">Join us in supporting and celebrating these inspiring Humans."</p>
+            <p>
+              <strong>Will Green</strong> <br />
+              Curator <br />
+              <span class="text-sm">a WGW Community and Africa Tech Ecosystem initiative.</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
