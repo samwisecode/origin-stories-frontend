@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { UButton } from '#components'
 import type { Partner, Speaker } from '~/types'
 
 const contactForm = ref({
@@ -58,18 +57,22 @@ const currentPartners = Object.values(
 
 <template>
   <div>
-    <section class="mt-8 mb-20">
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="">
-          <div class="">
+    <section class="section-large">
+      <div class="relative z-10 page-container">
+        <div>
+          <div>
             <div class="space-y-8 text-center">
-              <div class="flex justify-center">
-                <img src="/Origin_Stories_Primary_Flag yellow.svg" class="w-164" />
-              </div>
+              <h1 class="flex justify-center">
+                <img
+                  src="/Origin_Stories_Primary_Flag yellow.svg"
+                  alt="Origin Stories"
+                  class="w-164"
+                />
+              </h1>
               <div class="space-y-6 text-center">
-                <h2 class="font-semibold text-2xl md:text-3xl mb-8 text-light-brown">
-                  Inspiring Journey's of African Entrepreneurs
-                </h2>
+                <p class="font-semibold text-2xl md:text-3xl mb-8 text-deep-brown">
+                  Inspiring Journeys of African Entrepreneurs
+                </p>
                 <p class="text-3xl md:text-4xl text-center mb-2 text-black font-semibold">
                   19 November 2026 | 6:30pm
                 </p>
@@ -78,12 +81,9 @@ const currentPartners = Object.values(
                 </p>
               </div>
               <div class="flex flex-col justify-center sm:flex-row gap-4 pt-4">
-                <UButton
-                  to="https://qkt.io/AfricanOriginStories"
-                  class="flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
-                  target="_blank"
-                  >Get Your Ticket</UButton
-                >
+                <UButton to="https://qkt.io/AfricanOriginStories" target="_blank" class="btn">
+                  Get Your Ticket
+                </UButton>
               </div>
             </div>
           </div>
@@ -91,10 +91,11 @@ const currentPartners = Object.values(
       </div>
     </section>
     <section class="bg-black border-b-4 py-8 border-light-brown">
-      <div class="max-w-7xl w-full mx-auto px-6 lg:px-8">
+      <div class="page-container w-full">
         <div class="relative aspect-video w-full">
           <iframe
-            src="https://www.youtube.com/embed/hVNk76B2yJg"
+            src="https://www.youtube-nocookie.com/embed/hVNk76B2yJg"
+            loading="lazy"
             title="Origin Stories Video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -105,8 +106,8 @@ const currentPartners = Object.values(
       </div>
     </section>
 
-    <section class="py-5 md:py-20">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+    <section class="section-large">
+      <div class="page-container text-center">
         <p class="text-black text-xl md:text-2xl lg:text-3xl my-4 mx-auto leading-relaxed">
           Origin Stories is a
           <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
@@ -115,22 +116,23 @@ const currentPartners = Object.values(
           where
           <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
             >African&nbsp;entrepreneurs share their inspiring journeys.</span
-          >It’s not just a stage, it’s a support platform. The stories are raw, honest and deeply
-          human. They highlight resilience, ingenuity and legacy while, amplifying African
+          >
+          It’s not just a stage, it’s a support platform. The stories are raw, honest and deeply
+          human. They highlight resilience, ingenuity and legacy while amplifying African
           entrepreneurship to the world.
         </p>
       </div>
     </section>
 
-    <section class="w-full p-8">
-      <div class="container max-w-260 mx-auto text-left">
+    <section class="section-medium">
+      <div class="page-container max-w-5xl text-left">
         <div>
           <div class="flex justify-center">
-            <img src="/table-mountain.png" alt="Table Mountain" />
+            <img src="/table-mountain.png" alt="Table Mountain" loading="lazy" />
           </div>
-          <p class="text-black text-2xl md:text-3xl my-8 font-bold mx-auto leading-[120%]">
+          <h2 class="text-black text-2xl md:text-3xl my-8 font-bold mx-auto leading-[120%]">
             The Origin of ORIGIN STORIES...
-          </p>
+          </h2>
           <div class="text-black text-lg md:text-xl my-8 mx-auto">
             <p class="mb-4">
               "Early one Friday morning while talking with an African entrepreneur and walking down
@@ -138,7 +140,7 @@ const currentPartners = Object.values(
             </p>
             <p class="mb-4">
               I realised there was nowhere to listen to or share these inspiring African
-              entrepreneur's stories (like Nkosinathi's) and for them to inspire the next generation
+              entrepreneurs' stories (like Nkosinathi's) and for them to inspire the next generation
               of dreamers, builders and value-creators.
             </p>
             <p class="mb-4">
@@ -160,11 +162,11 @@ const currentPartners = Object.values(
       </div>
     </section>
 
-    <section class="mt-8 bg-black pt-5 md:pt-20 pb-5 md:pb-20">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-left">
-        <p class="text-white text-center md:text-left text-2xl md:text-3xl my-4 leading-relaxed">
-          <span class="font-bold">What is ORIGIN STORIES?</span>
-        </p>
+    <section class="section-large bg-black">
+      <div class="page-container text-left">
+        <h2 class="display-md uppercase text-white text-center md:text-left mb-4">
+          What is <span class="text-accent">Origin Stories?</span>
+        </h2>
         <ul class="text-white/80 text-xl list-disc pl-8">
           <li class="my-8">
             <strong>7 - 10 handpicked</strong> curated <strong>speakers</strong>.
@@ -192,10 +194,12 @@ const currentPartners = Object.values(
       </div>
     </section>
 
-    <section class="container mx-auto pt-5 md:pt-20 pb-5 md:pb-20 px-4">
+    <section class="section-large page-container">
       <div class="grid grid-cols-1 md:grid-cols-3 items-center">
         <div class="text-center col-span-1 md:col-span-2 md:text-left">
-          <h2 class="text-black text-3xl my-8 font-bold mx-auto leading-[120%]">Our Vision</h2>
+          <h2 class="display-md uppercase text-black my-8">
+            Our <span class="text-accent-light-bg">Vision</span>
+          </h2>
           <p class="text-black text-xl my-8 mx-auto">
             To inspire, connect and positively shape the global narrative of African
             entrepreneurship.
@@ -223,17 +227,17 @@ const currentPartners = Object.values(
           </p>
         </div>
         <div class="col-span-1 px-20 md:p-4">
-          <img src="/arms-linked.png" />
+          <img src="/arms-linked.png" alt="Arms linked in support" loading="lazy" />
         </div>
       </div>
     </section>
 
-    <section id="speakers" class="pt-5 md:pt-20 pb-5 md:pb-20 bg-black">
-      <h2 class="display-md text-white text-center my-8 uppercase">
+    <section id="speakers" class="section-large bg-black">
+      <h2 class="display-md text-white text-center mb-8 uppercase">
         {{ latestYear }} <span class="text-accent">Speakers</span>
       </h2>
-      <div class="container mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 p-12">
+      <div class="page-container">
+        <div class="flex flex-wrap justify-center gap-6 md:gap-12 py-8 md:py-12">
           <SpeakerProfile
             v-for="speaker in latestSpeakers"
             :key="speaker.name"
@@ -243,7 +247,7 @@ const currentPartners = Object.values(
             :company="speaker.company"
             :linked-in-url="speaker.linkedInUrl"
             :bio="speaker.bio"
-            class="text-white/90 bg-black cursor-pointer"
+            class="text-white/90 bg-black w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-6rem)/3)]"
           />
         </div>
       </div>
@@ -252,12 +256,12 @@ const currentPartners = Object.values(
     <section
       v-if="currentPartners.length"
       id="partners"
-      class="pt-5 md:pt-20 pb-5 md:pb-20 bg-white"
+      class="section-large bg-white"
     >
-      <h2 class="uppercase display-md text-black text-center my-8">
-        Our <span class="text-accent">Partners</span>
+      <h2 class="uppercase display-md text-black text-center mb-8">
+        Our <span class="text-accent-light-bg">Partners</span>
       </h2>
-      <div class="container mx-auto px-6">
+      <div class="page-container">
         <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 py-12">
           <component
             :is="partner.url ? 'a' : 'div'"
@@ -276,20 +280,18 @@ const currentPartners = Object.values(
           </component>
         </div>
         <div class="flex justify-center">
-          <UButton
-            to="/partners"
-            class="flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:bg-black hover:text-white"
-            >Meet Our Partners</UButton
-          >
+          <UButton to="/partners" class="btn">Meet Our Partners</UButton>
         </div>
       </div>
     </section>
 
     <JoinCommunity />
 
-    <section id="contact" class="bg-black pt-12 md:pt-20 pb-12 md:pb-20">
+    <section id="contact" class="section-large bg-black">
       <div class="max-w-2xl mx-auto px-6 lg:px-8">
-        <h2 class="font-semibold text-3xl md:text-4xl text-white text-center mb-4">Get in Touch</h2>
+        <h2 class="display-md uppercase text-white text-center mb-4">
+          Get in <span class="text-accent">Touch</span>
+        </h2>
         <p class="text-white/80 text-center mb-12 text-lg">
           Have a question or want to get involved? We'd love to hear from you.
         </p>
@@ -302,7 +304,7 @@ const currentPartners = Object.values(
               v-model="contactForm.name"
               type="text"
               required
-              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-light-brown"
               placeholder="Your name"
             />
           </div>
@@ -314,7 +316,7 @@ const currentPartners = Object.values(
               v-model="contactForm.email"
               type="email"
               required
-              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-light-brown"
               placeholder="your@email.com"
             />
           </div>
@@ -326,7 +328,7 @@ const currentPartners = Object.values(
                 id="phone"
                 v-model="contactForm.phone"
                 type="tel"
-                class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+                class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-light-brown"
                 placeholder="+27 XX XXX XXXX"
               />
             </div>
@@ -337,7 +339,7 @@ const currentPartners = Object.values(
                 id="company"
                 v-model="contactForm.company"
                 type="text"
-                class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640]"
+                class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-light-brown"
                 placeholder="Your company"
               />
             </div>
@@ -350,13 +352,14 @@ const currentPartners = Object.values(
               v-model="contactForm.message"
               required
               rows="5"
-              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-[#c59640] resize-none"
+              class="w-full px-4 py-3 bg-white text-black border-2 border-black focus:outline-none focus:ring-2 focus:ring-light-brown resize-none"
               placeholder=""
             />
           </div>
 
           <div
             v-if="submitStatus === 'success'"
+            role="status"
             class="bg-green-100 border-2 border-green-800 text-green-900 px-4 py-3"
           >
             Thank you for your message! We'll get back to you soon.
@@ -364,6 +367,7 @@ const currentPartners = Object.values(
 
           <div
             v-if="submitStatus === 'error'"
+            role="alert"
             class="bg-red-100 border-2 border-red-800 text-red-900 px-4 py-3"
           >
             Something went wrong. Please try again or email us at will@colab.marketing
@@ -372,7 +376,7 @@ const currentPartners = Object.values(
           <UButton
             type="submit"
             :disabled="isSubmitting"
-            class="w-full flex justify-center btn-primary bg-[#c59640] text-black border-2 border-black hover:border-light-brown hover:bg-black hover:text-light-brown"
+            class="btn btn-on-dark w-full"
           >
             {{ isSubmitting ? 'Sending...' : 'Send Message' }}
           </UButton>

@@ -14,7 +14,7 @@ defineProps<{ partner: Partner }>()
       />
     </div>
     <div class="space-y-4 pb-8 mb-8">
-      <h2 class="text-2xl font-bold mt-8 mb-2">{{ partner.name }}</h2>
+      <h3 class="text-2xl font-bold mt-8 mb-2">{{ partner.name }}</h3>
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div class="text-lg md:text-xl [&_p]:mb-4" v-html="partner.description" />
       <p v-if="partner.url">

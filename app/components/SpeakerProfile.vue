@@ -10,15 +10,15 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <div class="p-0 lg:p-8 xl:p-12">
+  <div class="pb-4">
+    <div class="p-0 lg:px-4 xl:px-8">
       <div>
-        <img :src="profilePicUrl" :alt="name" />
+        <img :src="profilePicUrl" :alt="name" loading="lazy" class="w-full h-auto" />
       </div>
       <div class="flex flex-col items-center justify-center py-2 px-4">
-        <h4 class="text-accent font-bold mt-4 text-center text-lg md:text-xl">
+        <h3 class="text-accent font-bold mt-4 text-center text-lg md:text-xl">
           {{ name }}
-        </h4>
+        </h3>
         <p class="text-center text-sm md:text-base opacity-90">{{ title }}</p>
         <p class="text-xs md:text-sm text-center opacity-70">{{ company }}</p>
       </div>
@@ -32,7 +32,8 @@ defineProps<{
     >
       <UButton
         label="Read Bio"
-        class="block cursor-pointer hover:text-white/50 w-full text-center"
+        variant="link"
+        class="w-full justify-center text-xs font-semibold uppercase tracking-wider text-white/90 hover:text-white hover:underline underline-offset-4 cursor-pointer"
       />
 
       <template #description>

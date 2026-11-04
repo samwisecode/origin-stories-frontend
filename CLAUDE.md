@@ -125,7 +125,9 @@ The site uses a **TED-inspired dramatic typography system** with high contrast:
 - **Colors**: Black/white primary with gold/orange accents (`#c59640`)
 - **Typography**: Poppins font with custom scale (`.display-xl`, `.display-lg`, `.text-hero`, `.text-lead`)
 - **Spacing**: Dramatic section spacing (`.section-massive`, `.section-large`)
-- **Buttons**: Sharp, geometric styles with uppercase text (`btn-primary`, `btn-menu`)
+- **Buttons**: Sharp, geometric styles with uppercase text. Use `class="btn"` on `UButton`, plus `btn-outline` (white), `btn-sm` (compact) or `btn-on-dark` (on black sections). These are unlayered so they override Nuxt UI's own button utilities.
+- **Containers**: `.page-container` (max-w-7xl, side padding); narrow it with a `max-w-*` utility
+- **Accent text**: `.text-accent` (light gold) on black only; `.text-accent-light-bg` (darker gold) on white for contrast
 
 Custom CSS variables are defined in `app/assets/css/main.css` for fonts and colors.
 

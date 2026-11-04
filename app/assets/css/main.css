@@ -1,25 +1,9 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
 @theme static {
   --font-sans:
     'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
-  /* Apply Poppins font to all UI elements */
-  --ui-font-body: var(--font-sans);
-  --ui-font-button: var(--font-sans);
-  --ui-font-headline: var(--font-sans);
-  --ui-font-display: var(--font-sans);
-  --ui-font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
-  --ui-font-serif: var(--font-sans);
-  --ui-font-ui: var(--font-sans);
-  --ui-font-brand: var(--font-sans);
-  --ui-font-accent: var(--font-sans);
-  --ui-font-heading: var(--font-sans);
-  --ui-font-subheading: var(--font-sans);
-  --ui-font-caption: var(--font-sans);
-  --ui-font-label: var(--font-sans);
 
   /* High contrast color palette */
   --color-slate-50: #f8fafc;
@@ -34,22 +18,10 @@
   --color-slate-900: #0f172a;
   --color-slate-950: #020617;
 
-  --color-lime-green: #888c03;
-  --color-dark-green: #2c4001;
+  /* Brand gold: use on black backgrounds and as a button fill */
   --color-light-brown: #c59640;
-
-  /* Orange accent color */
-  --color-sunset-50: #d47c39;
-  --color-sunset-100: #d47c39;
-  --color-sunset-200: #d47c39;
-  --color-sunset-300: #d47c39;
-  --color-sunset-400: #d47c39;
-  --color-sunset-500: #d47c39;
-  --color-sunset-600: #d47c39;
-  --color-sunset-700: #d47c39;
-  --color-sunset-800: #d47c39;
-  --color-sunset-900: #d47c39;
-  --color-sunset-950: #d47c39;
+  /* Darker gold for text on white (4.3:1 contrast, the light one is only 2.7:1) */
+  --color-deep-brown: #a07224;
 }
 
 /* TED-inspired typography system */
@@ -80,6 +52,7 @@
   font-weight: 400;
   line-height: 1.4;
   max-width: 50rem;
+  margin-inline: auto;
 }
 
 .text-lead {
@@ -89,85 +62,56 @@
   max-width: 45rem;
 }
 
-/* Dramatic spacing */
+/* Section spacing */
 .section-massive {
-  padding: clamp(3rem, 10vw, 5rem) 0;
+  padding-block: clamp(3rem, 10vw, 5rem);
 }
 
 .section-large {
-  padding: clamp(2rem, 8vw, 6rem) 0;
+  padding-block: clamp(2rem, 8vw, 6rem);
 }
 
 .section-medium {
-  padding: clamp(2rem, 6vw, 4rem) 0;
+  padding-block: clamp(2rem, 6vw, 4rem);
 }
 
-.btn-primary {
-  padding: 1rem 2.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-  border-radius: 0;
+/* Page content wrapper (in a layer so max-w-* utilities can narrow it) */
+@layer components {
+  .page-container {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
 }
 
-.btn-primary:hover {
-  cursor: pointer;
+/* Buttons: gold by default, .btn-outline for white, .btn-sm for compact */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-none border-2 border-black bg-light-brown px-10 py-4 text-base font-semibold uppercase tracking-wider text-black transition-colors cursor-pointer hover:bg-black hover:text-white;
 }
 
-.btn-menu {
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-  border-radius: 0;
+.btn-outline {
+  @apply bg-white;
 }
 
-.btn-menu:hover {
-  cursor: pointer;
+.btn-sm {
+  @apply px-4 py-2 text-xs;
 }
 
-.btn-secondary {
-  padding: 1rem 2.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-  border-radius: 0;
+/* Keeps the button outline visible when it turns black on a black section */
+.btn-on-dark {
+  @apply hover:border-light-brown hover:text-light-brown;
 }
 
-.btn-secondary:hover {
-  cursor: pointer;
-}
-
-/* Grid systems */
-.grid-dramatic {
-  display: grid;
-  gap: clamp(2rem, 5vw, 4rem);
-}
-
-/* Typography emphasis */
+/* Typography emphasis: on dark sections only, use .text-accent-light-bg on white */
 .text-accent {
   color: var(--color-light-brown);
   font-weight: 700;
 }
 
-/* d45f39 */
+.text-accent-light-bg {
+  color: var(--color-deep-brown);
+  font-weight: 700;
+}
 
-/* Clean component overrides */
 body {
-  font-family:
-    'Poppins',
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
   font-feature-settings:
     'rlig' 1,
     'calt' 1;
