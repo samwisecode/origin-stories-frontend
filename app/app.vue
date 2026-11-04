@@ -19,6 +19,8 @@ useSeoMeta({
   twitterImage: '/og-image.png',
   twitterCard: 'summary_large_image'
 })
+
+const { openSettings } = useAnalyticsConsent()
 </script>
 
 <template>
@@ -36,7 +38,10 @@ useSeoMeta({
         <p class="text-sm text-muted">
           Origin Stories © {{ new Date().getFullYear() }}
           <NuxtLink to="/terms" class="underline">Terms & Conditions</NuxtLink> |
-          <NuxtLink to="/policy" class="underline">Privacy Policy</NuxtLink>
+          <NuxtLink to="/policy" class="underline">Privacy Policy</NuxtLink> |
+          <button type="button" class="underline cursor-pointer" @click="openSettings">
+            Cookie Settings
+          </button>
         </p>
       </template>
 
@@ -46,7 +51,7 @@ useSeoMeta({
             to="https://www.youtube.com/@africanoriginstories"
             target="_blank"
             icon="i-simple-icons-youtube"
-            aria-label="Twitter"
+            aria-label="YouTube"
             color="neutral"
             variant="ghost"
             size="sm"
@@ -55,13 +60,14 @@ useSeoMeta({
             to="https://www.instagram.com/willsgreenwalk"
             target="_blank"
             icon="i-simple-icons-instagram"
-            aria-label="Twitter"
+            aria-label="Instagram"
             color="neutral"
             variant="ghost"
             size="sm"
           />
           <UButton
             to="https://www.linkedin.com/company/origin-stories-africa/"
+            target="_blank"
             icon="i-simple-icons-linkedin"
             aria-label="LinkedIn"
             color="neutral"
@@ -79,5 +85,7 @@ useSeoMeta({
         </div>
       </template>
     </UFooter>
+
+    <CookieBanner />
   </UApp>
 </template>

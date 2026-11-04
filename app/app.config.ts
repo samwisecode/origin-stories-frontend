@@ -4,14 +4,14 @@ export default defineAppConfig({
       primary: 'slate',
       neutral: 'slate'
     },
-    button: {
-      defaultVariants: {
-        color: 'black',
-        variant: 'solid',
-        size: 'md'
-      },
-      default: {
-        class: 'bg-black text-white'
+    modal: {
+      slots: {
+        overlay: 'bg-black/75'
+      }
+    },
+    slideover: {
+      slots: {
+        overlay: 'bg-black/75'
       }
     }
   }

@@ -46,6 +46,20 @@ export default defineNuxtConfig({
   },
 
   gtag: {
-    id: 'G-BX04VF3EPE'
+    id: 'G-BX04VF3EPE',
+    // Loaded by useAnalyticsConsent once the visitor accepts the cookie banner
+    initMode: 'manual',
+    initCommands: [
+      [
+        'consent',
+        'default',
+        {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'denied'
+        }
+      ]
+    ]
   }
 })

@@ -20,12 +20,12 @@ useSeoMeta({
 <template>
   <div>
     <section class="section-massive bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="page-container">
         <div class="text-center">
           <h1 class="display-xl mb-16">
             Our
             <br />
-            <span class="text-accent">Partners</span>
+            <span class="text-accent-light-bg">Partners</span>
           </h1>
           <p class="text-hero mx-auto mb-8">
             Origin Stories is made possible through the generous support of African organizations
@@ -35,21 +35,29 @@ useSeoMeta({
       </div>
     </section>
 
-    <section v-if="currentPartners.length" class="bg-white container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-        <PartnerCard v-for="partner in currentPartners" :key="partner.name" :partner="partner" />
+    <section v-if="currentPartners.length" class="bg-white page-container">
+      <h2 class="sr-only">Current Partners</h2>
+      <div class="flex flex-wrap justify-start gap-x-12">
+        <PartnerCard
+          v-for="partner in currentPartners"
+          :key="partner.name"
+          :partner="partner"
+          class="w-full md:w-[calc((100%-3rem)/2)]"
+        />
       </div>
     </section>
 
-    <section
-      v-if="pastPartners.length"
-      class="bg-white container mx-auto px-4 border-t border-gray-200"
-    >
-      <h3 class="text-4xl md:text-6xl text-center mt-20 md:mt-32 mb-16 uppercase">
-        Our <span class="text-accent">Past Partners</span>
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-        <PartnerCard v-for="partner in pastPartners" :key="partner.name" :partner="partner" />
+    <section v-if="pastPartners.length" class="bg-white page-container border-t border-gray-200">
+      <h2 class="display-md uppercase text-center mt-20 md:mt-32 mb-16">
+        Our <span class="text-accent-light-bg">Past Partners</span>
+      </h2>
+      <div class="flex flex-wrap justify-center gap-x-12">
+        <PartnerCard
+          v-for="partner in pastPartners"
+          :key="partner.name"
+          :partner="partner"
+          class="w-full md:w-[calc((100%-3rem)/2)]"
+        />
       </div>
     </section>
 
