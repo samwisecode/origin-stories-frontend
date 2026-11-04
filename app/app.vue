@@ -19,6 +19,8 @@ useSeoMeta({
   twitterImage: '/og-image.png',
   twitterCard: 'summary_large_image'
 })
+
+const { openSettings } = useAnalyticsConsent()
 </script>
 
 <template>
@@ -36,7 +38,10 @@ useSeoMeta({
         <p class="text-sm text-muted">
           Origin Stories © {{ new Date().getFullYear() }}
           <NuxtLink to="/terms" class="underline">Terms & Conditions</NuxtLink> |
-          <NuxtLink to="/policy" class="underline">Privacy Policy</NuxtLink>
+          <NuxtLink to="/policy" class="underline">Privacy Policy</NuxtLink> |
+          <button type="button" class="underline cursor-pointer" @click="openSettings">
+            Cookie Settings
+          </button>
         </p>
       </template>
 
@@ -80,5 +85,7 @@ useSeoMeta({
         </div>
       </template>
     </UFooter>
+
+    <CookieBanner />
   </UApp>
 </template>
