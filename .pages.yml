@@ -46,6 +46,15 @@ content:
       - name: company
         label: Company
         type: string
+      - name: companies
+        label: Companies
+        type: reference
+        options:
+          collection: companies
+          multiple: true
+          search: name
+          value: '{path}'
+          label: '{name}'
       - name: linkedInUrl
         label: LinkedIn URL
         type: string
