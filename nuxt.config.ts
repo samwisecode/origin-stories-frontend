@@ -61,5 +61,12 @@ export default defineNuxtConfig({
         }
       ]
     ]
+  },
+
+  // Icons first rendered client-side (e.g. inside a UModal) inject their CSS at the top of <head>.
+  // Naming the `components` layer there would place it before `base`, letting Tailwind's
+  // preflight override component styles like .page-container's auto margins.
+  icon: {
+    cssLayer: 'base'
   }
 })
