@@ -9,6 +9,11 @@ media:
     input: public/uploads/partners
     output: /uploads/partners
     categories: [image]
+  - name: companies
+    label: Company logos
+    input: public/uploads/companies
+    output: /uploads/companies
+    categories: [image]
 
 content:
   - name: speakers
@@ -41,6 +46,15 @@ content:
       - name: company
         label: Company
         type: string
+      - name: companies
+        label: Companies
+        type: reference
+        options:
+          collection: companies
+          multiple: true
+          search: name
+          value: '{path}'
+          label: '{name}'
       - name: linkedInUrl
         label: LinkedIn URL
         type: string
@@ -110,3 +124,52 @@ content:
         type: number
         required: true
         description: Lower numbers show first.
+
+  - name: companies
+    label: Companies
+    type: collection
+    path: content/companies
+    format: json
+    filename: '{primary}.json'
+    view:
+      fields: [name, industry]
+      primary: name
+      sort: [name]
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: logo
+        label: Logo
+        type: image
+        required: true
+        options:
+          media: companies
+      - name: intro
+        label: Short introduction
+        type: text
+      - name: industry
+        label: Industry
+        type: string
+      - name: info
+        label: Info
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: socials
+        label: Social media links
+        type: object
+        list: true
+        fields:
+          - name: type
+            label: Type
+            type: select
+            required: true
+            options:
+              values: [Website, LinkedIn, Instagram, Facebook, X, TikTok, YouTube]
+          - name: url
+            label: URL
+            type: string
+            required: true
