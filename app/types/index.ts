@@ -23,3 +23,14 @@ export interface Partner {
   status?: 'Current' | 'Past'
   order: number
 }
+
+export interface AboutPage {
+  seoTitle: string
+  seoDescription: string
+  heroHeading: string
+  heroParagraphs: string[]
+  whyHeading: string
+  whyHeadingAccent?: string
+  whyPoints: string[]
+  closingLine: string
+}
