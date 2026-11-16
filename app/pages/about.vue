@@ -1,7 +1,12 @@
-<script setup>
+<script setup lang="ts">
+import type { AboutPage } from '~/types'
+import about from '~~/content/pages/about.json'
+
+const page: AboutPage = about
+
 useSeoMeta({
-  title: 'About - Origin Stories',
-  description: 'We Tell the Stories Africa is Too Humble to Tell.'
+  title: page.seoTitle,
+  description: page.seoDescription
 })
 </script>
 
@@ -12,14 +17,13 @@ useSeoMeta({
       <div class="page-container section-large">
         <div>
           <div>
-            <h1 class="display-xl mb-12">We Tell the Stories Africa is Too Humble to Tell.</h1>
-            <p class="mb-8 text-2xl md:text-3xl">
-              For too long, the incredible achievements and challenges of African founders have been
-              whispered among family or hidden behind a polite reserve. We believe this silence is a
-              disservice to the world.
-            </p>
-            <p class="text-2xl md:text-3xl mb-8">
-              We created Origin Stories to give these narratives a voice.
+            <h1 class="display-xl mb-12">{{ page.heroHeading }}</h1>
+            <p
+              v-for="(paragraph, index) in page.heroParagraphs"
+              :key="index"
+              class="mb-8 text-2xl md:text-3xl"
+            >
+              {{ paragraph }}
             </p>
           </div>
         </div>
@@ -30,20 +34,17 @@ useSeoMeta({
     <section class="section-large bg-black text-white">
       <div class="page-container">
         <div class="text-left">
-          <h2 class="display-md uppercase mb-8">Why This <span class="text-accent">Matters</span></h2>
+          <h2 class="display-md uppercase mb-8">
+            {{ page.whyHeading }}
+            <span v-if="page.whyHeadingAccent" class="text-accent">{{ page.whyHeadingAccent }}</span>
+          </h2>
           <ul class="space-y-8 text-left list-disc pl-8 text-2xl md:text-3xl">
-            <li>
-              We challenge the belief that talking about success, or overcoming challenges is taboo. Instead we celebrate it.
-            </li>
-            <li>
-              Unlike other ecosystems, African founders rarely get credit for their perseverance. We showcase the relentless challenges and solutions our founders endure and create.
-            </li>
-            <li>
-              Africa operates a business culture anchored in relationships. Trust is built first and sometimes slowly. We help founders tell their stories and connect them to an audience that cares. This builds trust with future partners that helps them thrive.
+            <li v-for="(point, index) in page.whyPoints" :key="index">
+              {{ point }}
             </li>
           </ul>
-          <p class="text-accent text-3xl font-bold mt-8">
-            We are building a legacy of inspiration, one incredible journey at a time.
+          <p v-if="page.closingLine" class="text-accent text-3xl font-bold mt-8">
+            {{ page.closingLine }}
           </p>
         </div>
       </div>
