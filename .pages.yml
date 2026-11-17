@@ -216,3 +216,157 @@ content:
         label: Closing line
         type: string
         description: Gold line under the bullet points.
+
+  - name: home
+    label: Home page
+    type: file
+    path: content/pages/home.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - name: tagline
+            label: Tagline
+            type: string
+            required: true
+          - name: eventDate
+            label: Event date and time
+            type: string
+            required: true
+          - name: venue
+            label: Venue
+            type: string
+            required: true
+          - name: ticketLabel
+            label: Ticket button text
+            type: string
+            required: true
+          - name: ticketUrl
+            label: Ticket link
+            type: string
+            required: true
+      - name: intro
+        label: Intro paragraph
+        type: object
+        fields:
+          - name: before
+            label: Text before highlight
+            type: string
+          - name: highlight
+            label: Highlighted text
+            type: text
+            required: true
+            description: Shown with the brown marker behind it.
+          - name: after
+            label: Text after highlight
+            type: text
+      - name: origin
+        label: Origin story
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            required: true
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list: true
+            description: One row per paragraph.
+          - name: authorName
+            label: Author name
+            type: string
+            required: true
+          - name: authorRole
+            label: Author role
+            type: string
+          - name: authorNote
+            label: Small print under author
+            type: string
+      - name: about
+        label: "'What is Origin Stories' section"
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            required: true
+          - name: headingAccent
+            label: Heading (gold words)
+            type: string
+            description: Shown in gold straight after the heading.
+          - name: body
+            label: Body
+            type: rich-text
+            description: Use a bullet list. Bold text is supported.
+            options:
+              format: html
+              media: false
+      - name: vision
+        label: Vision section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            required: true
+          - name: headingAccent
+            label: Heading (gold words)
+            type: string
+            description: Shown in gold straight after the heading.
+          - name: body
+            label: Body
+            type: rich-text
+            options:
+              format: html
+              media: false
+      - name: speakers
+        label: Speakers section
+        type: object
+        fields:
+          - name: headingAccent
+            label: Heading (gold words)
+            type: string
+            required: true
+            description: Shown in gold after the latest speaker year, e.g. "2026 Speakers".
+      - name: partners
+        label: Partners section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            required: true
+          - name: headingAccent
+            label: Heading (gold words)
+            type: string
+            description: Shown in gold straight after the heading.
+          - name: buttonLabel
+            label: Button text
+            type: string
+            required: true
+      - name: contact
+        label: Contact section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            required: true
+          - name: headingAccent
+            label: Heading (gold words)
+            type: string
+            description: Shown in gold straight after the heading.
+          - name: intro
+            label: Intro text
+            type: text
+          - name: successMessage
+            label: Message sent text
+            type: text
+            required: true
+          - name: errorMessage
+            label: Message failed text
+            type: text
+            required: true

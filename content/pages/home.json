@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "tagline": "Inspiring Journeys of African Entrepreneurs",
+    "eventDate": "19 November 2026 | 6:30pm",
+    "venue": "The Star Theatre, Homecoming Centre, District 6, Cape Town",
+    "ticketLabel": "Get Your Ticket",
+    "ticketUrl": "https://qkt.io/AfricanOriginStories"
+  },
+  "intro": {
+    "before": "Origin Stories is a",
+    "highlight": "live theatre event and media platform where African entrepreneurs share their inspiring journeys.",
+    "after": "It’s not just a stage, it’s a support platform. The stories are raw, honest and deeply human. They highlight resilience, ingenuity and legacy while amplifying African entrepreneurship to the world."
+  },
+  "origin": {
+    "heading": "The Origin of ORIGIN STORIES...",
+    "paragraphs": [
+      "\"Early one Friday morning while talking with an African entrepreneur and walking down Lion's Head mountain in Cape Town.",
+      "I realised there was nowhere to listen to or share these inspiring African entrepreneurs' stories (like Nkosinathi's) and for them to inspire the next generation of dreamers, builders and value-creators.",
+      "After reading the quote \"IF NOT NOW, WHEN? IF NOT ME, WHO?\" and being encouraged by others.",
+      "We decided to create this platform to showcase the most inspiring African Entrepreneur stories and share them with the World.",
+      "Join us in supporting and celebrating these inspiring Humans.\""
+    ],
+    "authorName": "Will Green",
+    "authorRole": "Curator",
+    "authorNote": "a WGW Community and Africa Tech Ecosystem initiative."
+  },
+  "about": {
+    "heading": "What is",
+    "headingAccent": "Origin Stories?",
+    "body": "<ul><li><p><strong>7 - 10 handpicked</strong> curated <strong>speakers</strong>.</p></li><li><p>Each speaker has <strong>7 minutes</strong> to share the real story behind their <strong>entrepreneurial journey</strong>.</p></li><li><p>Think <strong>'TED talk' meets 'PechaKucha'</strong> with a healthy dose of humour, emotions, celebrations and support.</p></li><li><p>The event is <strong>NOT</strong> an investor, product, business, sales or marketing pitch.</p></li><li><p>An informal networking and <strong>entertaining evening</strong> with other curious and supportive Humans.</p></li><li><p>A <strong>global community</strong> supporting African entrepreneurs.</p></li></ul>"
+  },
+  "vision": {
+    "heading": "Our",
+    "headingAccent": "Vision",
+    "body": "<p>To inspire, connect and positively shape the global narrative of African entrepreneurship.<br>To reach <strong>1 million African Entrepreneurs by 2050</strong>.</p><p>This isn’t just a platform, it’s a stage for stories that resonate, ideas that linger and unheard voices to make a lasting impact.</p><p>Are you ready to experience real human and inspiring African Origin Stories?</p><p>We look forward to welcoming you on the <strong>19th of November 2026 at 18:30 for 19:00 (doors open 18:00)</strong>.</p><p>Thanks to all our partners for your support especially Silicon Overdrive, Western Cape Government and Von Seidels. Thanks to our volunteer team.</p><p>*All profits will be reinvested to host future events to create and distribute more stories and help support High School entrepreneur programmes in Africa.</p>"
+  },
+  "speakers": {
+    "headingAccent": "Speakers"
+  },
+  "partners": {
+    "heading": "Our",
+    "headingAccent": "Partners",
+    "buttonLabel": "Meet Our Partners"
+  },
+  "contact": {
+    "heading": "Get in",
+    "headingAccent": "Touch",
+    "intro": "Have a question or want to get involved? We'd love to hear from you.",
+    "successMessage": "Thank you for your message! We'll get back to you soon.",
+    "errorMessage": "Something went wrong. Please try again or email us at will@colab.marketing"
+  }
+}

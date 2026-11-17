@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { Partner, Speaker } from '~/types'
+import type { HomePage, Partner, Speaker } from '~/types'
+import home from '~~/content/pages/home.json'
+
+const page: HomePage = home
 
 const contactForm = ref({
   name: '',
@@ -71,18 +74,18 @@ const currentPartners = Object.values(
               </h1>
               <div class="space-y-6 text-center">
                 <p class="font-semibold text-2xl md:text-3xl mb-8 text-deep-brown">
-                  Inspiring Journeys of African Entrepreneurs
+                  {{ page.hero.tagline }}
                 </p>
                 <p class="text-3xl md:text-4xl text-center mb-2 text-black font-semibold">
-                  19 November 2026 | 6:30pm
+                  {{ page.hero.eventDate }}
                 </p>
                 <p class="text-lg md:text-xl text-black text-center">
-                  The Star Theatre, Homecoming Centre, District 6, Cape Town
+                  {{ page.hero.venue }}
                 </p>
               </div>
               <div class="flex flex-col justify-center sm:flex-row gap-4 pt-4">
-                <UButton to="https://qkt.io/AfricanOriginStories" target="_blank" class="btn">
-                  Get Your Ticket
+                <UButton :to="page.hero.ticketUrl" target="_blank" class="btn">
+                  {{ page.hero.ticketLabel }}
                 </UButton>
               </div>
             </div>
@@ -109,17 +112,9 @@ const currentPartners = Object.values(
     <section class="section-large">
       <div class="page-container text-center">
         <p class="text-black text-xl md:text-2xl lg:text-3xl my-4 mx-auto leading-relaxed">
-          Origin Stories is a
-          <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
-            >live theatre event and media platform</span
-          >
-          where
-          <span class="text-black bg-white font-bold md:p-2 md:border-4 md:border-black"
-            >African&nbsp;entrepreneurs share their inspiring journeys.</span
-          >
-          It’s not just a stage, it’s a support platform. The stories are raw, honest and deeply
-          human. They highlight resilience, ingenuity and legacy while amplifying African
-          entrepreneurship to the world.
+          {{ page.intro.before }}
+          <span class="marker">{{ page.intro.highlight }}</span>
+          {{ page.intro.after }}
         </p>
       </div>
     </section>
@@ -131,31 +126,16 @@ const currentPartners = Object.values(
             <img src="/table-mountain.png" alt="Table Mountain" loading="lazy" />
           </div>
           <h2 class="text-black text-2xl md:text-3xl my-8 font-bold mx-auto leading-[120%]">
-            The Origin of ORIGIN STORIES...
+            {{ page.origin.heading }}
           </h2>
           <div class="text-black text-lg md:text-xl my-8 mx-auto">
-            <p class="mb-4">
-              "Early one Friday morning while talking with an African entrepreneur and walking down
-              Lion's Head mountain in Cape Town.
+            <p v-for="(paragraph, index) in page.origin.paragraphs" :key="index" class="mb-4">
+              {{ paragraph }}
             </p>
-            <p class="mb-4">
-              I realised there was nowhere to listen to or share these inspiring African
-              entrepreneurs' stories (like Nkosinathi's) and for them to inspire the next generation
-              of dreamers, builders and value-creators.
-            </p>
-            <p class="mb-4">
-              After reading the quote "IF NOT NOW, WHEN? IF NOT ME, WHO?" and being encouraged by
-              others.
-            </p>
-            <p class="mb-4">
-              We decided to create this platform to showcase the most inspiring African Entrepreneur
-              stories and share them with the World.
-            </p>
-            <p class="mb-4">Join us in supporting and celebrating these inspiring Humans."</p>
             <p>
-              <strong>Will Green</strong> <br />
-              Curator <br />
-              <span class="text-sm">a WGW Community and Africa Tech Ecosystem initiative.</span>
+              <strong>{{ page.origin.authorName }}</strong> <br />
+              <template v-if="page.origin.authorRole">{{ page.origin.authorRole }} <br /></template>
+              <span v-if="page.origin.authorNote" class="text-sm">{{ page.origin.authorNote }}</span>
             </p>
           </div>
         </div>
@@ -165,32 +145,17 @@ const currentPartners = Object.values(
     <section class="section-large bg-black">
       <div class="page-container text-left">
         <h2 class="display-md uppercase text-white text-center md:text-left mb-4">
-          What is <span class="text-accent">Origin Stories?</span>
+          {{ page.about.heading }}
+          <span v-if="page.about.headingAccent" class="text-accent">{{
+            page.about.headingAccent
+          }}</span>
         </h2>
-        <ul class="text-white/80 text-xl list-disc pl-8">
-          <li class="my-8">
-            <strong>7 - 10 handpicked</strong> curated <strong>speakers</strong>.
-          </li>
-          <li class="my-8">
-            Each speaker has <strong>7 minutes</strong> to share the real story behind their
-            <strong>entrepreneurial journey</strong>.
-          </li>
-          <li class="my-8">
-            Think <strong>'TED talk' meets 'PechaKucha'</strong> with a healthy dose of humour,
-            emotions, celebrations and support.
-          </li>
-          <li class="my-8">
-            The event is <strong>NOT</strong> an investor, product, business, sales or marketing
-            pitch.
-          </li>
-          <li class="my-8">
-            An informal networking and <strong>entertaining evening</strong> with other curious and
-            supportive Humans.
-          </li>
-          <li class="my-8">
-            A <strong>global community</strong> supporting African entrepreneurs.
-          </li>
-        </ul>
+        <!-- eslint-disable vue/no-v-html -->
+        <div
+          class="text-white/80 text-xl [&_ul]:list-disc [&_ul]:pl-8 [&_li]:my-8"
+          v-html="page.about.body"
+        />
+        <!-- eslint-enable vue/no-v-html -->
       </div>
     </section>
 
@@ -198,33 +163,13 @@ const currentPartners = Object.values(
       <div class="grid grid-cols-1 md:grid-cols-3 items-center">
         <div class="text-center col-span-1 md:col-span-2 md:text-left">
           <h2 class="display-md uppercase text-black my-8">
-            Our <span class="text-accent-light-bg">Vision</span>
+            {{ page.vision.heading }}
+            <span v-if="page.vision.headingAccent" class="text-accent-light-bg">{{
+              page.vision.headingAccent
+            }}</span>
           </h2>
-          <p class="text-black text-xl my-8 mx-auto">
-            To inspire, connect and positively shape the global narrative of African
-            entrepreneurship.
-            <br />
-            To reach <strong>1 million African Entrepreneurs by 2050</strong>.
-          </p>
-          <p class="text-black text-xl my-8 mx-auto">
-            This isn’t just a platform, it’s a stage for stories that resonate, ideas that linger
-            and unheard voices to make a lasting impact.
-          </p>
-          <p class="text-black text-xl my-8 mx-auto">
-            Are you ready to experience real human and inspiring African Origin Stories?
-          </p>
-          <p class="text-black text-xl my-8 mx-auto">
-            We look forward to welcoming you on the
-            <strong>19th of November 2026 at 18:30 for 19:00 (doors open 18:00)</strong>.
-          </p>
-          <p class="text-black text-xl my-8 mx-auto">
-            Thanks to all our partners for your support especially Silicon Overdrive, Western Cape
-            Government and Von Seidels. Thanks to our volunteer team.
-          </p>
-          <p class="text-black text-xl my-8 mx-auto">
-            *All profits will be reinvested to host future events to create and distribute more
-            stories and help support High School entrepreneur programmes in Africa.
-          </p>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <div class="text-black text-xl [&_p]:my-8" v-html="page.vision.body" />
         </div>
         <div class="col-span-1 px-20 md:p-4">
           <img src="/arms-linked.png" alt="Arms linked in support" loading="lazy" />
@@ -234,7 +179,7 @@ const currentPartners = Object.values(
 
     <section id="speakers" class="section-large bg-black">
       <h2 class="display-md text-white text-center mb-8 uppercase">
-        {{ latestYear }} <span class="text-accent">Speakers</span>
+        {{ latestYear }} <span class="text-accent">{{ page.speakers.headingAccent }}</span>
       </h2>
       <div class="page-container">
         <div class="flex flex-wrap justify-center gap-6 md:gap-12 py-8 md:py-12">
@@ -253,13 +198,12 @@ const currentPartners = Object.values(
       </div>
     </section>
 
-    <section
-      v-if="currentPartners.length"
-      id="partners"
-      class="section-large bg-white"
-    >
+    <section v-if="currentPartners.length" id="partners" class="section-large bg-white">
       <h2 class="uppercase display-md text-black text-center mb-8">
-        Our <span class="text-accent-light-bg">Partners</span>
+        {{ page.partners.heading }}
+        <span v-if="page.partners.headingAccent" class="text-accent-light-bg">{{
+          page.partners.headingAccent
+        }}</span>
       </h2>
       <div class="page-container">
         <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 py-12">
@@ -280,7 +224,7 @@ const currentPartners = Object.values(
           </component>
         </div>
         <div class="flex justify-center">
-          <UButton to="/partners" class="btn">Meet Our Partners</UButton>
+          <UButton to="/partners" class="btn">{{ page.partners.buttonLabel }}</UButton>
         </div>
       </div>
     </section>
@@ -290,10 +234,13 @@ const currentPartners = Object.values(
     <section id="contact" class="section-large bg-black">
       <div class="max-w-2xl mx-auto px-6 lg:px-8">
         <h2 class="display-md uppercase text-white text-center mb-4">
-          Get in <span class="text-accent">Touch</span>
+          {{ page.contact.heading }}
+          <span v-if="page.contact.headingAccent" class="text-accent">{{
+            page.contact.headingAccent
+          }}</span>
         </h2>
-        <p class="text-white/80 text-center mb-12 text-lg">
-          Have a question or want to get involved? We'd love to hear from you.
+        <p v-if="page.contact.intro" class="text-white/80 text-center mb-12 text-lg">
+          {{ page.contact.intro }}
         </p>
 
         <form class="space-y-6" @submit.prevent="submitContactForm">
@@ -362,7 +309,7 @@ const currentPartners = Object.values(
             role="status"
             class="bg-green-100 border-2 border-green-800 text-green-900 px-4 py-3"
           >
-            Thank you for your message! We'll get back to you soon.
+            {{ page.contact.successMessage }}
           </div>
 
           <div
@@ -370,14 +317,10 @@ const currentPartners = Object.values(
             role="alert"
             class="bg-red-100 border-2 border-red-800 text-red-900 px-4 py-3"
           >
-            Something went wrong. Please try again or email us at will@colab.marketing
+            {{ page.contact.errorMessage }}
           </div>
 
-          <UButton
-            type="submit"
-            :disabled="isSubmitting"
-            class="btn btn-on-dark w-full"
-          >
+          <UButton type="submit" :disabled="isSubmitting" class="btn btn-on-dark w-full">
             {{ isSubmitting ? 'Sending...' : 'Send Message' }}
           </UButton>
         </form>
@@ -385,3 +328,14 @@ const currentPartners = Object.values(
     </section>
   </div>
 </template>
+
+<style scoped>
+.marker {
+  background-color: var(--color-light-brown);
+  background-repeat: no-repeat;
+  background-size: 100% 2em;
+  background-position: 0 100%;
+  padding-left: 0.2em;
+  margin-right: 0.24em;
+}
+</style>
