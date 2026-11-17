@@ -4,6 +4,9 @@
   "title": "CTO & Co-founder",
   "company": "AI Diagnostics",
   "linkedInUrl": "https://www.linkedin.com/in/johan-coetzee-100/",
-  "years": [2026],
+  "bio": "Johan Coetzee is the co-founder of AI Diagnostics (AID), a South African medtech company using acoustic AI to fight tuberculosis on the frontlines of public health. After beginning his career in software and cardiovascular technology, Johan shifted his focus to building accessible diagnostics for underserved communities. By pairing the affordable Ostium digital stethoscope with AI trained on thousands of breaths, his work puts specialist-level TB screening directly into the hands of community clinic nurses.",
+  "years": [
+    2026
+  ],
   "order": 1
 }
