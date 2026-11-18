@@ -7,7 +7,8 @@ const navigation = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Speakers', to: '/speakers' },
-  { label: 'Partners', to: '/partners' }
+  { label: 'Partners', to: '/partners' },
+  { label: 'Learn More', to: '/learnmore' }
 ]
 
 const closeMenu = () => {
