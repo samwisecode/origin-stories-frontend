@@ -81,3 +81,21 @@ export interface HomePage {
     errorMessage: string
   }
 }
+
+export interface LearnMorePage {
+  seoTitle: string
+  seoDescription: string
+  heroHeading: string
+  heroHeadingAccent?: string
+  heroIntro?: string
+  cards: {
+    title: string
+    description?: string
+    link: string
+  }[]
+  watchHeading: string
+  watchHeadingAccent?: string
+  watchIntro?: string
+  watchButtonLabel: string
+  watchButtonUrl: string
+}

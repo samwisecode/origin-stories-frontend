@@ -1,0 +1,29 @@
+{
+  "seoTitle": "Learn More - Origin Stories",
+  "seoDescription": "Meet the founders, sponsors and production partners behind Origin Stories.",
+  "heroHeading": "Meet the people behind the",
+  "heroHeadingAccent": "Stories",
+  "heroIntro": "Every story on this stage is backed by a founder who built something, the sponsors who make the evening possible and the businesses who bring it to life. Find out more about each of them, and get in touch.",
+  "cards": [
+    {
+      "title": "Speakers",
+      "description": "The founders telling their stories, and the companies they built.",
+      "link": "/speakers"
+    },
+    {
+      "title": "Sponsors",
+      "description": "The organisations who make Origin Stories possible.",
+      "link": "/partners"
+    },
+    {
+      "title": "Production partners",
+      "description": "The businesses who give their time and skills to bring Origin Stories to the stage.",
+      "link": "/partners"
+    }
+  ],
+  "watchHeading": "Watch the",
+  "watchHeadingAccent": "Stories",
+  "watchIntro": "Full conversations with African founders on the Origin Stories podcast.",
+  "watchButtonLabel": "Watch on YouTube",
+  "watchButtonUrl": "https://www.youtube.com/@africanoriginstories"
+}
