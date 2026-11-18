@@ -370,3 +370,68 @@ content:
             label: Message failed text
             type: text
             required: true
+
+  - name: learnMore
+    label: Learn More page
+    type: file
+    path: content/pages/learnmore.json
+    format: json
+    fields:
+      - name: seoTitle
+        label: SEO title
+        type: string
+        required: true
+        description: Shown in the browser tab and search results.
+      - name: seoDescription
+        label: SEO description
+        type: text
+        required: true
+        description: Shown under the title in search results.
+      - name: heroHeading
+        label: Hero heading
+        type: string
+        required: true
+      - name: heroHeadingAccent
+        label: Hero heading (gold words)
+        type: string
+        description: Shown in gold straight after the heading.
+      - name: heroIntro
+        label: Hero intro
+        type: text
+      - name: cards
+        label: Link cards
+        type: object
+        list: true
+        description: One row per card in the black section.
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+          - name: link
+            label: Link
+            type: string
+            required: true
+            description: A page on this site, e.g. /speakers, or a full URL.
+      - name: watchHeading
+        label: "'Watch' section heading"
+        type: string
+        required: true
+      - name: watchHeadingAccent
+        label: "'Watch' section heading (gold words)"
+        type: string
+        description: Shown in gold straight after the heading.
+      - name: watchIntro
+        label: "'Watch' section intro"
+        type: text
+      - name: watchButtonLabel
+        label: "'Watch' button text"
+        type: string
+        required: true
+      - name: watchButtonUrl
+        label: "'Watch' button link"
+        type: string
+        required: true
