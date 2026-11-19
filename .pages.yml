@@ -56,21 +56,24 @@ content:
       - name: company
         label: Company
         type: string
-      - name: companies
-        label: Companies
-        type: reference
-        options:
-          collection: companies
-          multiple: true
-          search: name
-          value: '{path}'
-          label: '{name}'
+      - name: companyUrl
+        label: Company URL
+        type: string
       - name: linkedInUrl
         label: LinkedIn URL
         type: string
+      - name: theStory
+        label: The Story
+        type: rich-text
+        options:
+          format: html
+          media: false
       - name: bio
         label: Bio
         type: text
+      - name: podcastUrl
+        label: Podcast URL
+        type: string
       - name: years
         label: Years
         type: number
