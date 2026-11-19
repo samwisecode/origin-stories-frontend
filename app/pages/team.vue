@@ -6,7 +6,7 @@
       <div class="max-w-7xl mx-auto mt-5 md:mt-20 mb-5 md:mb-20 px-6 lg:px-8">
         <div class="gap-16 items-center">
           <div>
-            <h1 class="display-xl mb-12">Meet The Team</h1>
+            <h1 class="display-lg font-extrabold uppercase mb-10">Meet The Team</h1>
           </div>
         </div>
       </div>

@@ -9,8 +9,12 @@ export interface Speaker {
   photo: string
   title?: string
   company?: string
+  companyUrl?: string
   linkedInUrl?: string
+  theStory?: string
+  // Not shown on the site; kept in the CMS in case it's needed later
   bio?: string
+  podcastUrl?: string
   years: number[]
   order: number
 }
@@ -20,7 +24,18 @@ export interface Partner {
   logo: string
   url?: string
   description: string
+  about?: string
+  podcastUrl?: string
   status?: 'Current' | 'Past'
+  order: number
+}
+
+export interface MadePossibleByCompany {
+  name: string
+  logo: string
+  url?: string
+  description: string
+  about?: string
   order: number
 }
 

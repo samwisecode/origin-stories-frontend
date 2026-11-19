@@ -17,11 +17,11 @@ useSeoMeta({
       <div class="page-container section-large">
         <div>
           <div>
-            <h1 class="display-xl mb-12">{{ page.heroHeading }}</h1>
+            <h1 class="display-lg font-extrabold uppercase mb-10">{{ page.heroHeading }}</h1>
             <p
               v-for="(paragraph, index) in page.heroParagraphs"
               :key="index"
-              class="mb-8 text-2xl md:text-3xl"
+              class="mb-8 text-xl md:text-2xl"
             >
               {{ paragraph }}
             </p>
@@ -36,7 +36,9 @@ useSeoMeta({
         <div class="text-left">
           <h2 class="display-md uppercase mb-8">
             {{ page.whyHeading }}
-            <span v-if="page.whyHeadingAccent" class="text-accent">{{ page.whyHeadingAccent }}</span>
+            <span v-if="page.whyHeadingAccent" class="text-accent">{{
+              page.whyHeadingAccent
+            }}</span>
           </h2>
           <ul class="space-y-8 text-left list-disc pl-8 text-2xl md:text-3xl">
             <li v-for="(point, index) in page.whyPoints" :key="index">

@@ -9,6 +9,16 @@ media:
     input: public/uploads/partners
     output: /uploads/partners
     categories: [image]
+  - name: ecosystemPartners
+    label: Ecosystem partner logos
+    input: public/uploads/ecosystem-partners
+    output: /uploads/ecosystem-partners
+    categories: [image]
+  - name: madePossibleBy
+    label: Made Possible By company logos
+    input: public/uploads/made-possible-by
+    output: /uploads/made-possible-by
+    categories: [image]
   - name: companies
     label: Company logos
     input: public/uploads/companies
@@ -46,21 +56,24 @@ content:
       - name: company
         label: Company
         type: string
-      - name: companies
-        label: Companies
-        type: reference
-        options:
-          collection: companies
-          multiple: true
-          search: name
-          value: '{path}'
-          label: '{name}'
+      - name: companyUrl
+        label: Company URL
+        type: string
       - name: linkedInUrl
         label: LinkedIn URL
         type: string
+      - name: theStory
+        label: The Story
+        type: rich-text
+        options:
+          format: html
+          media: false
       - name: bio
         label: Bio
         type: text
+      - name: podcastUrl
+        label: Podcast URL
+        type: string
       - name: years
         label: Years
         type: number
@@ -106,6 +119,15 @@ content:
         options:
           format: html
           media: false
+      - name: about
+        label: About
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: podcastUrl
+        label: Podcast URL
+        type: string
       - name: status
         label: Status
         type: select
@@ -118,7 +140,97 @@ content:
         type: number
         list: true
         required: true
-        description: Each year this person spoke, e.g. 2025. Add a row per year.
+        description: Years this partner was involved, e.g. 2025. Add a row per year.
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        description: Lower numbers show first.
+
+  - name: ecosystemPartners
+    label: Ecosystem Partners
+    type: collection
+    path: content/ecosystem-partners
+    format: json
+    filename: '{primary}.json'
+    view:
+      fields: [name, order]
+      primary: name
+      sort: [order, name]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: logo
+        label: Logo
+        type: image
+        required: true
+        options:
+          media: ecosystemPartners
+      - name: url
+        label: Website
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: about
+        label: About
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        description: Lower numbers show first.
+
+  - name: madePossibleBy
+    label: Made Possible By Companies
+    type: collection
+    path: content/made-possible-by
+    format: json
+    filename: '{primary}.json'
+    view:
+      fields: [name, order]
+      primary: name
+      sort: [order, name]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: logo
+        label: Logo
+        type: image
+        required: true
+        options:
+          media: madePossibleBy
+      - name: url
+        label: Website
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: about
+        label: About
+        type: rich-text
+        options:
+          format: html
+          media: false
       - name: order
         label: Display order
         type: number
@@ -126,7 +238,7 @@ content:
         description: Lower numbers show first.
 
   - name: companies
-    label: Companies
+    label: Speaker Companies
     type: collection
     path: content/companies
     format: json

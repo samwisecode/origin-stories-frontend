@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import type { Speaker } from '~/types'
-
-const speakers = Object.values(
-  import.meta.glob<Speaker>('~~/content/speakers/*.json', { eager: true, import: 'default' })
-).sort((a, b) => a.order - b.order)
-
 const latestYear = Math.max(...speakers.flatMap(speaker => speaker.years))
 
 const currentSpeakers = speakers.filter(speaker => speaker.years.includes(latestYear))
@@ -27,7 +21,7 @@ useSeoMeta({
     <section class="section-massive bg-white">
       <div class="page-container">
         <div class="text-center">
-          <h1 class="display-xl mb-16">
+          <h1 class="display-lg font-extrabold uppercase mb-10">
             Our
             <br />
             <span class="text-accent-light-bg">Speakers</span>
@@ -48,13 +42,12 @@ useSeoMeta({
         <div class="flex flex-wrap justify-start gap-6 md:gap-12 py-8 md:py-12">
           <SpeakerProfile
             v-for="speaker in currentSpeakers"
-            :key="speaker.name"
+            :key="speaker.slug"
             :name="speaker.name"
             :title="speaker.title"
             :profile-pic-url="speaker.photo"
             :company="speaker.company"
-            :linked-in-url="speaker.linkedInUrl"
-            :bio="speaker.bio"
+            :slug="speaker.slug"
             class="text-white/90 bg-black w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-6rem)/3)]"
           />
         </div>
@@ -73,13 +66,12 @@ useSeoMeta({
           <div class="flex flex-wrap justify-start gap-6 md:gap-12 py-8 md:py-12">
             <SpeakerProfile
               v-for="speaker in group.speakers"
-              :key="speaker.name"
+              :key="speaker.slug"
               :name="speaker.name"
               :title="speaker.title"
               :profile-pic-url="speaker.photo"
               :company="speaker.company"
-              :linked-in-url="speaker.linkedInUrl"
-              :bio="speaker.bio"
+              :slug="speaker.slug"
               class="text-white/90 bg-black w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-6rem)/3)] lg:w-[calc((100%-9rem)/4)]"
             />
           </div>
