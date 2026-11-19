@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { HomePage, Partner, Speaker } from '~/types'
+import type { HomePage, Partner } from '~/types'
 import home from '~~/content/pages/home.json'
 
 const page: HomePage = home
@@ -42,10 +42,6 @@ async function submitContactForm() {
     isSubmitting.value = false
   }
 }
-
-const speakers = Object.values(
-  import.meta.glob<Speaker>('~~/content/speakers/*.json', { eager: true, import: 'default' })
-).sort((a, b) => a.order - b.order)
 
 const latestYear = Math.max(...speakers.flatMap(speaker => speaker.years))
 const latestSpeakers = speakers.filter(speaker => speaker.years.includes(latestYear))
@@ -185,13 +181,12 @@ const currentPartners = Object.values(
         <div class="flex flex-wrap justify-center gap-6 md:gap-12 py-8 md:py-12">
           <SpeakerProfile
             v-for="speaker in latestSpeakers"
-            :key="speaker.name"
+            :key="speaker.slug"
             :name="speaker.name"
             :title="speaker.title"
             :profile-pic-url="speaker.photo"
             :company="speaker.company"
-            :linked-in-url="speaker.linkedInUrl"
-            :bio="speaker.bio"
+            :slug="speaker.slug"
             class="text-white/90 bg-black w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-6rem)/3)]"
           />
         </div>
