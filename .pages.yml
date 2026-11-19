@@ -137,7 +137,7 @@ content:
         type: number
         list: true
         required: true
-        description: Each year this person spoke, e.g. 2025. Add a row per year.
+        description: Years this partner was involved, e.g. 2025. Add a row per year.
       - name: order
         label: Display order
         type: number
