@@ -126,7 +126,7 @@ content:
         description: Lower numbers show first.
 
   - name: companies
-    label: Companies
+    label: Speaker Companies
     type: collection
     path: content/companies
     format: json
