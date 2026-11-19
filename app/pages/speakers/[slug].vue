@@ -48,10 +48,7 @@ useSeoMeta({
             <p v-if="speaker.company" class="text-lg md:text-xl font-semibold text-accent-light-bg">
               {{ speaker.company }}
             </p>
-            <div
-              v-if="speaker.companyUrl || speaker.linkedInUrl"
-              class="flex flex-wrap gap-4 mt-8"
-            >
+            <div v-if="speaker.companyUrl || speaker.linkedInUrl" class="flex flex-wrap gap-4 mt-8">
               <UButton
                 v-if="speaker.companyUrl"
                 :to="speaker.companyUrl"
@@ -82,7 +79,7 @@ useSeoMeta({
           The <span class="text-accent-light-bg">Story</span>
         </h2>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="max-w-3xl text-lg md:text-xl [&_p]:mb-4" v-html="speaker.theStory" />
+        <div class="max-w-4xl text-lg md:text-xl [&_p]:mb-4" v-html="speaker.theStory" />
       </div>
     </section>
 
@@ -91,12 +88,7 @@ useSeoMeta({
         <h2 class="display-md uppercase mb-8">
           Listen to the full <span class="text-accent-light-bg">conversation</span>
         </h2>
-        <UButton
-          :to="speaker.podcastUrl"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-outline"
-        >
+        <UButton :to="speaker.podcastUrl" target="_blank" rel="noopener" class="btn btn-outline">
           Listen now
         </UButton>
       </div>
