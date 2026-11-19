@@ -23,9 +23,10 @@ useSeoMeta({
           &larr; Back to Made Possible By
         </NuxtLink>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <!-- Logo column stays small so long names have room -->
+        <div class="grid grid-cols-1 md:grid-cols-[20rem_minmax(0,1fr)] gap-10 md:gap-16 items-center">
           <div
-            class="aspect-[4/3] bg-white border-2 border-black flex items-center justify-center p-10"
+            class="w-full max-w-80 aspect-[4/3] bg-white border-2 border-black flex items-center justify-center p-8"
           >
             <img
               :src="company.logo"
@@ -35,7 +36,13 @@ useSeoMeta({
           </div>
 
           <div>
-            <h1 class="display-lg uppercase text-accent-light-bg mb-6">{{ company.name }}</h1>
+            <!-- Long names drop a size so they fit on laptop screens -->
+            <h1
+              class="uppercase font-bold text-accent-light-bg mb-6 [overflow-wrap:anywhere]"
+              :class="company.name.length > 14 ? 'display-md' : 'display-lg'"
+            >
+              {{ company.name }}
+            </h1>
             <!-- eslint-disable-next-line vue/no-v-html -->
             <div class="text-lg md:text-xl [&_p]:mb-4" v-html="company.description" />
             <UButton
