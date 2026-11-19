@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image', '@nuxt/fonts', 'nuxt-gtag'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/ui',
+    '@nuxt/image',
+    '@nuxt/fonts',
+    'nuxt-gtag',
+    '@vercel/analytics'
+  ],
 
   devtools: {
     enabled: true
