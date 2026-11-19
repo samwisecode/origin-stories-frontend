@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const companies = madePossibleByCompanies
+const NuxtLink = resolveComponent('NuxtLink')
 
 useSeoMeta({
   title: 'Made Possible By - Origin Stories',
@@ -12,6 +13,12 @@ useSeoMeta({
     <section class="section-massive bg-white">
       <div class="page-container">
         <div class="text-center">
+          <NuxtLink
+            to="/learnmore"
+            class="inline-block mb-8 border-b-2 border-black pb-1 text-sm font-semibold"
+          >
+            &larr; Learn more
+          </NuxtLink>
           <h1 class="display-xl mb-16">
             Made
             <br />
@@ -24,19 +31,28 @@ useSeoMeta({
       </div>
     </section>
 
-    <section v-if="companies.length" class="bg-white page-container">
+    <section v-if="companies.length" class="section-large bg-gray-50">
       <h2 class="sr-only">Companies</h2>
-      <div class="flex flex-wrap justify-start gap-x-12">
-        <PartnerCard
-          v-for="company in companies"
-          :key="company.slug"
-          :partner="company"
-          :details-to="company.about ? `/made-possible-by/${company.slug}` : undefined"
-          class="w-full md:w-[calc((100%-3rem)/2)]"
-        />
-      </div>
+      <ul class="page-container grid grid-cols-2 md:grid-cols-4 gap-6">
+        <li v-for="company in companies" :key="company.slug">
+          <component
+            :is="company.about ? NuxtLink : 'div'"
+            :to="company.about ? `/made-possible-by/${company.slug}` : undefined"
+            class="group block"
+          >
+            <div
+              class="aspect-square bg-white border-2 border-black flex items-center justify-center p-6"
+            >
+              <img
+                :src="company.logo"
+                :alt="`${company.name} Logo`"
+                class="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <h3 class="mt-4 font-bold group-hover:underline">{{ company.name }}</h3>
+          </component>
+        </li>
+      </ul>
     </section>
-
-    <JoinCommunity />
   </div>
 </template>
