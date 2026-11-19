@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Partner } from '~/types'
 
-defineProps<{ partner: Partner }>()
+defineProps<{ partner: Partner, detailsTo?: string }>()
 </script>
 
 <template>
@@ -17,6 +17,9 @@ defineProps<{ partner: Partner }>()
       <h3 class="text-2xl font-bold mt-8 mb-2">{{ partner.name }}</h3>
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div class="text-lg md:text-xl [&_p]:mb-4" v-html="partner.description" />
+      <p v-if="detailsTo">
+        <NuxtLink :to="detailsTo" class="underline font-bold">Read more</NuxtLink>
+      </p>
       <p v-if="partner.url">
         <NuxtLink :to="partner.url" class="underline font-bold">{{
           partner.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')

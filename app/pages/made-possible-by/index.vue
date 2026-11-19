@@ -1,14 +1,5 @@
 <script setup lang="ts">
-import type { Partner } from '~/types'
-
-const companies = Object.values(
-  import.meta.glob<Partner>('~~/content/made-possible-by/*.json', {
-    eager: true,
-    import: 'default'
-  })
-).sort((a, b) => a.order - b.order)
-
-const currentCompanies = companies.filter(company => company.status !== 'Past')
+const companies = madePossibleByCompanies
 
 useSeoMeta({
   title: 'Made Possible By - Origin Stories',
@@ -33,13 +24,14 @@ useSeoMeta({
       </div>
     </section>
 
-    <section v-if="currentCompanies.length" class="bg-white page-container">
-      <h2 class="sr-only">Current Companies</h2>
+    <section v-if="companies.length" class="bg-white page-container">
+      <h2 class="sr-only">Companies</h2>
       <div class="flex flex-wrap justify-start gap-x-12">
         <PartnerCard
-          v-for="company in currentCompanies"
-          :key="company.name"
+          v-for="company in companies"
+          :key="company.slug"
           :partner="company"
+          :details-to="company.about ? `/made-possible-by/${company.slug}` : undefined"
           class="w-full md:w-[calc((100%-3rem)/2)]"
         />
       </div>

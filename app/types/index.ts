@@ -24,6 +24,15 @@ export interface Partner {
   order: number
 }
 
+export interface MadePossibleByCompany {
+  name: string
+  logo: string
+  url?: string
+  description: string
+  about?: string
+  order: number
+}
+
 export interface AboutPage {
   seoTitle: string
   seoDescription: string
