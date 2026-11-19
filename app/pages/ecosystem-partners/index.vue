@@ -19,7 +19,7 @@ useSeoMeta({
           >
             &larr; Learn more
           </NuxtLink>
-          <h1 class="display-xl mb-16">
+          <h1 class="display-lg font-extrabold uppercase mb-10">
             Ecosystem
             <br />
             <span class="text-accent-light-bg">Partners</span>

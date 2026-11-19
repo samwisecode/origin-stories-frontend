@@ -27,7 +27,7 @@ useSeoMeta({
     <section class="section-massive bg-white">
       <div class="page-container">
         <div class="text-center">
-          <h1 class="display-xl mb-16">
+          <h1 class="display-lg font-extrabold uppercase mb-10">
             Our
             <br />
             <span class="text-accent-light-bg">Speakers</span>
