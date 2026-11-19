@@ -11,14 +11,19 @@
       "link": "/speakers"
     },
     {
-      "title": "Sponsors",
-      "description": "The organisations who make Origin Stories possible.",
+      "title": "Partners",
+      "description": "The organisations who back Origin Stories.",
       "link": "/partners"
     },
     {
-      "title": "Production partners",
+      "title": "Ecosystem partners",
+      "description": "The organisations and communities who champion Origin Stories and the founders it celebrates.",
+      "link": "/ecosystem-partners"
+    },
+    {
+      "title": "Made Possible By",
       "description": "The businesses who give their time and skills to bring Origin Stories to the stage.",
-      "link": "/partners"
+      "link": "/made-possible-by"
     }
   ],
   "watchHeading": "Watch the",

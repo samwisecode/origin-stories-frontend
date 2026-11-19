@@ -14,11 +14,7 @@ useSeoMeta({
   <div>
     <section class="section-large bg-white">
       <div class="page-container max-w-5xl text-center">
-        <img
-          src="/Origin_Stories_Swirl_yellow.svg"
-          alt=""
-          class="mx-auto mb-10 w-20 md:w-28"
-        />
+        <img src="/Origin_Stories_Swirl_yellow.svg" alt="" class="mx-auto mb-10 w-20 md:w-28" />
         <h1 class="display-lg font-extrabold uppercase mb-10">
           {{ page.heroHeading }}
           <span v-if="page.heroHeadingAccent" class="text-accent-light-bg">{{
@@ -33,7 +29,7 @@ useSeoMeta({
 
     <section class="section-large bg-black">
       <div class="page-container">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:my-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:my-8">
           <NuxtLink
             v-for="card in page.cards"
             :key="card.title"

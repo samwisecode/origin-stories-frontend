@@ -220,19 +220,12 @@ content:
         options:
           format: html
           media: false
-      - name: status
-        label: Status
-        type: select
-        required: true
-        default: Current
+      - name: about
+        label: About
+        type: rich-text
         options:
-          values: [Current, Past]
-      - name: years
-        label: Years
-        type: number
-        list: true
-        required: true
-        description: Each year this company was involved, e.g. 2025. Add a row per year.
+          format: html
+          media: false
       - name: order
         label: Display order
         type: number
