@@ -116,6 +116,15 @@ content:
         options:
           format: html
           media: false
+      - name: about
+        label: About
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: podcastUrl
+        label: Podcast URL
+        type: string
       - name: status
         label: Status
         type: select

@@ -7,7 +7,7 @@ const contactFormSchema = z.object({
   phone: z.string().optional(),
   company: z.string().optional(),
   message: z.string().min(1, 'Message is required'),
-  // Set by Made Possible By detail pages: the company the message is for
+  // Set by company detail pages: the company the message is for
   forCompany: z.string().optional()
 })
 
@@ -53,7 +53,7 @@ export default defineEventHandler(async (event) => {
       html: `
         <p>Hi Will,</p>
         ${body.forCompany
-          ? `<p>You have a new message for <strong>${safe.forCompany}</strong> from their Made Possible By page. The sender agreed to their details being shared with ${safe.forCompany}. Please find their information below:</p>`
+          ? `<p>You have a new message for <strong>${safe.forCompany}</strong> from their page on the website. The sender agreed to their details being shared with ${safe.forCompany}. Please find their information below:</p>`
           : `<p>You have a new enquiry from the website contact form. Please find their information below:</p>`}
         <p><strong>Name:</strong> ${safe.name}</p>
         <p><strong>Email:</strong> <a href="mailto:${safe.email}">${safe.email}</a></p>
