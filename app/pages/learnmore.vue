@@ -58,7 +58,7 @@ useSeoMeta({
           }}</span>
         </h2>
         <p v-if="page.watchIntro" class="text-lg md:text-xl mb-10">{{ page.watchIntro }}</p>
-        <UButton :to="page.watchButtonUrl" target="_blank" class="btn btn-outline">
+        <UButton :to="page.watchButtonUrl" target="_blank" icon="i-simple-icons-youtube" class="btn btn-outline">
           {{ page.watchButtonLabel }}
         </UButton>
       </div>
