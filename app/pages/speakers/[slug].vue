@@ -23,29 +23,30 @@ useSeoMeta({
 
 <template>
   <div v-if="speaker">
-    <section class="section-large bg-white">
+    <section class="section-large bg-black text-white">
       <div class="page-container">
         <NuxtLink
           to="/speakers"
-          class="inline-block mb-6 border-b-2 border-black pb-1 text-sm font-semibold"
+          class="inline-block mb-6 border-b-2 border-white pb-1 text-sm font-semibold transition-colors hover:border-light-brown hover:text-light-brown"
         >
           &larr; All speakers
         </NuxtLink>
 
         <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-14 items-center">
-          <img
+          <SpeakerPhoto
             :src="speaker.photo"
             :alt="speaker.name"
-            class="w-full max-w-md aspect-[4/5] object-cover"
+            loading="eager"
+            class="w-full max-w-md"
           />
 
           <div>
             <h1 class="display-md uppercase font-bold mb-4 [overflow-wrap:anywhere]">
               {{ firstWord }}
-              <span v-if="nameAccent" class="text-accent-light-bg">{{ nameAccent }}</span>
+              <span v-if="nameAccent" class="text-accent">{{ nameAccent }}</span>
             </h1>
-            <p v-if="speaker.title" class="text-lg md:text-xl">{{ speaker.title }}</p>
-            <p v-if="speaker.company" class="text-lg md:text-xl font-semibold text-accent-light-bg">
+            <p v-if="speaker.title" class="text-lg md:text-xl text-white/90">{{ speaker.title }}</p>
+            <p v-if="speaker.company" class="text-lg md:text-xl font-semibold text-accent">
               {{ speaker.company }}
             </p>
             <div v-if="speaker.companyUrl || speaker.linkedInUrl" class="flex flex-wrap gap-4 mt-8">
@@ -54,7 +55,7 @@ useSeoMeta({
                 :to="speaker.companyUrl"
                 target="_blank"
                 rel="noopener"
-                class="btn"
+                class="btn btn-on-dark"
               >
                 {{ companyButtonLabel }}
               </UButton>
@@ -63,7 +64,7 @@ useSeoMeta({
                 :to="speaker.linkedInUrl"
                 target="_blank"
                 rel="noopener"
-                class="btn btn-outline"
+                class="btn btn-outline btn-on-dark"
               >
                 LinkedIn
               </UButton>
